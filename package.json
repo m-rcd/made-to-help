@@ -11,7 +11,8 @@
     "feature-test": "detox test --configuration ios.sim"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "testPathIgnorePatterns" : ["./node_modules", "./e2e"]
   },
   "dependencies": {
     "@expo/samples": "2.1.1",

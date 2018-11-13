@@ -26,13 +26,7 @@ export default class MapScreen extends React.Component {
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421
           }}
-        >
-          <MapView.Marker
-            coordinate={home.latlng}
-            title={home.title}
-            image={require("../assets/images/location.png")}
-          />
-        </MapView>
+        />
       </View>
     );
   }
