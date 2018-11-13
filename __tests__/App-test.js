@@ -4,6 +4,9 @@ import App from "../App";
 import renderer from "react-test-renderer";
 import NavigationTestUtils from "react-navigation/NavigationTestUtils";
 
+// Mocks the react-native-maps element which has our maps.
+jest.mock("react-native-maps", () => "MapScreen");
+
 describe("App snapshot", () => {
   jest.useFakeTimers();
   beforeEach(() => {

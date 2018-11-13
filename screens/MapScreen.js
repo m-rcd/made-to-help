@@ -1,5 +1,5 @@
 import React from "react";
-import { MapView } from "expo";
+import MapView from "react-native-maps";
 import { View } from "react-native";
 
 const home = {
@@ -10,6 +10,7 @@ const home = {
   title: "Makers Academy",
   description: "Home is where the heart is."
 };
+
 export default class MapScreen extends React.Component {
   static navigationOptions = {
     title: "Map"
