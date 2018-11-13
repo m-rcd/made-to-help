@@ -7,20 +7,40 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
-    "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+    "test": "node ./node_modules/jest/bin/jest.js --watchAll",
+    "feature-test": "detox test --configuration ios.sim"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "testPathIgnorePatterns": [
+      "./node_modules",
+      "./e2e"
+    ]
   },
   "dependencies": {
     "@expo/samples": "2.1.1",
     "expo": "^31.0.2",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
+    "react-native-maps": "^0.22.1",
     "react-navigation": "^2.18.2"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",
-    "jest-expo": "^31.0.0"
+    "detox": "^9.0.6",
+    "detox-expo-helpers": "^0.6.0",
+    "expo-detox-hook": "^1.0.10",
+    "jest-expo": "^31.0.0",
+    "mocha": "^5.2.0"
+  },
+  "detox": {
+    "test-runner": "mocha",
+    "configurations": {
+      "ios.sim": {
+        "binaryPath": "bin/Exponent.app",
+        "type": "ios.simulator",
+        "name": "iPhone 7"
+      }
+    }
   }
 }
