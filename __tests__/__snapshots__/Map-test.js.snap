@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Map snapshot renders successfully 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+  testID="map"
+>
+  <MapScreen
+    initialRegion={
+      Object {
+        "latitude": 51.5142,
+        "latitudeDelta": 0.0922,
+        "longitude": -0.0931,
+        "longitudeDelta": 0.0421,
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+</View>
+`;
