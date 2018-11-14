@@ -16,7 +16,6 @@ script:
 
 install:
   - yarn install
-  - yarn run feature-test
   # apt:
   #   sources:
   #     - ubuntu-toolchain-r-test
