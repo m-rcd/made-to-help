@@ -1,5 +1,7 @@
 # Made to Help
 
+[![Build Status](https://travis-ci.org/m-rcd/made-to-help.svg?branch=master)](https://travis-ci.org/m-rcd/made-to-help)
+
 **MADE to Help** is a mobile app that helps find you the best, and most accessible, routes for those who need  help navigating the city.
 
 MADE Engineers:
