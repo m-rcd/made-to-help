@@ -9,7 +9,7 @@ exports[`Map snapshot renders successfully 1`] = `
   }
   testID="map"
 >
-  <MapScreen
+  <MapView
     initialRegion={
       Object {
         "latitude": 51.5142,
@@ -23,6 +23,15 @@ exports[`Map snapshot renders successfully 1`] = `
         "flex": 1,
       }
     }
-  />
+  >
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 51.517292,
+          "longitude": -0.07327,
+        }
+      }
+    />
+  </MapView>
 </View>
 `;
