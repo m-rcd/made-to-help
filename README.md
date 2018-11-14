@@ -1,4 +1,5 @@
 # Made to Help
+[![link](https://img.shields.io/badge/trello-board-green.svg)](https://trello.com/b/2cdiYIh2/made-to-help)
 
 [![Build Status](https://travis-ci.org/m-rcd/made-to-help.svg?branch=master)](https://travis-ci.org/m-rcd/made-to-help)
 
