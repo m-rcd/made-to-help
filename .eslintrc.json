@@ -5,6 +5,13 @@
       "react/destructuring-assignment": "never",
       "react/jsx-filename-extension": "never",
       "no-underscore-dangle": 1,
-      "global-require": 0
+      "react/prop-types": 1,
+      "global-require": 0,
+      "no-use-before-define": 0,
+      "react/sort-comp": 0
+    },
+    "env": {
+      "jest": true,
+      "mocha": true
     }
 }
