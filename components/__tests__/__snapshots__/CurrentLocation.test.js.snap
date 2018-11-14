@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders CurrentLocation component 1`] = `
+<AIRMapMarker
+  coordinate={
+    Object {
+      "latitude": 0,
+      "longitude": 0,
+    }
+  }
+  image="://mock/uri"
+  onPress={[Function]}
+  stopPropagation={false}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "position": "absolute",
+      },
+      undefined,
+    ]
+  }
+/>
+`;
