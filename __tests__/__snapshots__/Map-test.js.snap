@@ -27,10 +27,11 @@ exports[`Map snapshot renders successfully 1`] = `
     <Marker
       coordinate={
         Object {
-          "latitude": 51.517292,
-          "longitude": -0.07327,
+          "latitude": 0,
+          "longitude": 0,
         }
       }
+      image={1}
     />
   </MapView>
 </View>

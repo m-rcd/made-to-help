@@ -1,15 +1,7 @@
 import React from 'react';
-import MapView, { Marker } from 'react-native-maps';
+import MapView from 'react-native-maps';
 import { View } from 'react-native';
-
-const home = {
-  latlng: {
-    latitude: 51.517292,
-    longitude: -0.07327,
-  },
-  title: 'Makers',
-  description: 'Home is where the heart is.',
-};
+import CurrentLocation from '../components/CurrentLocation';
 
 export default class MapScreen extends React.Component {
   static navigationOptions = {
@@ -28,7 +20,7 @@ export default class MapScreen extends React.Component {
             longitudeDelta: 0.0421,
           }}
         >
-          <Marker coordinate={home.latlng} />
+          <CurrentLocation />
         </MapView>
       </View>
     );
