@@ -1,5 +1,5 @@
 import React from "react";
-import MapView from "react-native-maps";
+import MapView, { Marker } from "react-native-maps";
 import { View } from "react-native";
 
 const home = {
@@ -7,7 +7,7 @@ const home = {
     latitude: 51.517292,
     longitude: -0.07327
   },
-  title: "Makers Academy",
+  title: "Makers",
   description: "Home is where the heart is."
 };
 
@@ -27,7 +27,9 @@ export default class MapScreen extends React.Component {
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421
           }}
-        />
+        >
+          <Marker coordinate={home.latlng} />
+        </MapView>
       </View>
     );
   }
