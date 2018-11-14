@@ -8,6 +8,7 @@
     "ios": "expo start --ios",
     "eject": "expo eject",
     "test": "node ./node_modules/jest/bin/jest.js --watchAll",
+    "travis-test": "node ./node_modules/jest/bin/jest.js",
     "feature-test": "detox test --configuration ios.sim"
   },
   "jest": {
