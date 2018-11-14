@@ -1,7 +1,6 @@
-import React from "react";
-import { StyleSheet, Image, Text, View } from "react-native";
-import { WebBrowser } from "expo";
-import Touchable from "react-native-platform-touchable";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { WebBrowser } from 'expo';
 
 export default class Links extends React.Component {
   render() {
@@ -13,41 +12,41 @@ export default class Links extends React.Component {
   }
 
   _handlePressSlack = () => {
-    WebBrowser.openBrowserAsync("https://slack.expo.io");
+    WebBrowser.openBrowserAsync('https://slack.expo.io');
   };
 
   _handlePressDocs = () => {
-    WebBrowser.openBrowserAsync("http://docs.expo.io");
+    WebBrowser.openBrowserAsync('http://docs.expo.io');
   };
 
   _handlePressForums = () => {
-    WebBrowser.openBrowserAsync("http://forums.expo.io");
+    WebBrowser.openBrowserAsync('http://forums.expo.io');
   };
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 15
+    paddingTop: 15,
   },
   optionsTitleText: {
     fontSize: 16,
     marginLeft: 15,
     marginTop: 9,
-    marginBottom: 12
+    marginBottom: 12,
   },
   optionIconContainer: {
-    marginRight: 9
+    marginRight: 9,
   },
   option: {
-    backgroundColor: "#fdfdfd",
+    backgroundColor: '#fdfdfd',
     paddingHorizontal: 15,
     paddingVertical: 15,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: "#EDEDED"
+    borderBottomColor: '#EDEDED',
   },
   optionText: {
     fontSize: 15,
-    marginTop: 1
-  }
+    marginTop: 1,
+  },
 });

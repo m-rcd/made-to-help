@@ -1,19 +1,19 @@
-import React from "react";
-import MapView, { Marker } from "react-native-maps";
-import { View } from "react-native";
+import React from 'react';
+import MapView, { Marker } from 'react-native-maps';
+import { View } from 'react-native';
 
 const home = {
   latlng: {
     latitude: 51.517292,
-    longitude: -0.07327
+    longitude: -0.07327,
   },
-  title: "Makers",
-  description: "Home is where the heart is."
+  title: 'Makers',
+  description: 'Home is where the heart is.',
 };
 
 export default class MapScreen extends React.Component {
   static navigationOptions = {
-    title: "Map"
+    title: 'Map',
   };
 
   render() {
@@ -25,7 +25,7 @@ export default class MapScreen extends React.Component {
             latitude: 51.5142,
             longitude: -0.0931,
             latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421
+            longitudeDelta: 0.0421,
           }}
         >
           <Marker coordinate={home.latlng} />

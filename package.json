@@ -10,12 +10,11 @@
     "test": "node ./node_modules/jest/bin/jest.js --watchAll",
     "travis-test": "node ./node_modules/jest/bin/jest.js",
     "feature-test": "detox test --configuration ios.sim",
-    "lint": "./node_modules/.bin/eslint *.js",
-    "format": "./node_modules/.bin/prettier *.js"
+    "lint": "./node_modules/.bin/eslint .",
+    "format": "./node_modules/.bin/prettier ./"
   },
   "jest": {
     "preset": "jest-expo",
-    "setupFiles": ["<rootDir>/setupFiles.js"], 
     "testPathIgnorePatterns": [
       "./node_modules",
       "./e2e"
@@ -23,16 +22,18 @@
   },
   "dependencies": {
     "@expo/samples": "2.1.1",
+    "babel-polyfill": "^6.26.0",
+    "detox": "^9.0.6",
     "expo": "^31.0.2",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
     "react-native-maps": "^0.22.1",
-    "react-navigation": "^2.18.2"
+    "react-navigation": "^2.18.2",
+    "react-test-renderer": "^16.6.3"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "babel-preset-expo": "^5.0.0",
-    "detox": "^9.0.6",
     "detox-expo-helpers": "^0.6.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
