@@ -1,5 +1,8 @@
 # Made to Help
 [![link](https://img.shields.io/badge/trello-board-green.svg)](https://trello.com/b/2cdiYIh2/made-to-help)
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
+
+
 
 **MADE to Help** is a mobile app that helps find you the best, and most accessible, routes for those who need  help navigating the city.
 

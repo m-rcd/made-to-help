@@ -1,0 +1,10 @@
+{
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "rules": {
+      "react/destructuring-assignment": "never",
+      "react/jsx-filename-extension": "never",
+      "no-underscore-dangle": 1,
+      "global-require": 0
+    }
+}
