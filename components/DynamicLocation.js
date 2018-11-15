@@ -2,6 +2,7 @@ import * as Expo from 'expo';
 import React from 'react';
 import { Platform, Text, View, Stylesheet } from 'react-native';
 import { Constants, Location, Permissions } from 'expo'
+import { GOOGLE_API_KEY } from 'react-native-dotenv'
 
 const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
 
@@ -32,6 +33,7 @@ export default class DynamicLocation extends React.Component {
       style={{flex: 1}}
       showsUserLocation={true}
       region={this.state.region}
+      provider="google"
       />
     );
   }
