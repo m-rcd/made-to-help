@@ -15,35 +15,33 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "function",
     "props": Object {
       "coordinate": Object {
         "latitude": 0,
         "longitude": 0,
       },
       "image": 1,
-      "stopPropagation": false,
     },
     "ref": null,
     "rendered": null,
-    "type": [Function],
+    "type": undefined,
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "function",
       "props": Object {
         "coordinate": Object {
           "latitude": 0,
           "longitude": 0,
         },
         "image": 1,
-        "stopPropagation": false,
       },
       "ref": null,
       "rendered": null,
-      "type": [Function],
+      "type": undefined,
     },
   ],
   Symbol(enzyme.__options__): Object {

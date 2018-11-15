@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Directions snapshot renders directions form 1`] = `
+<View
+  style={
+    Object {
+      "paddingTop": 23,
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    placeholder="Start"
+    placeholderTextColor="grey"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "borderColor": "#888",
+        "borderRadius": 10,
+        "borderWidth": 4,
+        "height": 40,
+        "justifyContent": "center",
+        "margin": 10,
+        "padding": 4,
+        "textAlign": "center",
+      }
+    }
+    underLineColorAndroid="transparent"
+    underlineColorAndroid="transparent"
+    value="Destination"
+  />
+  <TextInput
+    allowFontScaling={true}
+    placeholder="End"
+    placeholderTextColor="grey"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "borderColor": "#888",
+        "borderRadius": 10,
+        "borderWidth": 4,
+        "height": 40,
+        "justifyContent": "center",
+        "margin": 10,
+        "padding": 4,
+        "textAlign": "center",
+      }
+    }
+    underLineColorAndroid="transparent"
+    underlineColorAndroid="transparent"
+  />
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgb(0, 122, 255)",
+        "borderRadius": 10,
+        "height": 40,
+        "justifyContent": "center",
+        "margin": 10,
+        "opacity": 1,
+        "padding": 4,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+        }
+      }
+    >
+       Search 
+    </Text>
+  </View>
+</View>
+`;
