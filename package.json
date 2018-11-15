@@ -19,8 +19,8 @@
       "./node_modules",
       "./e2e"
     ],
-  "snapshotSerializer": [
-    "./node_modules/jest-serializer-enzyme"
+    "snapshotSerializer": [
+      "./node_modules/jest-serializer-enzyme"
     ]
   },
   "dependencies": {
@@ -55,7 +55,7 @@
     "prettier-eslint": "^8.8.2",
     "react-addons-test-utils": "^15.6.2",
     "react-dom": "^16.6.3",
-    "react-native-mock": "^0.0.6"
+    "react-native-mock": "^0.3.1"
   },
   "detox": {
     "test-runner": "mocha",

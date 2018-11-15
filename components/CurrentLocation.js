@@ -22,11 +22,15 @@ export default class CurrentLocation extends React.Component {
 
   render() {
     return (
-      <Marker
+      <View testID="marker">
+        <Marker
         coordinate={{ latitude: this.state.latitude, longitude: this.state.longitude }}
+        
         // eslint-disable-next-line
         image={require('../assets/images/user.png')}
       />
+      </View>
+      
     );
   }
 }
