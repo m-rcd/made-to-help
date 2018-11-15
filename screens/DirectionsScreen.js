@@ -5,7 +5,8 @@ import {
 import { createStackNavigator } from 'react-navigation';
 import MapScreen from './MapScreen';
 
-createStackNavigator({
+// eslint-disable-next-line
+const App = createStackNavigator({
   Home: MapScreen,
 });
 
