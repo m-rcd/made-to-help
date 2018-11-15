@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppRegistry, TextInput } from 'react-native';
 
-export default class Directions extends Component {
+export default class Directions extends React.Component {
   constructor(props) {
     super(props);
     this.state = { text: 'Destination' };
@@ -10,9 +10,9 @@ export default class Directions extends Component {
   render() {
     return (
       <TextInput
-      style={{height: 20, borderColour: 'gray', borderWidth: 1}}
-      inChangeText={(text) => this.setState({text})}
-      value={this.state.text}
+        style={{ height: 20, borderColour: 'gray', borderWidth: 1 }}
+        inChangeText={text => this.setState({ text })}
+        value={this.state.text}
       />
     );
   }
