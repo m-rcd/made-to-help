@@ -17,13 +17,15 @@ describe('Current Location', () => {
     expect(wrapper.state('longitude')).toBe(0);
   });
 
-  it('test location async', () => {
+  it('test location method changes latitude', () => {
     const wrapper = shallow(<CurrentLocation />);
     const instanceComponent = wrapper.instance();
     instanceComponent._getLocationAsync = () => {
-      wrapper.setState({ latitude: 34 });
+      wrapper.setState({ longitude: 51 });
+      wrapper.setState({ latitude: -0.03 });
     };
-    instanceComponent._getLocationAsync();
-    expect(wrapper.state('latitude')).toBe(34);
+    instanceComponent.componentWillMount();
+    expect(wrapper.state('longitude')).toBe(51);
+    expect(wrapper.state('latitude')).toBe(-0.03);
   });
 });
