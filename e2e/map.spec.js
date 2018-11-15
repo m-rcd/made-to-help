@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 const { reloadApp } = require('detox-expo-helpers');
 
 describe('Example', () => {
