@@ -1,13 +1,13 @@
 import React from 'react';
 import { MapView, Location, Permissions } from 'expo';
+import RouteTracker from './RouteTracker';
 
 const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
 
 export default class DynamicLocation extends React.Component {
   state = {
     /* eslint-disable-next-line */
-    location: { coords: { latitude: 0, longitude: 0 } },
-    // polylineCoords: [{ latitude: 50, longitude: -0.03 }, { latitude: 51, longitude: -0.04 }],
+    location: { coords: { latitude: -0.09, longitude: 51 } },
   };
 
   componentWillMount = async () => {
@@ -29,9 +29,7 @@ export default class DynamicLocation extends React.Component {
 
   render() {
     return (
-      <MapView style={{ flex: 1 }} showsUserLocation region={this.state.region} provider="google">
-        {/* <MapView.Polyline coordinates={this.state.polylineCoords} strokeWidth={5} /> */}
-      </MapView>
+      <MapView style={{ flex: 1 }} showsUserLocation region={this.state.region} provider="google" />
     );
   }
 }

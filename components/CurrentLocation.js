@@ -14,7 +14,6 @@ export default class CurrentLocation extends React.Component {
 
   _getLocationAsync = async () => {
     await Permissions.askAsync(Permissions.LOCATION);
-
     const location = await Location.getCurrentPositionAsync({});
     this.setState({ longitude: location.coords.longitude, latitude: location.coords.latitude });
   };
