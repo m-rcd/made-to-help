@@ -12,7 +12,6 @@ export default class DynamicLocation extends React.Component {
 
   componentWillMount = async () => {
     await Permissions.askAsync(Permissions.LOCATION);
-
     Location.watchPositionAsync(GEOLOCATION_OPTIONS, this.locationChanged);
   };
 
