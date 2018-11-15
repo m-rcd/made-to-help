@@ -28,4 +28,13 @@ describe('Current Location', () => {
     expect(wrapper.state('longitude')).toBe(51);
     expect(wrapper.state('latitude')).toBe(-0.03);
   });
-});
+  
+  it('test location async', () => {
+    const wrapper = shallow(<CurrentLocation />)
+    const location = {coords:{latitude: -0.03, longitude: 50}}
+    wrapper.setState({ longitude: location.coords.longitude})
+    wrapper.setState({ latitude: location.coords.latitude})
+    expect(wrapper.state('latitude')).toBe(-0.03)
+    expect(wrapper.state('longitude')).toBe(50)
+  })
+})
