@@ -6,4 +6,5 @@ npm-debug.*
 *.key
 *.mobileprovision
 bin
+coverage/
 .DS_Store

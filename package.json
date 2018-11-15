@@ -11,7 +11,7 @@
     "travis-test": "node ./node_modules/jest/bin/jest.js",
     "feature-test": "detox test --configuration ios.sim",
     "lint": "./node_modules/.bin/eslint .",
-    "format": "./node_modules/.bin/prettier ./"
+    "coverage": "yarn travis-test --coverage"
   },
   "jest": {
     "preset": "jest-expo",
@@ -21,13 +21,15 @@
     ]
   },
   "dependencies": {
+    "detox": "^9.0.8",
     "@expo/samples": "2.1.1",
+    "babel-eslint": "^10.0.1",
     "babel-polyfill": "^6.26.0",
-    "detox": "^9.0.6",
     "expo": "^31.0.2",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
     "react-native-maps": "^0.22.1",
+    "react-native-platform-touchable": "^1.1.1",
     "react-navigation": "^2.18.2",
     "react-test-renderer": "^16.6.3"
   },
