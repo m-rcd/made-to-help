@@ -2606,10 +2606,10 @@ detox-expo-helpers@^0.6.0:
     semver "^5.6.0"
     xdl "^51.5.0"
 
-detox@^9.0.6:
-  version "9.0.6"
-  resolved "https://registry.yarnpkg.com/detox/-/detox-9.0.6.tgz#14fbc8cbb8df4664236969d17acf0aaef0e26916"
-  integrity sha512-wS8xdzpWH5pNolJ9HG5sNPBsSSC4FbrN2bszXESznvnkhUiy6flP4o5zAZvA1x8bdZ/x+hrzUqzWFCfU1g3KVg==
+detox@^9.0.8:
+  version "9.0.8"
+  resolved "https://registry.yarnpkg.com/detox/-/detox-9.0.8.tgz#a70145399883d9be032794c213bd8e98de30b8f1"
+  integrity sha512-N2Pxny9qgjzLrxni9WF6HROLh2rGr63iQF4vgnpYeZTJTGO53AZEc4ElEAs86EC76ZXvM+aYmYhJdB1oepQJCQ==
   dependencies:
     bunyan "^1.8.12"
     bunyan-debug-stream "^1.1.0"
@@ -6651,7 +6651,7 @@ react-native-gesture-handler@1.0.9:
     invariant "^2.2.2"
     prop-types "^15.5.10"
 
-react-native-maps@^0.22.1, "react-native-maps@github:expo/react-native-maps#v0.22.1-exp.0":
+react-native-maps@^0.22.1, react-native-maps@expo/react-native-maps#v0.22.1-exp.0:
   version "0.22.1"
   resolved "https://codeload.github.com/expo/react-native-maps/tar.gz/e6f98ff7272e5d0a7fe974a41f28593af2d77bb2"
 
