@@ -27,11 +27,19 @@ export default class Directions extends React.Component {
         <TextInput
           style={styles.input}
           underLineColorAndroid="transparent"
-          placeholder="Enter Destination"
+          placeholder="Start"
           placeholderTextColor="grey"
           onChangeText={text => this.setState({ text })}
           value={this.state.text}
         />
+
+        <TextInput
+          style={styles.input}
+          underLineColorAndroid="transparent"
+          placeholder="End"
+          placeholderTextColor="grey"
+        />
+
         <TouchableOpacity
           style={styles.submitButton}
           onPress={() => navigate('Home')}
