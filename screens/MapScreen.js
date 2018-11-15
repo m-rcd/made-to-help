@@ -30,6 +30,7 @@ export default class MapScreen extends React.Component {
         >
           <Marker coordinate={home.latlng} />
         </MapView>
+
       </View>
     );
   }

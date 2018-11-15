@@ -7,3 +7,4 @@ npm-debug.*
 *.mobileprovision
 bin
 .DS_Store
+coverage/
