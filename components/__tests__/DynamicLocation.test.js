@@ -31,3 +31,8 @@ it('Should test for setState changes to locationChanged', () => {
   instance.locationChanged({coords: { latitude: -0.09, longitude: 51 } })
   expect(instance.state).toMatchSnapshot('Something Updated')
 });
+
+it('Should test for setState changes to journeyTime and journeyDistance', () => {
+  const wrap = shallow(<DynamicLocation />);
+  expect(wrap).toMatchSnapshot();
+});
