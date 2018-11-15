@@ -2,12 +2,13 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { MapView, Location, Permissions } from 'expo';
 import MapViewDirections from 'react-native-maps-directions';
+import KEY from '../env.config';
 
 const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
 
-const origin = { latitude: 37.3318456, longitude: -122.0296002 };
-const destination = { latitude: 37.771707, longitude: -122.4053769 };
-const GOOGLE_MAPS_APIKEY = 'AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk';
+const origin = { latitude: 51.5002, longitude: 0.1332 };
+const destination = { latitude: 51.523018, longitude: -0.087029 };
+const GOOGLE_MAPS_APIKEY = KEY;
 
 export default class DynamicLocation extends React.Component {
   state = {
@@ -36,16 +37,10 @@ export default class DynamicLocation extends React.Component {
 
   render() {
     return (
-      <View
-        style={{ flex: 1 }}
-      >
-        <Text
-          style={{ flex: 0.25 }}
-        >
+      <View style={{ flex: 1 }}>
+        <Text style={{ flex: 0.25 }}>
           {' '}
-          {
-            `${this.state.journeyTime} - Time \n ${this.state.journeyDistance} - Distance`
-          }
+          {`${this.state.journeyTime} - Time \n ${this.state.journeyDistance} - Distance`}
         </Text>
         <MapView
           style={{ flex: 0.75 }}
@@ -62,8 +57,7 @@ export default class DynamicLocation extends React.Component {
             mode="walking"
             onReady={(result) => {
               this.setState({ journeyTime: result.duration, journeyDistance: result.distance });
-            }
-          }
+            }}
           />
         </MapView>
       </View>
