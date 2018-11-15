@@ -73,16 +73,16 @@ ShallowWrapper {
             apikey="AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk"
             destination={
               Object {
-                "latitude": 37.771707,
-                "longitude": -122.4053769,
+                "latitude": 51.523018,
+                "longitude": -0.087029,
               }
             }
             mode="walking"
             onReady={[Function]}
             origin={
               Object {
-                "latitude": 37.3318456,
-                "longitude": -122.0296002,
+                "latitude": 51.5002,
+                "longitude": 0.1332,
               }
             }
             strokeColor="hotpink"
@@ -127,16 +127,16 @@ ShallowWrapper {
             apikey="AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk"
             destination={
               Object {
-                "latitude": 37.771707,
-                "longitude": -122.4053769,
+                "latitude": 51.523018,
+                "longitude": -0.087029,
               }
             }
             mode="walking"
             onReady={[Function]}
             origin={
               Object {
-                "latitude": 37.3318456,
-                "longitude": -122.0296002,
+                "latitude": 51.5002,
+                "longitude": 0.1332,
               }
             }
             strokeColor="hotpink"
@@ -157,14 +157,14 @@ ShallowWrapper {
           "props": Object {
             "apikey": "AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk",
             "destination": Object {
-              "latitude": 37.771707,
-              "longitude": -122.4053769,
+              "latitude": 51.523018,
+              "longitude": -0.087029,
             },
             "mode": "walking",
             "onReady": [Function],
             "origin": Object {
-              "latitude": 37.3318456,
-              "longitude": -122.0296002,
+              "latitude": 51.5002,
+              "longitude": 0.1332,
             },
             "strokeColor": "hotpink",
             "strokeWidth": 3,
@@ -209,16 +209,16 @@ ShallowWrapper {
               apikey="AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk"
               destination={
                 Object {
-                  "latitude": 37.771707,
-                  "longitude": -122.4053769,
+                  "latitude": 51.523018,
+                  "longitude": -0.087029,
                 }
               }
               mode="walking"
               onReady={[Function]}
               origin={
                 Object {
-                  "latitude": 37.3318456,
-                  "longitude": -122.0296002,
+                  "latitude": 51.5002,
+                  "longitude": 0.1332,
                 }
               }
               strokeColor="hotpink"
@@ -263,16 +263,16 @@ ShallowWrapper {
               apikey="AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk"
               destination={
                 Object {
-                  "latitude": 37.771707,
-                  "longitude": -122.4053769,
+                  "latitude": 51.523018,
+                  "longitude": -0.087029,
                 }
               }
               mode="walking"
               onReady={[Function]}
               origin={
                 Object {
-                  "latitude": 37.3318456,
-                  "longitude": -122.0296002,
+                  "latitude": 51.5002,
+                  "longitude": 0.1332,
                 }
               }
               strokeColor="hotpink"
@@ -293,14 +293,14 @@ ShallowWrapper {
             "props": Object {
               "apikey": "AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk",
               "destination": Object {
-                "latitude": 37.771707,
-                "longitude": -122.4053769,
+                "latitude": 51.523018,
+                "longitude": -0.087029,
               },
               "mode": "walking",
               "onReady": [Function],
               "origin": Object {
-                "latitude": 37.3318456,
-                "longitude": -122.0296002,
+                "latitude": 51.5002,
+                "longitude": 0.1332,
               },
               "strokeColor": "hotpink",
               "strokeWidth": 3,
