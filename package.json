@@ -15,9 +15,6 @@
   },
   "jest": {
     "preset": "jest-expo",
-    "setupFiles": [
-      "<rootDir>/setupFiles.js"
-    ],
     "testPathIgnorePatterns": [
       "./node_modules",
       "./e2e"
