@@ -2,6 +2,7 @@
 
 exports[`Renders DynamicLocation component 1`] = `
 <MapView
+  provider="google"
   showsUserLocation={true}
   style={
     Object {

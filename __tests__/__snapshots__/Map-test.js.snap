@@ -10,6 +10,7 @@ exports[`Map snapshot renders successfully 1`] = `
   testID="map"
 >
   <MapView
+    provider="google"
     showsUserLocation={true}
     style={
       Object {
