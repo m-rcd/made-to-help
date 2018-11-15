@@ -1,14 +1,31 @@
 import React from 'react';
-import { ExpoConfigView } from '@expo/samples';
+import { AppRegistry, TextInput, View } from 'react-native';
+import { Button } from 'react-native';
 
-export default class SettingsScreen extends React.Component {
+export default class Directions extends React.Component {
   static navigationOptions = {
-    title: 'app.json',
+    title: 'Directions',
   };
 
+  constructor(props) {
+    super(props);
+    this.state = { text: 'Destination' };
+  }
+
   render() {
-    /* Go ahead and delete ExpoConfigView and replace it with your
-     * content, we just wanted to give you a quick view of your config */
-    return <ExpoConfigView />;
+    return (
+      <View style={{width: window.width, margin: 10, padding:4, alignItems:'center', justifyContent:'center', borderWidth:4, borderColor:'#888', borderRadius:10, backgroundColor:'#fff'}}>
+          <TextInput
+            onChangeText={(text) => this.setState({text})}
+            value={this.state.text}
+            />
+          <Button
+            onPress={() => this.props.navigation.navigate('Map')}
+            title='Search'
+            color="#841584"
+            accessibilityLabel="Learn more about this purple button"
+            />
+    </View>
+    );
   }
 }
