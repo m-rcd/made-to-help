@@ -30,3 +30,68 @@ exports[`Renders DynamicLocation component 1`] = `
   />
 </View>
 `;
+
+exports[`Should test for setState changes 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "flex": 0.25,
+      }
+    }
+  >
+     
+    null - Time 
+ null - Distance
+  </Text>
+  <MapView
+    provider="google"
+    showsUserLocation={true}
+    style={
+      Object {
+        "flex": 0.75,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Should test for setState changes: Something Updated 1`] = `
+Object {
+  "journeyDistance": null,
+  "journeyInfo": null,
+  "journeyTime": null,
+  "location": Object {
+    "coords": Object {
+      "latitude": -0.09,
+      "longitude": 51,
+    },
+  },
+  "region": Object {
+    "latitude": -0.09,
+    "latitudeDelta": 0.1,
+    "longitude": 51,
+    "longitudeDelta": 0.05,
+  },
+}
+`;
+
+exports[`Should test for setState changes: something 1`] = `
+Object {
+  "journeyDistance": null,
+  "journeyInfo": null,
+  "journeyTime": null,
+  "location": Object {
+    "coords": Object {
+      "latitude": -0.09,
+      "longitude": 51,
+    },
+  },
+}
+`;

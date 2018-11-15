@@ -21,3 +21,14 @@ test('Renders DynamicLocation component', () => {
   const snapshot = renderer.create(<DynamicLocation />).toJSON();
   expect(snapshot).toMatchSnapshot();
 });
+
+it('Should test for setState changes', () => {
+  const snapshot = renderer.create(<DynamicLocation />);
+  expect(snapshot.toJSON()).toMatchSnapshot();
+
+  const instance = snapshot.getInstance()
+  expect(instance.state).toMatchSnapshot('something');
+
+  instance.locationChanged({coords: { latitude: -0.09, longitude: 51 } })
+  expect(instance.state).toMatchSnapshot('Something Updated')
+});

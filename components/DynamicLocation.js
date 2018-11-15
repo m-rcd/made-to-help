@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { MapView, Location, Permissions } from 'expo';
-import RouteTracker from './RouteTracker';
 import MapViewDirections from 'react-native-maps-directions';
 
 const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
@@ -25,7 +24,7 @@ export default class DynamicLocation extends React.Component {
   };
 
   /* eslint-disable */
-  locationChanges = location => {
+  locationChanged = location => {
     region = {
       latitude: location.coords.latitude,
       longitude: location.coords.longitude,
