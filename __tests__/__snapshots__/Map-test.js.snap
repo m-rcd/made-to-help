@@ -10,29 +10,12 @@ exports[`Map snapshot renders successfully 1`] = `
   testID="map"
 >
   <MapView
-    initialRegion={
-      Object {
-        "latitude": 51.5142,
-        "latitudeDelta": 0.0922,
-        "longitude": -0.0931,
-        "longitudeDelta": 0.0421,
-      }
-    }
+    showsUserLocation={true}
     style={
       Object {
         "flex": 1,
       }
     }
-  >
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 0,
-          "longitude": 0,
-        }
-      }
-      image={1}
-    />
-  </MapView>
+  />
 </View>
 `;

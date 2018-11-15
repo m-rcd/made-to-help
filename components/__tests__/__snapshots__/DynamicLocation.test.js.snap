@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders DynamicLocation component 1`] = `
+<MapView
+  showsUserLocation={true}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+/>
+`;
