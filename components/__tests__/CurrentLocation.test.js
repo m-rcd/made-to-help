@@ -7,7 +7,7 @@ import CurrentLocation from '../CurrentLocation';
 Enzyme.configure({ adapter: new Adapter() });
 
 test('Renders CurrentLocation component', () => {
-  const snapshot = renderer.create(<CurrentLocation />).toJSON();
+  const snapshot = shallow(<CurrentLocation />);
   expect(snapshot).toMatchSnapshot();
 });
 
