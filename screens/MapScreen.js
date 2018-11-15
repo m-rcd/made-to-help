@@ -1,6 +1,6 @@
 import React from 'react';
 import MapView, { Marker } from 'react-native-maps';
-import { View, TextInput } from 'react-native';
+import { View } from 'react-native';
 
 const home = {
   latlng: {
@@ -30,7 +30,7 @@ export default class MapScreen extends React.Component {
         >
           <Marker coordinate={home.latlng} />
         </MapView>
-  
+
       </View>
     );
   }
