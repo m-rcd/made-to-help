@@ -1,8 +1,6 @@
 import React from 'react';
-import {
-  StyleSheet, Text, View,
-} from 'react-native';
-import { WebBrowser } from 'expo';
+import { StyleSheet, Text, View } from 'react-native';
+import WebBrowser from 'expo';
 
 export default class Links extends React.Component {
   render() {

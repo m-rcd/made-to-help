@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import { Text } from 'react-native';
+import Text from 'react-native';
 
 export default class MonoText extends React.Component {
   render() {
