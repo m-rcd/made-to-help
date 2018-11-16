@@ -21,7 +21,6 @@ export default class Directions extends React.Component {
   }
 
   render() {
-    const navigate = this.props.navigation;
     return (
       <View style={styles.container}>
         <TextInput
@@ -42,7 +41,7 @@ export default class Directions extends React.Component {
 
         <TouchableOpacity
           style={styles.submitButton}
-          onPress={() => navigate('Home')}
+          onPress={() => this.props.navigation.navigate('Home')}
         >
           <Text style={styles.submitButtonText}> Search </Text>
         </TouchableOpacity>
