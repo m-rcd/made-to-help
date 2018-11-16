@@ -2,13 +2,12 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { MapView, Location, Permissions } from 'expo';
 import MapViewDirections from 'react-native-maps-directions';
-// import KEY from '../env.config';
+import KEY from '../env.config';
 
 const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
 
 const origin = { latitude: 51.5002, longitude: 0.1332 };
 const destination = { latitude: 51.523018, longitude: -0.087029 };
-// const GOOGLE_MAPS_APIKEY = KEY;
 
 export default class DynamicLocation extends React.Component {
   state = {
@@ -18,7 +17,7 @@ export default class DynamicLocation extends React.Component {
     journeyTime: null,
   };
 
-  componentWillMount = async () => {
+  componentDidMount = async () => {
     await Permissions.askAsync(Permissions.LOCATION);
     Location.watchPositionAsync(GEOLOCATION_OPTIONS, this.locationChanged);
   };
@@ -51,7 +50,7 @@ export default class DynamicLocation extends React.Component {
           <MapViewDirections
             origin={origin}
             destination={destination}
-            // apikey={GOOGLE_MAPS_APIKEY}
+            apikey={KEY}
             strokeWidth={3}
             strokeColor="hotpink"
             mode="walking"

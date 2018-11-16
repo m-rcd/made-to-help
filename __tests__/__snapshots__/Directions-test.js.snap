@@ -1,88 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Directions snapshot renders directions form 1`] = `
-<View
-  style={
-    Object {
-      "paddingTop": 23,
-    }
-  }
->
-  <TextInput
-    allowFontScaling={true}
-    onChangeText={[Function]}
-    placeholder="Start"
-    placeholderTextColor="grey"
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#fff",
-        "borderColor": "#888",
-        "borderRadius": 10,
-        "borderWidth": 4,
-        "height": 40,
-        "justifyContent": "center",
-        "margin": 10,
-        "padding": 4,
-        "textAlign": "center",
-      }
-    }
-    underLineColorAndroid="transparent"
-    underlineColorAndroid="transparent"
-    value="Destination"
-  />
-  <TextInput
-    allowFontScaling={true}
-    placeholder="End"
-    placeholderTextColor="grey"
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#fff",
-        "borderColor": "#888",
-        "borderRadius": 10,
-        "borderWidth": 4,
-        "height": 40,
-        "justifyContent": "center",
-        "margin": 10,
-        "padding": 4,
-        "textAlign": "center",
-      }
-    }
-    underLineColorAndroid="transparent"
-    underlineColorAndroid="transparent"
-  />
+<View>
   <View
-    accessible={true}
-    isTVSelectable={true}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
+    pointerEvents="box-none"
     style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "rgb(0, 122, 255)",
-        "borderRadius": 10,
-        "height": 40,
-        "justifyContent": "center",
-        "margin": 10,
-        "opacity": 1,
-        "padding": 4,
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        undefined,
+      ]
     }
   >
-    <Text
+    <View
       style={
-        Object {
-          "color": "white",
-        }
+        Array [
+          Object {
+            "backgroundColor": "#C9C9CE",
+            "borderBottomColor": "#b5b5b5",
+            "borderBottomWidth": 0.5,
+            "borderTopColor": "#7e7e7e",
+            "borderTopWidth": 0.5,
+            "flexDirection": "row",
+            "height": 44,
+          },
+          Object {
+            "width": "100%",
+          },
+        ]
       }
     >
-       Search 
-    </Text>
+      <TextInput
+        allowFontScaling={true}
+        autoFocus={false}
+        clearButtonMode="while-editing"
+        editable={true}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        onSubmitEditing={[Function]}
+        placeholder="Search"
+        placeholderTextColor="#A8A8A8"
+        returnKeyType="search"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": 5,
+              "flex": 1,
+              "fontSize": 15,
+              "height": 28,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "marginTop": 7.5,
+              "paddingBottom": 4.5,
+              "paddingLeft": 10,
+              "paddingRight": 10,
+              "paddingTop": 4.5,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value=""
+      />
+    </View>
   </View>
 </View>
 `;

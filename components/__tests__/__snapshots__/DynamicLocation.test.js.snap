@@ -70,6 +70,7 @@ ShallowWrapper {
           }
         >
           <MapViewDirections
+            apikey="AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk"
             destination={
               Object {
                 "latitude": 51.523018,
@@ -123,6 +124,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <MapViewDirections
+            apikey="AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk"
             destination={
               Object {
                 "latitude": 51.523018,
@@ -153,6 +155,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "apikey": "AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk",
             "destination": Object {
               "latitude": 51.523018,
               "longitude": -0.087029,
@@ -203,6 +206,7 @@ ShallowWrapper {
             }
           >
             <MapViewDirections
+              apikey="AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk"
               destination={
                 Object {
                   "latitude": 51.523018,
@@ -256,6 +260,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <MapViewDirections
+              apikey="AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk"
               destination={
                 Object {
                   "latitude": 51.523018,
@@ -286,6 +291,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "apikey": "AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk",
               "destination": Object {
                 "latitude": 51.523018,
                 "longitude": -0.087029,
