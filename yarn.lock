@@ -7731,6 +7731,15 @@ react-native-gesture-handler@1.0.9:
     invariant "^2.2.2"
     prop-types "^15.5.10"
 
+react-native-maps-directions@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/react-native-maps-directions/-/react-native-maps-directions-1.6.0.tgz#d56e6119fd9ca9984e408970ae150fea3f9863c3"
+  integrity sha512-rr2TLqZsmHoZpPyMq6icXg8/n+3+36dvg2b1SDHWuqGZ9UGtKlOQaaGWmHmTHrwDIjer2g0QTPNV0wy+ZmwvFA==
+  dependencies:
+    lodash.isequal "^4.5.0"
+    prop-types "^15.6.0"
+
+react-native-maps@^0.22.1, react-native-maps@expo/react-native-maps#v0.22.1-exp.0:
 react-native-maps@^0.22.1, "react-native-maps@github:expo/react-native-maps#v0.22.1-exp.0":
   version "0.22.1"
   resolved "https://codeload.github.com/expo/react-native-maps/tar.gz/e6f98ff7272e5d0a7fe974a41f28593af2d77bb2"

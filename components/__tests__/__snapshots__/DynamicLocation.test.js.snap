@@ -1,13 +1,362 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders DynamicLocation component 1`] = `
-<MapView
-  provider="google"
-  showsUserLocation={true}
+<View
   style={
     Object {
       "flex": 1,
     }
   }
-/>
+>
+  <Text
+    style={
+      Object {
+        "flex": 0.25,
+      }
+    }
+  >
+     
+    null - Time 
+ null - Distance
+  </Text>
+  <MapView
+    provider="google"
+    showsUserLocation={true}
+    style={
+      Object {
+        "flex": 0.75,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Should test for setState changes to journeyTime and journeyDistance 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DynamicLocation />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Component
+          style={
+            Object {
+              "flex": 0.25,
+            }
+          }
+        >
+           
+          null - Time 
+ null - Distance
+        </Component>,
+        <MockMapView
+          provider="google"
+          showsUserLocation={true}
+          style={
+            Object {
+              "flex": 0.75,
+            }
+          }
+        >
+          <MapViewDirections
+            destination={
+              Object {
+                "latitude": 51.523018,
+                "longitude": -0.087029,
+              }
+            }
+            mode="walking"
+            onReady={[Function]}
+            origin={
+              Object {
+                "latitude": 51.5002,
+                "longitude": 0.1332,
+              }
+            }
+            strokeColor="hotpink"
+            strokeWidth={3}
+          />
+        </MockMapView>,
+      ],
+      "style": Object {
+        "flex": 1,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            " ",
+            "null - Time 
+ null - Distance",
+          ],
+          "style": Object {
+            "flex": 0.25,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          " ",
+          "null - Time 
+ null - Distance",
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <MapViewDirections
+            destination={
+              Object {
+                "latitude": 51.523018,
+                "longitude": -0.087029,
+              }
+            }
+            mode="walking"
+            onReady={[Function]}
+            origin={
+              Object {
+                "latitude": 51.5002,
+                "longitude": 0.1332,
+              }
+            }
+            strokeColor="hotpink"
+            strokeWidth={3}
+          />,
+          "provider": "google",
+          "region": undefined,
+          "showsUserLocation": true,
+          "style": Object {
+            "flex": 0.75,
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "destination": Object {
+              "latitude": 51.523018,
+              "longitude": -0.087029,
+            },
+            "mode": "walking",
+            "onReady": [Function],
+            "origin": Object {
+              "latitude": 51.5002,
+              "longitude": 0.1332,
+            },
+            "strokeColor": "hotpink",
+            "strokeWidth": 3,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Component
+            style={
+              Object {
+                "flex": 0.25,
+              }
+            }
+          >
+             
+            null - Time 
+ null - Distance
+          </Component>,
+          <MockMapView
+            provider="google"
+            showsUserLocation={true}
+            style={
+              Object {
+                "flex": 0.75,
+              }
+            }
+          >
+            <MapViewDirections
+              destination={
+                Object {
+                  "latitude": 51.523018,
+                  "longitude": -0.087029,
+                }
+              }
+              mode="walking"
+              onReady={[Function]}
+              origin={
+                Object {
+                  "latitude": 51.5002,
+                  "longitude": 0.1332,
+                }
+              }
+              strokeColor="hotpink"
+              strokeWidth={3}
+            />
+          </MockMapView>,
+        ],
+        "style": Object {
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              " ",
+              "null - Time 
+ null - Distance",
+            ],
+            "style": Object {
+              "flex": 0.25,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            " ",
+            "null - Time 
+ null - Distance",
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <MapViewDirections
+              destination={
+                Object {
+                  "latitude": 51.523018,
+                  "longitude": -0.087029,
+                }
+              }
+              mode="walking"
+              onReady={[Function]}
+              origin={
+                Object {
+                  "latitude": 51.5002,
+                  "longitude": 0.1332,
+                }
+              }
+              strokeColor="hotpink"
+              strokeWidth={3}
+            />,
+            "provider": "google",
+            "region": undefined,
+            "showsUserLocation": true,
+            "style": Object {
+              "flex": 0.75,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "destination": Object {
+                "latitude": 51.523018,
+                "longitude": -0.087029,
+              },
+              "mode": "walking",
+              "onReady": [Function],
+              "origin": Object {
+                "latitude": 51.5002,
+                "longitude": 0.1332,
+              },
+              "strokeColor": "hotpink",
+              "strokeWidth": 3,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Should test for setState changes to locationChanged: Something Updated 1`] = `
+Object {
+  "journeyDistance": null,
+  "journeyTime": null,
+  "location": Object {
+    "coords": Object {
+      "latitude": -0.09,
+      "longitude": 51,
+    },
+  },
+  "region": Object {
+    "latitude": -0.09,
+    "latitudeDelta": 0.1,
+    "longitude": 51,
+    "longitudeDelta": 0.05,
+  },
+}
+`;
+
+exports[`Should test for setState changes to locationChanged: something 1`] = `
+Object {
+  "journeyDistance": null,
+  "journeyTime": null,
+  "location": Object {
+    "coords": Object {
+      "latitude": -0.09,
+      "longitude": 51,
+    },
+  },
+}
 `;
