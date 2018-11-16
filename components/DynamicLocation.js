@@ -1,15 +1,19 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { MapView, Location, Permissions } from 'expo';
 import MapViewDirections from 'react-native-maps-directions';
-// import KEY from '../env.config';
+import KEY from '../env.config';
 
 const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
 
-const origin = { latitude: 51.5002, longitude: 0.1332 };
-const destination = { latitude: 51.523018, longitude: -0.087029 };
-// const GOOGLE_MAPS_APIKEY = KEY;
-
+const origin = '50 commercial st UK';
+const destination = 'Westminster Bridge, London SE1 7GP';
+const GOOGLE_MAPS_APIKEY = KEY;
+const styles = StyleSheet.create({
+  calloutView: {
+    fontSize: 50,
+  },
+});
 export default class DynamicLocation extends React.Component {
   state = {
     /* eslint-disable-next-line */
@@ -38,20 +42,14 @@ export default class DynamicLocation extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <Text style={{ flex: 0.25 }}>
-          {' '}
+        {/* <Text style={{ flex: 0.25 }}>
           {`${this.state.journeyTime} - Time \n ${this.state.journeyDistance} - Distance`}
-        </Text>
-        <MapView
-          style={{ flex: 0.75 }}
-          showsUserLocation
-          region={this.state.region}
-          provider="google"
-        >
+        </Text> */}
+        <MapView style={{ flex: 1 }} showsUserLocation region={this.state.region} provider="google">
           <MapViewDirections
             origin={origin}
             destination={destination}
-            // apikey={GOOGLE_MAPS_APIKEY}
+            apikey={GOOGLE_MAPS_APIKEY}
             strokeWidth={3}
             strokeColor="hotpink"
             mode="walking"
@@ -60,6 +58,11 @@ export default class DynamicLocation extends React.Component {
             }}
           />
         </MapView>
+        <MapView.Callout>
+          <View style={styles.calloutView}>
+            <Text>Hello World!</Text>
+          </View>
+        </MapView.Callout>
       </View>
     );
   }
