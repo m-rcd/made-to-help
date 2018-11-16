@@ -8,7 +8,6 @@ const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
 
 const origin = { latitude: 51.5002, longitude: 0.1332 };
 const destination = { latitude: 51.523018, longitude: -0.087029 };
-const GOOGLE_MAPS_APIKEY = KEY;
 
 export default class DynamicLocation extends React.Component {
   state = {
