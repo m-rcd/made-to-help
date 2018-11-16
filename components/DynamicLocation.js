@@ -11,8 +11,16 @@ const destination = 'Westminster Bridge, London SE1 7GP';
 const GOOGLE_MAPS_APIKEY = KEY;
 const styles = StyleSheet.create({
   calloutView: {
-    fontSize: 50,
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    width: 500
   },
+  calloutText: {
+    fontSize: 40,
+    color: 'hotpink',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontFamily: 'Verdana'
+  }
 });
 export default class DynamicLocation extends React.Component {
   state = {
@@ -41,7 +49,9 @@ export default class DynamicLocation extends React.Component {
 
   render() {
     return (
-      <View style={{ flex: 1 }}>
+      <View
+        style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}
+        >
         {/* <Text style={{ flex: 0.25 }}>
           {`${this.state.journeyTime} - Time \n ${this.state.journeyDistance} - Distance`}
         </Text> */}
@@ -54,13 +64,16 @@ export default class DynamicLocation extends React.Component {
             strokeColor="hotpink"
             mode="walking"
             onReady={(result) => {
-              this.setState({ journeyTime: result.duration, journeyDistance: result.distance });
+              this.setState({ journeyTime: result.duration, journeyDistance: result.distance.toFixed(2) });
             }}
           />
         </MapView>
         <MapView.Callout>
           <View style={styles.calloutView}>
-            <Text>Hello World!</Text>
+            <Text
+              style={styles.calloutText}
+              accessibilityLabel = {`Hello! Journey Time is ${Math.round(this.state.journeyTime)} Minutes and the distance is \n ${this.state.journeyDistance} KM`}>
+              {`${Math.round(this.state.journeyTime)} Minutes \n ${this.state.journeyDistance} KM`}</Text>
           </View>
         </MapView.Callout>
       </View>
