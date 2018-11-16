@@ -40,8 +40,7 @@ export default class Directions extends React.Component {
 
       query={{
         key: 'AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk',
-        language: 'en',
-        types: '(regions)'
+        language: 'en'
       }}
 
       styles={{
@@ -65,7 +64,6 @@ export default class Directions extends React.Component {
       }}
       GooglePlacesSearchQuery={{
         rankby: 'distance',
-        types: 'food'
       }}
 
       filterReverseGeocodingByTypes={['locality', 'administrative_area_level_3']}

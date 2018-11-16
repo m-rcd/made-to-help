@@ -36,6 +36,8 @@
     "react-native-maps": "^0.22.1",
     "react-native-maps-directions": "^1.6.0",
     "react-native-platform-touchable": "^1.1.1",
+    "react-native-progressive-input": "^1.1.0",
+    "react-native-vector-icons": "^6.0.2",
     "react-navigation": "^2.18.2",
     "react-test-renderer": "^16.6.3",
     "redux-mock-store": "^1.5.3"
