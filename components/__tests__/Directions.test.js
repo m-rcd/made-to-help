@@ -11,11 +11,29 @@ test('Renders directions component', () => {
   expect(snapshot).toMatchSnapshot();
 })
 
-it('Should test for setState changes', () => {
-  const snapshot = renderer.create(<Directions />);
-  const instance = snapshot.getInstance()
-  expect(instance.state).toMatchSnapshot('something');
+it('State should start empty', () => {
+  const wrapper = shallow(<Directions />);
+  expect(wrapper.instance().state.latitude).toBe('');
+  expect(wrapper.instance().state.longitude).toBe('');
+  expect(wrapper.instance().state.address).toBe('');
 })
+
+it('Should test for setState changes', () => {
+  const wrapper = shallow(<Directions />);
+  const instance = wrapper.instance()
+  instance.savingLocation('Makers', -0.09, 51)
+  expect(instance.state.address).toBe('Makers')
+  expect(instance.state.latitude).toBe(-0.09)
+  expect(instance.state.longitude).toBe(51)
+})
+
+// it('setStates onPress', () => {
+//   const mockFunc = jest.fn();
+//   const component = shallow(<Directions onPress={mockFunc}/>); 
+//   component.instance().savingLocation = mockFunc;
+//   component.dive().simulate('Press');
+//   expect(mockFunc).toHaveBeenCalled();
+// })
 
 it('Should test for setState changes to longitude and latitude', () => {
   const wrap = shallow(<Directions />);

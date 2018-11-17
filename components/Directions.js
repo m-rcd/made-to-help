@@ -3,15 +3,22 @@ import { View, Text } from 'react-native';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 
 export default class Directions extends React.Component {
-  state = {
-    address: '',
-    latitude: '',
-    longitude: '',
+ 
+  constructor(props) {
+      super(props);
+      this.state = { address: '', latitude: '', longitude: '' };
+    this.savingLocation = this.savingLocation.bind(this)
   }
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { address: '', latitude: '', longitude: '' };
-  // }
+
+  savingLocation(address, latitude, longitude) {
+    this.setState(
+      {
+        address: address,
+        latitude: latitude,
+        longitude: longitude,
+      },
+    );
+  }
 
   render() {
     return (
@@ -26,15 +33,8 @@ export default class Directions extends React.Component {
           returnKeyType="search"
           listViewDisplayed="auto"
           fetchDetails
-          renderDescription={row => row.description}
           onPress={(data, details = null) => {
-            this.setState(
-              {
-                address: data.description,
-                latitude: details.geometry.location.lat,
-                longitude: details.geometry.location.lng,
-              },
-            );
+            this.savingLocation(data.description, details.geometry.location.lat, details.geometry.location.lng ) 
           }}
 
           getDefaultValue={() => ''}

@@ -29,6 +29,7 @@
     "babel-polyfill": "^6.26.0",
     "detox": "^9.0.8",
     "expo": "^31.0.2",
+    "jest": "^23.6.0",
     "jest-serializer-enzyme": "^1.0.0",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",

@@ -156,7 +156,6 @@ ShallowWrapper {
               "language": "en",
             }
           }
-          renderDescription={[Function]}
           returnKeyType="search"
           styles={
             Object {
@@ -245,7 +244,6 @@ ShallowWrapper {
             "key": "AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk",
             "language": "en",
           },
-          "renderDescription": [Function],
           "returnKeyType": "search",
           "styles": Object {
             "description": Object {
@@ -336,7 +334,6 @@ ShallowWrapper {
                 "language": "en",
               }
             }
-            renderDescription={[Function]}
             returnKeyType="search"
             styles={
               Object {
@@ -425,7 +422,6 @@ ShallowWrapper {
               "key": "AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk",
               "language": "en",
             },
-            "renderDescription": [Function],
             "returnKeyType": "search",
             "styles": Object {
               "description": Object {
@@ -473,13 +469,5 @@ ShallowWrapper {
       },
     },
   },
-}
-`;
-
-exports[`Should test for setState changes: something 1`] = `
-Object {
-  "address": "",
-  "latitude": "",
-  "longitude": "",
 }
 `;
