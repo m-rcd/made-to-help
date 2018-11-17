@@ -3,19 +3,18 @@ import { View, Text } from 'react-native';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 
 export default class Directions extends React.Component {
- 
   constructor(props) {
-      super(props);
-      this.state = { address: '', latitude: '', longitude: '' };
-    this.savingLocation = this.savingLocation.bind(this)
+    super(props);
+    this.state = { address: '', latitude: '', longitude: '' };
+    this.savingLocation = this.savingLocation.bind(this);
   }
 
   savingLocation(address, latitude, longitude) {
     this.setState(
       {
-        address: address,
-        latitude: latitude,
-        longitude: longitude,
+        address,
+        latitude,
+        longitude,
       },
     );
   }
@@ -34,7 +33,8 @@ export default class Directions extends React.Component {
           listViewDisplayed="auto"
           fetchDetails
           onPress={(data, details = null) => {
-            this.savingLocation(data.description, details.geometry.location.lat, details.geometry.location.lng ) 
+            this.savingLocation(data.description,
+              details.geometry.location.lat, details.geometry.location.lng);
           }}
 
           getDefaultValue={() => ''}
