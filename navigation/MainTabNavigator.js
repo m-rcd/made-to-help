@@ -50,7 +50,7 @@ DirectionsStack.navigationOptions = {
   tabBarLabel: 'Directions',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
-      testId={'Directions'}
+      testId="Directions"
       focused={focused}
       name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
     />
