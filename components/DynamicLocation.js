@@ -8,7 +8,10 @@ const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
 
 const origin = { latitude: 51.5002, longitude: 0.1332 };
 const destination = { latitude: 51.523018, longitude: -0.087029 };
+<<<<<<< HEAD
 const GOOGLE_MAPS_APIKEY = KEY;
+=======
+>>>>>>> aa1d58e1585cba41134e2082e20cc757749cf8c6
 
 export default class DynamicLocation extends React.Component {
   state = {
@@ -18,7 +21,7 @@ export default class DynamicLocation extends React.Component {
     journeyTime: null,
   };
 
-  componentWillMount = async () => {
+  componentDidMount = async () => {
     await Permissions.askAsync(Permissions.LOCATION);
     Location.watchPositionAsync(GEOLOCATION_OPTIONS, this.locationChanged);
   };
@@ -51,7 +54,11 @@ export default class DynamicLocation extends React.Component {
           <MapViewDirections
             origin={origin}
             destination={destination}
+<<<<<<< HEAD
             apikey={GOOGLE_MAPS_APIKEY}
+=======
+            apikey={KEY}
+>>>>>>> aa1d58e1585cba41134e2082e20cc757749cf8c6
             strokeWidth={3}
             strokeColor="hotpink"
             mode="walking"
