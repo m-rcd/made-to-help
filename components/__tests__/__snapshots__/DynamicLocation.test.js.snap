@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://goo.gl/fbAQLP 
 
 exports[`Renders DynamicLocation component 1`] = `
 <View
@@ -29,7 +29,7 @@ exports[`Renders DynamicLocation component 1`] = `
       }
     >
       <Text
-        accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
+        accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is
  null KM"
         style={
           Object {
@@ -41,7 +41,7 @@ exports[`Renders DynamicLocation component 1`] = `
           }
         }
       >
-        0 Minutes 
+        0 Minutes
  null KM
       </Text>
     </View>
@@ -96,7 +96,7 @@ ShallowWrapper {
             }
           >
             <Component
-              accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
+              accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is
  null KM"
               style={
                 Object {
@@ -108,7 +108,7 @@ ShallowWrapper {
                 }
               }
             >
-              0 Minutes 
+              0 Minutes
  null KM
             </Component>
           </Component>
@@ -177,7 +177,7 @@ ShallowWrapper {
             }
           >
             <Component
-              accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
+              accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is
  null KM"
               style={
                 Object {
@@ -189,7 +189,7 @@ ShallowWrapper {
                 }
               }
             >
-              0 Minutes 
+              0 Minutes
  null KM
             </Component>
           </Component>,
@@ -201,7 +201,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <Component
-              accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
+              accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is
  null KM"
               style={
                 Object {
@@ -213,7 +213,7 @@ ShallowWrapper {
                 }
               }
             >
-              0 Minutes 
+              0 Minutes
  null KM
             </Component>,
             "style": Object {
@@ -227,9 +227,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "accessibilityLabel": "Hello! Journey Time is 0 Minutes and the distance is 
+              "accessibilityLabel": "Hello! Journey Time is 0 Minutes and the distance is
  null KM",
-              "children": "0 Minutes 
+              "children": "0 Minutes
  null KM",
               "style": Object {
                 "color": "hotpink",
@@ -240,7 +240,7 @@ ShallowWrapper {
               },
             },
             "ref": null,
-            "rendered": "0 Minutes 
+            "rendered": "0 Minutes
  null KM",
             "type": [Function],
           },
@@ -287,7 +287,7 @@ ShallowWrapper {
               }
             >
               <Component
-                accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
+                accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is
  null KM"
                 style={
                   Object {
@@ -299,7 +299,7 @@ ShallowWrapper {
                   }
                 }
               >
-                0 Minutes 
+                0 Minutes
  null KM
               </Component>
             </Component>
@@ -368,7 +368,7 @@ ShallowWrapper {
               }
             >
               <Component
-                accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
+                accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is
  null KM"
                 style={
                   Object {
@@ -380,7 +380,7 @@ ShallowWrapper {
                   }
                 }
               >
-                0 Minutes 
+                0 Minutes
  null KM
               </Component>
             </Component>,
@@ -392,7 +392,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": <Component
-                accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
+                accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is
  null KM"
                 style={
                   Object {
@@ -404,7 +404,7 @@ ShallowWrapper {
                   }
                 }
               >
-                0 Minutes 
+                0 Minutes
  null KM
               </Component>,
               "style": Object {
@@ -418,9 +418,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "accessibilityLabel": "Hello! Journey Time is 0 Minutes and the distance is 
+                "accessibilityLabel": "Hello! Journey Time is 0 Minutes and the distance is
  null KM",
-                "children": "0 Minutes 
+                "children": "0 Minutes
  null KM",
                 "style": Object {
                   "color": "hotpink",
@@ -431,7 +431,7 @@ ShallowWrapper {
                 },
               },
               "ref": null,
-              "rendered": "0 Minutes 
+              "rendered": "0 Minutes
  null KM",
               "type": [Function],
             },
