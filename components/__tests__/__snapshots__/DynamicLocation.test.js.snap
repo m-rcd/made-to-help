@@ -123,25 +123,28 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": <MapViewDirections
-            apikey="AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU"
-            destination={
-              Object {
-                "latitude": 51.523018,
-                "longitude": -0.087029,
+          "children": Array [
+            null,
+            <MapViewDirections
+              apikey="AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc"
+              destination={
+                Object {
+                  "latitude": 51.523018,
+                  "longitude": -0.087029,
+                }
               }
-            }
-            mode="walking"
-            onReady={[Function]}
-            origin={
-              Object {
-                "latitude": 51.5002,
-                "longitude": 0.1332,
+              mode="walking"
+              onReady={[Function]}
+              origin={
+                Object {
+                  "latitude": 51.5002,
+                  "longitude": 0.1332,
+                }
               }
-            }
-            strokeColor="hotpink"
-            strokeWidth={3}
-          />,
+              strokeColor="hotpink"
+              strokeWidth={3}
+            />,
+          ],
           "provider": "google",
           "region": undefined,
           "showsUserLocation": true,
@@ -150,29 +153,32 @@ ShallowWrapper {
           },
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "apikey": "AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU",
-            "destination": Object {
-              "latitude": 51.523018,
-              "longitude": -0.087029,
+        "rendered": Array [
+          null,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "apikey": "AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc",
+              "destination": Object {
+                "latitude": 51.523018,
+                "longitude": -0.087029,
+              },
+              "mode": "walking",
+              "onReady": [Function],
+              "origin": Object {
+                "latitude": 51.5002,
+                "longitude": 0.1332,
+              },
+              "strokeColor": "hotpink",
+              "strokeWidth": 3,
             },
-            "mode": "walking",
-            "onReady": [Function],
-            "origin": Object {
-              "latitude": 51.5002,
-              "longitude": 0.1332,
-            },
-            "strokeColor": "hotpink",
-            "strokeWidth": 3,
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+        ],
         "type": [Function],
       },
     ],
@@ -259,25 +265,28 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <MapViewDirections
-              apikey="AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU"
-              destination={
-                Object {
-                  "latitude": 51.523018,
-                  "longitude": -0.087029,
+            "children": Array [
+              null,
+              <MapViewDirections
+                apikey="AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc"
+                destination={
+                  Object {
+                    "latitude": 51.523018,
+                    "longitude": -0.087029,
+                  }
                 }
-              }
-              mode="walking"
-              onReady={[Function]}
-              origin={
-                Object {
-                  "latitude": 51.5002,
-                  "longitude": 0.1332,
+                mode="walking"
+                onReady={[Function]}
+                origin={
+                  Object {
+                    "latitude": 51.5002,
+                    "longitude": 0.1332,
+                  }
                 }
-              }
-              strokeColor="hotpink"
-              strokeWidth={3}
-            />,
+                strokeColor="hotpink"
+                strokeWidth={3}
+              />,
+            ],
             "provider": "google",
             "region": undefined,
             "showsUserLocation": true,
@@ -286,29 +295,32 @@ ShallowWrapper {
             },
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "apikey": "AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU",
-              "destination": Object {
-                "latitude": 51.523018,
-                "longitude": -0.087029,
+          "rendered": Array [
+            null,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "apikey": "AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc",
+                "destination": Object {
+                  "latitude": 51.523018,
+                  "longitude": -0.087029,
+                },
+                "mode": "walking",
+                "onReady": [Function],
+                "origin": Object {
+                  "latitude": 51.5002,
+                  "longitude": 0.1332,
+                },
+                "strokeColor": "hotpink",
+                "strokeWidth": 3,
               },
-              "mode": "walking",
-              "onReady": [Function],
-              "origin": Object {
-                "latitude": 51.5002,
-                "longitude": 0.1332,
-              },
-              "strokeColor": "hotpink",
-              "strokeWidth": 3,
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+          ],
           "type": [Function],
         },
       ],
@@ -337,6 +349,7 @@ ShallowWrapper {
 
 exports[`Should test for setState changes to locationChanged: Something Updated 1`] = `
 Object {
+  "isLoading": true,
   "journeyDistance": null,
   "journeyTime": null,
   "location": Object {
@@ -345,6 +358,7 @@ Object {
       "longitude": 51,
     },
   },
+  "markers": Array [],
   "region": Object {
     "latitude": -0.09,
     "latitudeDelta": 0.1,
@@ -356,6 +370,7 @@ Object {
 
 exports[`Should test for setState changes to locationChanged: something 1`] = `
 Object {
+  "isLoading": true,
   "journeyDistance": null,
   "journeyTime": null,
   "location": Object {
@@ -364,5 +379,6 @@ Object {
       "longitude": 51,
     },
   },
+  "markers": Array [],
 }
 `;
