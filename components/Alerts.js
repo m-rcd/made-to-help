@@ -1,8 +1,9 @@
 import * as firebase from 'firebase';
 import React from 'react';
 import {
-  View, TextInput, Text, Button,
+  View, TextInput, Text, Button, Alert,
 } from 'react-native';
+import { Location } from 'expo';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCwF76W5Y9qC_ow3ilkweB7IqoCxBuLUKY',
@@ -15,7 +16,18 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-export default class Alert extends React.Component {
+export default class Alerts extends React.Component {
+  state = {
+    longitude: null,
+    latitude: null,
+    text: '',
+  };
+
+  componentWillMount = async () => {
+    const location = await Location.getCurrentPositionAsync({});
+    this.setState({ longitude: location.coords.longitude, latitude: location.coords.latitude });
+  };
+
   writeAlertData = (body, location) => {
     firebase
       .database()
@@ -30,18 +42,22 @@ export default class Alert extends React.Component {
       .catch((err) => {
         console.log('Error: ', err);
       });
+    Alert.alert('Thanks, your report has been submitted. 🙃');
   };
 
   sendData = () => {
-    this.writeAlertData('this road sucks', { latitude: 51, longitude: -0.03 });
+    this.writeAlertData(this.state.text, {
+      latitude: this.state.latitude,
+      longitude: this.state.longitude,
+    });
   };
 
   render() {
     return (
       <View>
         <Text>Report a Bad Route</Text>
-        <TextInput placeholder="Body" />
-        <Button title="Submit" onPress={this.sendData} />
+        <TextInput placeholder="Body" onChangeText={text => this.setState({ text })} />
+        {this.state.text !== '' && <Button title="Submit" onPress={this.sendData} />}
       </View>
     );
   }
