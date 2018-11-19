@@ -9,4 +9,4 @@ bin
 .DS_Store
 coverage/
 yarn-error.log
-.env
+env.config.js
