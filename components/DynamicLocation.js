@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { MapView, Location, Permissions } from 'expo';
 import MapViewDirections from 'react-native-maps-directions';
 import KEY from '../env.config';
+import DisplayAlertMarkers from './DisplayAlertMarkers'
 
 const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
 
@@ -116,6 +117,7 @@ export default class DynamicLocation extends React.Component {
               {`${Math.round(this.state.journeyTime)} Minutes \n ${this.state.journeyDistance} KM`}
             </Text>
           </View>
+          <DisplayAlertMarkers />
         </MapView.Callout>
       </View>
     );
