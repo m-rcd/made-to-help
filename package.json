@@ -28,6 +28,7 @@
     "babel-eslint": "^10.0.1",
     "babel-polyfill": "^6.26.0",
     "detox": "^9.0.8",
+    "dotenv": "^6.1.0",
     "expo": "^31.0.2",
     "jest-serializer-enzyme": "^1.0.0",
     "react": "16.5.0",
