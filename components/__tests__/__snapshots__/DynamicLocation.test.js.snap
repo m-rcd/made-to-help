@@ -70,7 +70,7 @@ ShallowWrapper {
           }
         >
           <MapViewDirections
-            apikey="AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc"
+            apikey="AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU"
             destination={
               Object {
                 "latitude": 51.523018,
@@ -126,7 +126,7 @@ ShallowWrapper {
           "children": Array [
             null,
             <MapViewDirections
-              apikey="AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc"
+              apikey="AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU"
               destination={
                 Object {
                   "latitude": 51.523018,
@@ -160,7 +160,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "apikey": "AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc",
+              "apikey": "AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU",
               "destination": Object {
                 "latitude": 51.523018,
                 "longitude": -0.087029,
@@ -212,7 +212,7 @@ ShallowWrapper {
             }
           >
             <MapViewDirections
-              apikey="AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc"
+              apikey="AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU"
               destination={
                 Object {
                   "latitude": 51.523018,
@@ -268,7 +268,7 @@ ShallowWrapper {
             "children": Array [
               null,
               <MapViewDirections
-                apikey="AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc"
+                apikey="AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU"
                 destination={
                   Object {
                     "latitude": 51.523018,
@@ -302,7 +302,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "apikey": "AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc",
+                "apikey": "AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU",
                 "destination": Object {
                   "latitude": 51.523018,
                   "longitude": -0.087029,
