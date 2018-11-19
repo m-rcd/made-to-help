@@ -13,29 +13,47 @@ exports[`Map snapshot renders successfully 1`] = `
     style={
       Object {
         "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "center",
       }
     }
   >
-    <Text
-      style={
-        Object {
-          "flex": 0.25,
-        }
-      }
-    >
-       
-      null - Time 
- null - Distance
-    </Text>
     <MapView
       provider="google"
       showsUserLocation={true}
       style={
         Object {
-          "flex": 0.75,
+          "flex": 1,
         }
       }
     />
+    <Callout>
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgba(255, 255, 255, 0.3)",
+            "width": 500,
+          }
+        }
+      >
+        <Text
+          accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
+ null KM"
+          style={
+            Object {
+              "color": "hotpink",
+              "fontFamily": "Verdana",
+              "fontSize": 40,
+              "fontWeight": "bold",
+              "textAlign": "center",
+            }
+          }
+        >
+          0 Minutes 
+ null KM
+        </Text>
+      </View>
+    </Callout>
   </View>
 </View>
 `;

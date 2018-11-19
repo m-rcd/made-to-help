@@ -5,29 +5,47 @@ exports[`Renders DynamicLocation component 1`] = `
   style={
     Object {
       "flex": 1,
+      "flexDirection": "row",
+      "justifyContent": "center",
     }
   }
 >
-  <Text
-    style={
-      Object {
-        "flex": 0.25,
-      }
-    }
-  >
-     
-    null - Time 
- null - Distance
-  </Text>
   <MapView
     provider="google"
     showsUserLocation={true}
     style={
       Object {
-        "flex": 0.75,
+        "flex": 1,
       }
     }
   />
+  <Callout>
+    <View
+      style={
+        Object {
+          "backgroundColor": "rgba(255, 255, 255, 0.3)",
+          "width": 500,
+        }
+      }
+    >
+      <Text
+        accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
+ null KM"
+        style={
+          Object {
+            "color": "hotpink",
+            "fontFamily": "Verdana",
+            "fontSize": 40,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        0 Minutes 
+ null KM
+      </Text>
+    </View>
+  </Callout>
 </View>
 `;
 
@@ -49,48 +67,57 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": Array [
-        <Component
-          style={
-            Object {
-              "flex": 0.25,
-            }
-          }
-        >
-           
-          null - Time 
- null - Distance
-        </Component>,
         <MockMapView
           provider="google"
           showsUserLocation={true}
           style={
             Object {
-              "flex": 0.75,
+              "flex": 1,
             }
           }
         >
           <MapViewDirections
-            destination={
-              Object {
-                "latitude": 51.523018,
-                "longitude": -0.087029,
-              }
-            }
+            apikey="GOOGLE_MAPS_APIKEY"
+            destination="Westminster Bridge, London SE1 7GP"
             mode="walking"
             onReady={[Function]}
-            origin={
-              Object {
-                "latitude": 51.5002,
-                "longitude": 0.1332,
-              }
-            }
+            origin="50 commercial st UK"
             strokeColor="hotpink"
             strokeWidth={3}
           />
         </MockMapView>,
+        <Unknown>
+          <Component
+            style={
+              Object {
+                "backgroundColor": "rgba(255, 255, 255, 0.3)",
+                "width": 500,
+              }
+            }
+          >
+            <Component
+              accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
+ null KM"
+              style={
+                Object {
+                  "color": "hotpink",
+                  "fontFamily": "Verdana",
+                  "fontSize": 40,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              0 Minutes 
+ null KM
+            </Component>
+          </Component>
+        </Unknown>,
       ],
       "style": Object {
         "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "center",
       },
     },
     "ref": null,
@@ -100,43 +127,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": Array [
-            " ",
-            "null - Time 
- null - Distance",
-          ],
-          "style": Object {
-            "flex": 0.25,
-          },
-        },
-        "ref": null,
-        "rendered": Array [
-          " ",
-          "null - Time 
- null - Distance",
-        ],
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
           "children": <MapViewDirections
-            destination={
-              Object {
-                "latitude": 51.523018,
-                "longitude": -0.087029,
-              }
-            }
+            apikey="GOOGLE_MAPS_APIKEY"
+            destination="Westminster Bridge, London SE1 7GP"
             mode="walking"
             onReady={[Function]}
-            origin={
-              Object {
-                "latitude": 51.5002,
-                "longitude": 0.1332,
-              }
-            }
+            origin="50 commercial st UK"
             strokeColor="hotpink"
             strokeWidth={3}
           />,
@@ -144,7 +140,7 @@ ShallowWrapper {
           "region": undefined,
           "showsUserLocation": true,
           "style": Object {
-            "flex": 0.75,
+            "flex": 1,
           },
         },
         "ref": null,
@@ -153,21 +149,101 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "destination": Object {
-              "latitude": 51.523018,
-              "longitude": -0.087029,
-            },
+            "apikey": "GOOGLE_MAPS_APIKEY",
+            "destination": "Westminster Bridge, London SE1 7GP",
             "mode": "walking",
             "onReady": [Function],
-            "origin": Object {
-              "latitude": 51.5002,
-              "longitude": 0.1332,
-            },
+            "origin": "50 commercial st UK",
             "strokeColor": "hotpink",
             "strokeWidth": 3,
           },
           "ref": null,
           "rendered": null,
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <Component
+            style={
+              Object {
+                "backgroundColor": "rgba(255, 255, 255, 0.3)",
+                "width": 500,
+              }
+            }
+          >
+            <Component
+              accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
+ null KM"
+              style={
+                Object {
+                  "color": "hotpink",
+                  "fontFamily": "Verdana",
+                  "fontSize": 40,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              0 Minutes 
+ null KM
+            </Component>
+          </Component>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Component
+              accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
+ null KM"
+              style={
+                Object {
+                  "color": "hotpink",
+                  "fontFamily": "Verdana",
+                  "fontSize": 40,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              0 Minutes 
+ null KM
+            </Component>,
+            "style": Object {
+              "backgroundColor": "rgba(255, 255, 255, 0.3)",
+              "width": 500,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessibilityLabel": "Hello! Journey Time is 0 Minutes and the distance is 
+ null KM",
+              "children": "0 Minutes 
+ null KM",
+              "style": Object {
+                "color": "hotpink",
+                "fontFamily": "Verdana",
+                "fontSize": 40,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": "0 Minutes 
+ null KM",
+            "type": [Function],
+          },
           "type": [Function],
         },
         "type": [Function],
@@ -182,48 +258,57 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": Array [
-          <Component
-            style={
-              Object {
-                "flex": 0.25,
-              }
-            }
-          >
-             
-            null - Time 
- null - Distance
-          </Component>,
           <MockMapView
             provider="google"
             showsUserLocation={true}
             style={
               Object {
-                "flex": 0.75,
+                "flex": 1,
               }
             }
           >
             <MapViewDirections
-              destination={
-                Object {
-                  "latitude": 51.523018,
-                  "longitude": -0.087029,
-                }
-              }
+              apikey="GOOGLE_MAPS_APIKEY"
+              destination="Westminster Bridge, London SE1 7GP"
               mode="walking"
               onReady={[Function]}
-              origin={
-                Object {
-                  "latitude": 51.5002,
-                  "longitude": 0.1332,
-                }
-              }
+              origin="50 commercial st UK"
               strokeColor="hotpink"
               strokeWidth={3}
             />
           </MockMapView>,
+          <Unknown>
+            <Component
+              style={
+                Object {
+                  "backgroundColor": "rgba(255, 255, 255, 0.3)",
+                  "width": 500,
+                }
+              }
+            >
+              <Component
+                accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
+ null KM"
+                style={
+                  Object {
+                    "color": "hotpink",
+                    "fontFamily": "Verdana",
+                    "fontSize": 40,
+                    "fontWeight": "bold",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                0 Minutes 
+ null KM
+              </Component>
+            </Component>
+          </Unknown>,
         ],
         "style": Object {
           "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
         },
       },
       "ref": null,
@@ -233,43 +318,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": Array [
-              " ",
-              "null - Time 
- null - Distance",
-            ],
-            "style": Object {
-              "flex": 0.25,
-            },
-          },
-          "ref": null,
-          "rendered": Array [
-            " ",
-            "null - Time 
- null - Distance",
-          ],
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
             "children": <MapViewDirections
-              destination={
-                Object {
-                  "latitude": 51.523018,
-                  "longitude": -0.087029,
-                }
-              }
+              apikey="GOOGLE_MAPS_APIKEY"
+              destination="Westminster Bridge, London SE1 7GP"
               mode="walking"
               onReady={[Function]}
-              origin={
-                Object {
-                  "latitude": 51.5002,
-                  "longitude": 0.1332,
-                }
-              }
+              origin="50 commercial st UK"
               strokeColor="hotpink"
               strokeWidth={3}
             />,
@@ -277,7 +331,7 @@ ShallowWrapper {
             "region": undefined,
             "showsUserLocation": true,
             "style": Object {
-              "flex": 0.75,
+              "flex": 1,
             },
           },
           "ref": null,
@@ -286,21 +340,101 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "destination": Object {
-                "latitude": 51.523018,
-                "longitude": -0.087029,
-              },
+              "apikey": "GOOGLE_MAPS_APIKEY",
+              "destination": "Westminster Bridge, London SE1 7GP",
               "mode": "walking",
               "onReady": [Function],
-              "origin": Object {
-                "latitude": 51.5002,
-                "longitude": 0.1332,
-              },
+              "origin": "50 commercial st UK",
               "strokeColor": "hotpink",
               "strokeWidth": 3,
             },
             "ref": null,
             "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <Component
+              style={
+                Object {
+                  "backgroundColor": "rgba(255, 255, 255, 0.3)",
+                  "width": 500,
+                }
+              }
+            >
+              <Component
+                accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
+ null KM"
+                style={
+                  Object {
+                    "color": "hotpink",
+                    "fontFamily": "Verdana",
+                    "fontSize": 40,
+                    "fontWeight": "bold",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                0 Minutes 
+ null KM
+              </Component>
+            </Component>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Component
+                accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
+ null KM"
+                style={
+                  Object {
+                    "color": "hotpink",
+                    "fontFamily": "Verdana",
+                    "fontSize": 40,
+                    "fontWeight": "bold",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                0 Minutes 
+ null KM
+              </Component>,
+              "style": Object {
+                "backgroundColor": "rgba(255, 255, 255, 0.3)",
+                "width": 500,
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessibilityLabel": "Hello! Journey Time is 0 Minutes and the distance is 
+ null KM",
+                "children": "0 Minutes 
+ null KM",
+                "style": Object {
+                  "color": "hotpink",
+                  "fontFamily": "Verdana",
+                  "fontSize": 40,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                },
+              },
+              "ref": null,
+              "rendered": "0 Minutes 
+ null KM",
+              "type": [Function],
+            },
             "type": [Function],
           },
           "type": [Function],
