@@ -1,8 +1,6 @@
 import * as firebase from 'firebase';
 import React from 'react';
-import {
-  View, Button,
-} from 'react-native';
+import { View, Button } from 'react-native';
 import { MapView } from 'expo';
 
 export default class DisplayAlertMarkers extends React.Component {
@@ -11,15 +9,20 @@ export default class DisplayAlertMarkers extends React.Component {
     markers: [],
   };
 
-  getMarkerData = () => {
+  componentWillMount() {
     firebase
       .database()
       .ref('alerts/')
-      .on('value', (snapshot) => {
+      .once('value')
+      .then((snapshot) => {
         const data = snapshot.val();
         const items = Object.values(data);
         this.setState({ markers: items });
       });
+  }
+
+  getMarkerData = () => {
+    this.setState({ isLoading: false });
   };
 
   render() {
@@ -27,14 +30,18 @@ export default class DisplayAlertMarkers extends React.Component {
       <View>
         {this.state.isLoading
           ? null
-          : this.state.markers.map((marker, index) => {
-            const coords = {
-              latitude: marker.location.latitude,
-              longitude: marker.location.longitude,
-            };
+          : this.state.markers.forEach((marker) => {
             const alertData = `${marker.body}`;
-
-            return <MapView.Marker key={index} coordinate={coords} title={alertData} />;
+            console.log(marker.location.latitude);
+            return (
+              <MapView.Marker
+                coordinate={{
+                  latitude: marker.location.latitude,
+                  longitude: marker.location.longitude,
+                }}
+                title={alertData}
+              />
+            );
           })}
         <Button title="Alerts" onPress={this.getMarkerData} />
       </View>

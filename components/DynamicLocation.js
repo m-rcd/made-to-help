@@ -3,10 +3,9 @@ import { View, Text, StyleSheet } from 'react-native';
 import { MapView, Location, Permissions } from 'expo';
 import MapViewDirections from 'react-native-maps-directions';
 import KEY from '../env.config';
-import DisplayAlertMarkers from './DisplayAlertMarkers'
+import DisplayAlertMarkers from './DisplayAlertMarkers';
 
 const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
-
 
 const origin = '50 commercial st UK';
 const destination = 'Westminster Bridge, London SE1 7GP';
@@ -64,18 +63,14 @@ export default class DynamicLocation extends React.Component {
       .catch((error) => {
         console.log(error);
       });
-  }
+  };
 
   render() {
     return (
       <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
-        <MapView
-          style={{ flex: 1 }}
-          showsUserLocation
-          region={this.state.region}
-          provider="google"
-        >
-          {this.state.isLoading ? null
+        <MapView style={{ flex: 1 }} showsUserLocation region={this.state.region} provider="google">
+          {this.state.isLoading
+            ? null
             : this.state.markers.map((marker, index) => {
               const coords = {
                 latitude: marker.latitude,
@@ -112,12 +107,14 @@ export default class DynamicLocation extends React.Component {
           <View style={styles.calloutView}>
             <Text
               style={styles.calloutText}
-              accessibilityLabel={`Hello! Journey Time is ${Math.round(this.state.journeyTime)} Minutes and the distance is \n ${this.state.journeyDistance} KM`}
+              accessibilityLabel={`Hello! Journey Time is ${Math.round(
+                this.state.journeyTime,
+              )} Minutes and the distance is \n ${this.state.journeyDistance} KM`}
             >
               {`${Math.round(this.state.journeyTime)} Minutes \n ${this.state.journeyDistance} KM`}
             </Text>
+            <DisplayAlertMarkers />
           </View>
-          <DisplayAlertMarkers />
         </MapView.Callout>
       </View>
     );
