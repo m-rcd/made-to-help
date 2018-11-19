@@ -79,6 +79,7 @@ ShallowWrapper {
           <MapViewDirections
             apikey="GOOGLE_MAPS_APIKEY"
             destination="Westminster Bridge, London SE1 7GP"
+
             mode="walking"
             onReady={[Function]}
             origin="50 commercial st UK"

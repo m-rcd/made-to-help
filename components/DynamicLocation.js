@@ -2,13 +2,14 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { MapView, Location, Permissions } from 'expo';
 import MapViewDirections from 'react-native-maps-directions';
-// import KEY from '../env.config';
+import KEY from '../env.config';
 
 const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
 
+
 const origin = '50 commercial st UK';
 const destination = 'Westminster Bridge, London SE1 7GP';
-// const GOOGLE_MAPS_APIKEY = KEY;
+
 const styles = StyleSheet.create({
   calloutView: {
     backgroundColor: 'rgba(255, 255, 255, 0.3)',
@@ -22,6 +23,9 @@ const styles = StyleSheet.create({
     fontFamily: 'Verdana',
   },
 });
+
+const DB_URL = KEY;
+
 export default class DynamicLocation extends React.Component {
   state = {
     /* eslint-disable-next-line */
@@ -30,7 +34,7 @@ export default class DynamicLocation extends React.Component {
     journeyTime: null,
   };
 
-  componentWillMount = async () => {
+  componentDidMount = async () => {
     await Permissions.askAsync(Permissions.LOCATION);
     Location.watchPositionAsync(GEOLOCATION_OPTIONS, this.locationChanged);
   };
@@ -56,7 +60,7 @@ export default class DynamicLocation extends React.Component {
           <MapViewDirections
             origin={origin}
             destination={destination}
-            apikey="GOOGLE_MAPS_APIKEY"
+            apikey={DB_URL}
             strokeWidth={3}
             strokeColor="hotpink"
             mode="walking"
