@@ -67,13 +67,9 @@ export default class DynamicLocation extends React.Component {
 
   render() {
     return (
-      <View style={{ flex: 1 }}>
-        <Text style={{ flex: 0.25 }}>
-          {' '}
-          {`${this.state.journeyTime} - Time \n ${this.state.journeyDistance} - Distance`}
-        </Text>
+      <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
         <MapView
-          style={{ flex: 0.75 }}
+          style={{ flex: 1 }}
           showsUserLocation
           region={this.state.region}
           provider="google"
