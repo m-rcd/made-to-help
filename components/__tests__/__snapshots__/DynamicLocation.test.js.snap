@@ -70,7 +70,7 @@ ShallowWrapper {
           }
         >
           <MapViewDirections
-            apikey="qbK2Xk22XxIthNHi1uJGfg8Ghx535grHLwRFqPOrZHbORWiFxnbzKuZO248j1u6Rt/gF6HlVsMw7hj21Xch2RIZd4K976iwXQRYyGV8kDcLRkBYciR2743bKgxd23YtVJYpCazguKD2bfsFGARjP+HkJTgCUQXUYop00S5Mpd81P45uvJHOmJwTPdSJNmWFApbEl7fYHClDOjoHMTIRWO646Meb/OwlZ4nZUVQgAnIdo1j5xJWtyZspuTn0vKh4wViEu9dDzPCipgbZ5LvI6dTD9EGioH6aG9fCkP4RcSEIZVbHpXLIjKLT5DFknZFuj2dHzrWxt35td8lfbIg7hnBEk7UzZg4G9zutb6LcIbXfiv47J+eBkvc9h/SMnrnh4WqQE+/tWTUswx1HioKBKpz9HONHjPr8+6B/ZpgziTKTXShqcG6qNi9tekN7XerygbOMbkd+urml4n8OUDzF0KJBhUZ5el0bSQre6sVSfLLe0HZ6k2f6xDKwI7KA07ovSU5DIUOsh8itswVc+XtvGnyuu9AePXA32ATDEO0e2PPSP0mRyaZf/p1jxaJ5+Hm1unoU58FIvhAv1YV0e5CLCCupECy/UZfDYzv/kS9hRiFJDH052xqE7/WOHIIqATXrp1ovYVWmuDZL0DSH9okxF4u51RFExerWR+GgHFeIWNP4="
+            apikey="AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc"
             destination={
               Object {
                 "latitude": 51.523018,
@@ -124,7 +124,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <MapViewDirections
-            apikey="qbK2Xk22XxIthNHi1uJGfg8Ghx535grHLwRFqPOrZHbORWiFxnbzKuZO248j1u6Rt/gF6HlVsMw7hj21Xch2RIZd4K976iwXQRYyGV8kDcLRkBYciR2743bKgxd23YtVJYpCazguKD2bfsFGARjP+HkJTgCUQXUYop00S5Mpd81P45uvJHOmJwTPdSJNmWFApbEl7fYHClDOjoHMTIRWO646Meb/OwlZ4nZUVQgAnIdo1j5xJWtyZspuTn0vKh4wViEu9dDzPCipgbZ5LvI6dTD9EGioH6aG9fCkP4RcSEIZVbHpXLIjKLT5DFknZFuj2dHzrWxt35td8lfbIg7hnBEk7UzZg4G9zutb6LcIbXfiv47J+eBkvc9h/SMnrnh4WqQE+/tWTUswx1HioKBKpz9HONHjPr8+6B/ZpgziTKTXShqcG6qNi9tekN7XerygbOMbkd+urml4n8OUDzF0KJBhUZ5el0bSQre6sVSfLLe0HZ6k2f6xDKwI7KA07ovSU5DIUOsh8itswVc+XtvGnyuu9AePXA32ATDEO0e2PPSP0mRyaZf/p1jxaJ5+Hm1unoU58FIvhAv1YV0e5CLCCupECy/UZfDYzv/kS9hRiFJDH052xqE7/WOHIIqATXrp1ovYVWmuDZL0DSH9okxF4u51RFExerWR+GgHFeIWNP4="
+            apikey="AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc"
             destination={
               Object {
                 "latitude": 51.523018,
@@ -155,7 +155,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "apikey": "qbK2Xk22XxIthNHi1uJGfg8Ghx535grHLwRFqPOrZHbORWiFxnbzKuZO248j1u6Rt/gF6HlVsMw7hj21Xch2RIZd4K976iwXQRYyGV8kDcLRkBYciR2743bKgxd23YtVJYpCazguKD2bfsFGARjP+HkJTgCUQXUYop00S5Mpd81P45uvJHOmJwTPdSJNmWFApbEl7fYHClDOjoHMTIRWO646Meb/OwlZ4nZUVQgAnIdo1j5xJWtyZspuTn0vKh4wViEu9dDzPCipgbZ5LvI6dTD9EGioH6aG9fCkP4RcSEIZVbHpXLIjKLT5DFknZFuj2dHzrWxt35td8lfbIg7hnBEk7UzZg4G9zutb6LcIbXfiv47J+eBkvc9h/SMnrnh4WqQE+/tWTUswx1HioKBKpz9HONHjPr8+6B/ZpgziTKTXShqcG6qNi9tekN7XerygbOMbkd+urml4n8OUDzF0KJBhUZ5el0bSQre6sVSfLLe0HZ6k2f6xDKwI7KA07ovSU5DIUOsh8itswVc+XtvGnyuu9AePXA32ATDEO0e2PPSP0mRyaZf/p1jxaJ5+Hm1unoU58FIvhAv1YV0e5CLCCupECy/UZfDYzv/kS9hRiFJDH052xqE7/WOHIIqATXrp1ovYVWmuDZL0DSH9okxF4u51RFExerWR+GgHFeIWNP4=",
+            "apikey": "AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc",
             "destination": Object {
               "latitude": 51.523018,
               "longitude": -0.087029,
@@ -206,7 +206,7 @@ ShallowWrapper {
             }
           >
             <MapViewDirections
-              apikey="qbK2Xk22XxIthNHi1uJGfg8Ghx535grHLwRFqPOrZHbORWiFxnbzKuZO248j1u6Rt/gF6HlVsMw7hj21Xch2RIZd4K976iwXQRYyGV8kDcLRkBYciR2743bKgxd23YtVJYpCazguKD2bfsFGARjP+HkJTgCUQXUYop00S5Mpd81P45uvJHOmJwTPdSJNmWFApbEl7fYHClDOjoHMTIRWO646Meb/OwlZ4nZUVQgAnIdo1j5xJWtyZspuTn0vKh4wViEu9dDzPCipgbZ5LvI6dTD9EGioH6aG9fCkP4RcSEIZVbHpXLIjKLT5DFknZFuj2dHzrWxt35td8lfbIg7hnBEk7UzZg4G9zutb6LcIbXfiv47J+eBkvc9h/SMnrnh4WqQE+/tWTUswx1HioKBKpz9HONHjPr8+6B/ZpgziTKTXShqcG6qNi9tekN7XerygbOMbkd+urml4n8OUDzF0KJBhUZ5el0bSQre6sVSfLLe0HZ6k2f6xDKwI7KA07ovSU5DIUOsh8itswVc+XtvGnyuu9AePXA32ATDEO0e2PPSP0mRyaZf/p1jxaJ5+Hm1unoU58FIvhAv1YV0e5CLCCupECy/UZfDYzv/kS9hRiFJDH052xqE7/WOHIIqATXrp1ovYVWmuDZL0DSH9okxF4u51RFExerWR+GgHFeIWNP4="
+              apikey="AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc"
               destination={
                 Object {
                   "latitude": 51.523018,
@@ -260,7 +260,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <MapViewDirections
-              apikey="qbK2Xk22XxIthNHi1uJGfg8Ghx535grHLwRFqPOrZHbORWiFxnbzKuZO248j1u6Rt/gF6HlVsMw7hj21Xch2RIZd4K976iwXQRYyGV8kDcLRkBYciR2743bKgxd23YtVJYpCazguKD2bfsFGARjP+HkJTgCUQXUYop00S5Mpd81P45uvJHOmJwTPdSJNmWFApbEl7fYHClDOjoHMTIRWO646Meb/OwlZ4nZUVQgAnIdo1j5xJWtyZspuTn0vKh4wViEu9dDzPCipgbZ5LvI6dTD9EGioH6aG9fCkP4RcSEIZVbHpXLIjKLT5DFknZFuj2dHzrWxt35td8lfbIg7hnBEk7UzZg4G9zutb6LcIbXfiv47J+eBkvc9h/SMnrnh4WqQE+/tWTUswx1HioKBKpz9HONHjPr8+6B/ZpgziTKTXShqcG6qNi9tekN7XerygbOMbkd+urml4n8OUDzF0KJBhUZ5el0bSQre6sVSfLLe0HZ6k2f6xDKwI7KA07ovSU5DIUOsh8itswVc+XtvGnyuu9AePXA32ATDEO0e2PPSP0mRyaZf/p1jxaJ5+Hm1unoU58FIvhAv1YV0e5CLCCupECy/UZfDYzv/kS9hRiFJDH052xqE7/WOHIIqATXrp1ovYVWmuDZL0DSH9okxF4u51RFExerWR+GgHFeIWNP4="
+              apikey="AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc"
               destination={
                 Object {
                   "latitude": 51.523018,
@@ -291,7 +291,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "apikey": "qbK2Xk22XxIthNHi1uJGfg8Ghx535grHLwRFqPOrZHbORWiFxnbzKuZO248j1u6Rt/gF6HlVsMw7hj21Xch2RIZd4K976iwXQRYyGV8kDcLRkBYciR2743bKgxd23YtVJYpCazguKD2bfsFGARjP+HkJTgCUQXUYop00S5Mpd81P45uvJHOmJwTPdSJNmWFApbEl7fYHClDOjoHMTIRWO646Meb/OwlZ4nZUVQgAnIdo1j5xJWtyZspuTn0vKh4wViEu9dDzPCipgbZ5LvI6dTD9EGioH6aG9fCkP4RcSEIZVbHpXLIjKLT5DFknZFuj2dHzrWxt35td8lfbIg7hnBEk7UzZg4G9zutb6LcIbXfiv47J+eBkvc9h/SMnrnh4WqQE+/tWTUswx1HioKBKpz9HONHjPr8+6B/ZpgziTKTXShqcG6qNi9tekN7XerygbOMbkd+urml4n8OUDzF0KJBhUZ5el0bSQre6sVSfLLe0HZ6k2f6xDKwI7KA07ovSU5DIUOsh8itswVc+XtvGnyuu9AePXA32ATDEO0e2PPSP0mRyaZf/p1jxaJ5+Hm1unoU58FIvhAv1YV0e5CLCCupECy/UZfDYzv/kS9hRiFJDH052xqE7/WOHIIqATXrp1ovYVWmuDZL0DSH9okxF4u51RFExerWR+GgHFeIWNP4=",
+              "apikey": "AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc",
               "destination": Object {
                 "latitude": 51.523018,
                 "longitude": -0.087029,
