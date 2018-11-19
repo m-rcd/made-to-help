@@ -8,9 +8,10 @@ import { Location } from 'expo';
 export default class DisplayAlertMarkers extends React.Component {
   state = {
     markers: [],
+    isLoading: true,
   }
 
-  componentWillMount() {
+  getMarkerData = () => {
     firebase.database().ref('alerts/').on('value', (snapshot) => {
       let data = snapshot.val();
       let items = Object.values(data);
@@ -20,8 +21,22 @@ export default class DisplayAlertMarkers extends React.Component {
 
   render() {
     return (
-      <View>
-      </View>
+      <Button title="Alerts" onPress={this.getMarkerData} />
+      {this.state.isLoading ? null : this.state.markers.map((marker, index) => {
+        const coords = {
+          latitude: marker.location.latitude,
+          longitude: marker.location.longitude,
+        };
+        const alertData = `${marker.body}`;
+
+        return (
+          <MapView.Marker
+          key={index}
+          coordinate={coords}
+          title={alertData}
+        />
+        );
+      })}
     )
   }
 };
