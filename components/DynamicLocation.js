@@ -32,11 +32,14 @@ export default class DynamicLocation extends React.Component {
     location: { coords: { latitude: -0.09, longitude: 51 } },
     journeyDistance: null,
     journeyTime: null,
+    isLoading: true,
+    markers: [],
   };
 
   componentDidMount = async () => {
     await Permissions.askAsync(Permissions.LOCATION);
     Location.watchPositionAsync(GEOLOCATION_OPTIONS, this.locationChanged);
+    this.fetchMarkerData();
   };
 
   /* eslint-disable */
@@ -51,12 +54,48 @@ export default class DynamicLocation extends React.Component {
   };
   /* eslint-enable */
 
+  fetchMarkerData = () => {
+    fetch('https://made-to-help.herokuapp.com/api/stations')
+      .then(response => response.json())
+      .then((responseJson) => {
+        this.setState({ isLoading: false, markers: responseJson });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   render() {
     return (
-      <View
-        style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}
-      >
-        <MapView style={{ flex: 1 }} showsUserLocation region={this.state.region} provider="google">
+      <View style={{ flex: 1 }}>
+        <Text style={{ flex: 0.25 }}>
+          {' '}
+          {`${this.state.journeyTime} - Time \n ${this.state.journeyDistance} - Distance`}
+        </Text>
+        <MapView
+          style={{ flex: 0.75 }}
+          showsUserLocation
+          region={this.state.region}
+          provider="google"
+        >
+          {this.state.isLoading ? null
+            : this.state.markers.map((marker, index) => {
+              const coords = {
+                latitude: marker.latitude,
+                longitude: marker.longitude,
+              };
+              const stepData = `Accessibility: ${marker.stepFree}`;
+
+              return (
+                <MapView.Marker
+                  key={index}
+                  coordinate={coords}
+                  title={marker.station}
+                  description={stepData}
+                  image={require('../assets/images/wheelchair-access.png')}
+                />
+              );
+            })}
           <MapViewDirections
             origin={origin}
             destination={destination}
