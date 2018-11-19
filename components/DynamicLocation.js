@@ -8,7 +8,7 @@ const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
 
 const origin = { latitude: 51.5002, longitude: 0.1332 };
 const destination = { latitude: 51.523018, longitude: -0.087029 };
-const GOOGLE_MAPS_APIKEY = KEY;
+const DB_URL = KEY;
 
 export default class DynamicLocation extends React.Component {
   state = {
@@ -51,7 +51,7 @@ export default class DynamicLocation extends React.Component {
           <MapViewDirections
             origin={origin}
             destination={destination}
-            apikey={GOOGLE_MAPS_APIKEY}
+            apikey={DB_URL}
             strokeWidth={3}
             strokeColor="hotpink"
             mode="walking"
