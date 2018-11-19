@@ -28,12 +28,16 @@ it('Should test for setState changes', () => {
 })
 
 // it('setStates onPress', () => {
-//   const mockFunc = jest.fn();
-//   const component = shallow(<Directions onPress={mockFunc}/>); 
-//   component.instance().savingLocation = mockFunc;
-//   component.dive().simulate('Press');
-//   expect(mockFunc).toHaveBeenCalled();
-// })
+//   const data = 'test'
+//   const details = 'hi'
+//   const onPress = jest.fn();
+//   const component = shallow(<Directions onPress={onPress}/>);
+//   component.find('GooglePlacesAutocomplete').simulate('press', {
+//         target: {  details, data},
+//       });
+//
+//     expect(onPress).toBeCalledWith(details, data);
+// });
 
 it('Should test for setState changes to longitude and latitude', () => {
   const wrap = shallow(<Directions />);
