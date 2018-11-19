@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+import KEY from '../env.config';
+
 
 export default class Directions extends React.Component {
   constructor(props) {
@@ -40,7 +42,7 @@ export default class Directions extends React.Component {
           getDefaultValue={() => ''}
 
           query={{
-            key: 'AIzaSyB2rfzTA_qJznxhWxxxpuU4e2e6WvLPklk',
+            key: KEY,
             language: 'en',
           }}
 

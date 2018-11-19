@@ -8,5 +8,5 @@ npm-debug.*
 bin
 .DS_Store
 coverage/
-env.config.js
 yarn-error.log
+.env
