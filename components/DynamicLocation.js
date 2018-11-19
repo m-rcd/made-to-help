@@ -1,13 +1,29 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { MapView, Location, Permissions } from 'expo';
 import MapViewDirections from 'react-native-maps-directions';
 import KEY from '../env.config';
 
 const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
 
-const origin = { latitude: 51.5002, longitude: 0.1332 };
-const destination = { latitude: 51.523018, longitude: -0.087029 };
+
+const origin = '50 commercial st UK';
+const destination = 'Westminster Bridge, London SE1 7GP';
+
+const styles = StyleSheet.create({
+  calloutView: {
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    width: 500,
+  },
+  calloutText: {
+    fontSize: 40,
+    color: 'hotpink',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontFamily: 'Verdana',
+  },
+});
+
 const DB_URL = KEY;
 
 export default class DynamicLocation extends React.Component {
@@ -51,13 +67,9 @@ export default class DynamicLocation extends React.Component {
 
   render() {
     return (
-      <View style={{ flex: 1 }}>
-        <Text style={{ flex: 0.25 }}>
-          {' '}
-          {`${this.state.journeyTime} - Time \n ${this.state.journeyDistance} - Distance`}
-        </Text>
+      <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
         <MapView
-          style={{ flex: 0.75 }}
+          style={{ flex: 1 }}
           showsUserLocation
           region={this.state.region}
           provider="google"
@@ -88,10 +100,23 @@ export default class DynamicLocation extends React.Component {
             strokeColor="hotpink"
             mode="walking"
             onReady={(result) => {
-              this.setState({ journeyTime: result.duration, journeyDistance: result.distance });
+              this.setState({
+                journeyTime: result.duration,
+                journeyDistance: result.distance.toFixed(2),
+              });
             }}
           />
         </MapView>
+        <MapView.Callout>
+          <View style={styles.calloutView}>
+            <Text
+              style={styles.calloutText}
+              accessibilityLabel={`Hello! Journey Time is ${Math.round(this.state.journeyTime)} Minutes and the distance is \n ${this.state.journeyDistance} KM`}
+            >
+              {`${Math.round(this.state.journeyTime)} Minutes \n ${this.state.journeyDistance} KM`}
+            </Text>
+          </View>
+        </MapView.Callout>
       </View>
     );
   }
