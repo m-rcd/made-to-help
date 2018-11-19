@@ -77,9 +77,8 @@ ShallowWrapper {
           }
         >
           <MapViewDirections
-            apikey="GOOGLE_MAPS_APIKEY"
+            apikey="AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc"
             destination="Westminster Bridge, London SE1 7GP"
-
             mode="walking"
             onReady={[Function]}
             origin="50 commercial st UK"
@@ -129,7 +128,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <MapViewDirections
-            apikey="GOOGLE_MAPS_APIKEY"
+            apikey="AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc"
             destination="Westminster Bridge, London SE1 7GP"
             mode="walking"
             onReady={[Function]}
@@ -150,7 +149,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "apikey": "GOOGLE_MAPS_APIKEY",
+            "apikey": "AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc",
             "destination": "Westminster Bridge, London SE1 7GP",
             "mode": "walking",
             "onReady": [Function],
@@ -269,7 +268,7 @@ ShallowWrapper {
             }
           >
             <MapViewDirections
-              apikey="GOOGLE_MAPS_APIKEY"
+              apikey="AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc"
               destination="Westminster Bridge, London SE1 7GP"
               mode="walking"
               onReady={[Function]}
@@ -320,7 +319,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <MapViewDirections
-              apikey="GOOGLE_MAPS_APIKEY"
+              apikey="AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc"
               destination="Westminster Bridge, London SE1 7GP"
               mode="walking"
               onReady={[Function]}
@@ -341,7 +340,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "apikey": "GOOGLE_MAPS_APIKEY",
+              "apikey": "AIzaSyCbhVNmiXfsH9OAomH1G2je9QfFqD8sqtc",
               "destination": "Westminster Bridge, London SE1 7GP",
               "mode": "walking",
               "onReady": [Function],
