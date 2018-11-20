@@ -1,9 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import * as firebase from 'firebase';
+import {
+  View, Text, StyleSheet, Button,
+} from 'react-native';
 import { MapView, Location, Permissions } from 'expo';
 import MapViewDirections from 'react-native-maps-directions';
 import KEY from '../env.config';
-import DisplayAlertMarkers from './DisplayAlertMarkers';
 
 const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
 
@@ -33,13 +35,27 @@ export default class DynamicLocation extends React.Component {
     journeyDistance: null,
     journeyTime: null,
     isLoading: true,
+    alertIsLoading: true,
     markers: [],
+    alertMarkers: [],
+  };
+
+  getMarkerData = () => {
+    this.setState({ alertIsLoading: false });
   };
 
   componentDidMount = async () => {
     await Permissions.askAsync(Permissions.LOCATION);
     Location.watchPositionAsync(GEOLOCATION_OPTIONS, this.locationChanged);
     this.fetchMarkerData();
+    firebase
+      .database()
+      .ref('alerts/')
+      .on('value', (snapshot) => {
+        const data = snapshot.val();
+        const items = Object.values(data);
+        this.setState({ alertMarkers: items });
+      });
   };
 
   /* eslint-disable */
@@ -88,6 +104,23 @@ export default class DynamicLocation extends React.Component {
                 />
               );
             })}
+          {/** For Alert Markers:  */}
+          {this.state.alertIsLoading
+            ? null
+            : this.state.alertMarkers.map((marker, index) => {
+              const alertData = `${marker.body}`;
+              console.log(marker.location);
+              return (
+                <MapView.Marker
+                  key={index}
+                  coordinate={{
+                    latitude: marker.location.latitude,
+                    longitude: marker.location.longitude,
+                  }}
+                  title={alertData}
+                />
+              );
+            })}
           <MapViewDirections
             origin={origin}
             destination={destination}
@@ -113,9 +146,9 @@ export default class DynamicLocation extends React.Component {
             >
               {`${Math.round(this.state.journeyTime)} Minutes \n ${this.state.journeyDistance} KM`}
             </Text>
-            <DisplayAlertMarkers />
           </View>
         </MapView.Callout>
+        <Button title="Alerts" style={{ margin: 10 }} onPress={this.getMarkerData} />
       </View>
     );
   }
