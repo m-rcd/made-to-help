@@ -57,6 +57,20 @@ export default class Alerts extends React.Component {
     this.navigateHome();
   };
 
+  sendTypeOfReportData = () => {
+    this.setState({ typeOfReport: 'Broken Lift', icon: IMAGES[1] });
+    this.writeAlertData(
+      this.state.text,
+      {
+        latitude: this.state.latitude,
+        longitude: this.state.longitude,
+      },
+      this.state.typeOfReport,
+      this.state.icon,
+    );
+    this.navigateHome();
+  };
+
   navigateHome = () => {
     this.props.navigation.navigate('Home');
   };
@@ -77,10 +91,7 @@ export default class Alerts extends React.Component {
     return (
       <View>
         <Text>Inaccessibility Report</Text>
-        <Button
-          title="Broken Lift"
-          onPress={() => this.setState({ typeOfReport: 'Broken Lift', icon: IMAGES[1] })}
-        />
+        <Button title="Broken Lift" onPress={this.sendTypeOfReportData} />
         <TextInput placeholder="Extra Info" onChangeText={this.onHandleChange}>
           {this.state.text}
         </TextInput>
