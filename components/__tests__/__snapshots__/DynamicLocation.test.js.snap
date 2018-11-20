@@ -155,11 +155,6 @@ ShallowWrapper {
         </Unknown>,
         <Button
           onPress={[Function]}
-          style={
-            Object {
-              "margin": 10,
-            }
-          }
           title="Alerts"
         />,
       ],
@@ -311,9 +306,6 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "onPress": [Function],
-          "style": Object {
-            "margin": 10,
-          },
           "title": "Alerts",
         },
         "ref": null,
@@ -378,11 +370,6 @@ ShallowWrapper {
           </Unknown>,
           <Button
             onPress={[Function]}
-            style={
-              Object {
-                "margin": 10,
-              }
-            }
             title="Alerts"
           />,
         ],
@@ -534,9 +521,6 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "onPress": [Function],
-            "style": Object {
-              "margin": 10,
-            },
             "title": "Alerts",
           },
           "ref": null,
@@ -571,6 +555,7 @@ exports[`Should test for setState changes to locationChanged: Something Updated 
 Object {
   "alertIsLoading": true,
   "alertMarkers": Array [],
+  "alertVisibility": true,
   "isLoading": true,
   "journeyDistance": null,
   "journeyTime": null,
@@ -594,6 +579,7 @@ exports[`Should test for setState changes to locationChanged: something 1`] = `
 Object {
   "alertIsLoading": true,
   "alertMarkers": Array [],
+  "alertVisibility": true,
   "isLoading": true,
   "journeyDistance": null,
   "journeyTime": null,

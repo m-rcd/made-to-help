@@ -60,14 +60,11 @@ export default class DynamicLocation extends React.Component {
       });
   };
 
-  componentWillMount() {
-    this.fetchAlertMarkers();
-  }
-
   componentDidMount = async () => {
     await Permissions.askAsync(Permissions.LOCATION);
     Location.watchPositionAsync(GEOLOCATION_OPTIONS, this.locationChanged);
     this.fetchMarkerData();
+    this.fetchAlertMarkers();
   };
 
   /* eslint-disable */
@@ -161,7 +158,7 @@ export default class DynamicLocation extends React.Component {
             </Text>
           </View>
         </MapView.Callout>
-        <Button title="Alerts" style={{ margin: 10 }} onPress={this.toggleMarkerData} />
+        <Button title="Alerts" onPress={this.toggleMarkerData} />
       </View>
     );
   }
