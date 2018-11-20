@@ -13,29 +13,87 @@ exports[`Map snapshot renders successfully 1`] = `
     style={
       Object {
         "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "center",
       }
     }
   >
-    <Text
-      style={
-        Object {
-          "flex": 0.25,
-        }
-      }
-    >
-       
-      null - Time 
- null - Distance
-    </Text>
     <MapView
       provider="google"
       showsUserLocation={true}
       style={
         Object {
-          "flex": 0.75,
+          "flex": 1,
         }
       }
     />
+    <Callout>
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgba(255, 255, 255, 0.3)",
+            "width": 500,
+          }
+        }
+      >
+        <Text
+          accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
+ null KM"
+          style={
+            Object {
+              "color": "hotpink",
+              "fontFamily": "Verdana",
+              "fontSize": 40,
+              "fontWeight": "bold",
+              "textAlign": "center",
+            }
+          }
+        >
+          0 Minutes 
+ null KM
+        </Text>
+      </View>
+    </Callout>
+    <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#007AFF",
+                "fontSize": 18,
+                "padding": 8,
+                "textAlign": "center",
+              },
+            ]
+          }
+        >
+          Alerts
+        </Text>
+      </View>
+    </View>
   </View>
 </View>
 `;

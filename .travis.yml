@@ -1,16 +1,13 @@
 language: node_js
-
 node_js:
-  - "8.12.0"
-
+- 8.12.0
 cache:
   directories:
-   - node_modules
-
-
+  - node_modules
 install:
-  - yarn install
-
+- yarn install
 script:
-  - yarn run lint
-  - yarn run travis-test
+- yarn run lint
+- yarn run travis-test
+env:
+  secure: IZP2aNVV15a3MktROvg5+sNjAQ0ODT2+HEEty1wQIYE8H5cIIYYypO96gL2RJibIwH30s6B/1+bxTyvH3G28yKd+HiGb1H3YWtstfSG5BwRgWqGGWeMprxh2J7MKD541F5l8iqGdDWhUbc/3PjfKysbNA1CZZkuFx+d+vP2dfCAVdBJwnjBW7TTUD4bGK6zJiRKATzDmv/CCo1TrWtMF+9iM94DSM6Z6PG2oBQ8YOQjAZjEEuLtGLD+PKOgKOVHopVmHYn25shHS03kQ1/Laq+3GNY6mRm9aflYyIBWPlZBPIAX0ByGEd/3+/8M0n6iibyAVngbbK97ajkDB79e5AX8pYSpps/bzlWj1BmTIXueBzSfGIhd7TwtsGYO1Xo8n0Cnb51iYL5t3HUdI2RchKgQB8ao6gatJi4dbcKreYPn3EJJd5impYguVumQ8jhCotP0ES6hlYkm/jiQqmKtZed2DaNsLU1vBbld6Hf+jnboVi/IskhDfuth18b/BwyKPKCEpa/mj7kqsPez3RHCrJXHQOyKu+uZYvBNMsECwbrYSCcb6WkJn8JeL4eL35A9elOUbXYM/oHnTeoEILP/7hxhmJNAUo0hubJJ8GJK/XdoH4T1nRC5JRLVmadvknWHBeA+n2FvTVA4rjrcEqeDWxDIturCrYpCRjvapMzU6iLo=

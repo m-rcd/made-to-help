@@ -1,0 +1,473 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders directions component 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "flex": 0.1,
+      }
+    }
+  >
+     -  - 
+  </Text>
+  <View
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#C9C9CE",
+            "borderBottomColor": "#b5b5b5",
+            "borderBottomWidth": 0.5,
+            "borderTopColor": "#7e7e7e",
+            "borderTopWidth": 0.5,
+            "flexDirection": "row",
+            "height": 44,
+          },
+          Object {
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        autoFocus={false}
+        clearButtonMode="while-editing"
+        editable={true}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        onSubmitEditing={[Function]}
+        placeholder="Search"
+        placeholderTextColor="#A8A8A8"
+        returnKeyType="search"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": 5,
+              "flex": 1,
+              "fontSize": 15,
+              "height": 28,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "marginTop": 7.5,
+              "paddingBottom": 4.5,
+              "paddingLeft": 10,
+              "paddingRight": 10,
+              "paddingTop": 4.5,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value=""
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Should test for setState changes to longitude and latitude 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Directions />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Component
+          style={
+            Object {
+              "flex": 0.1,
+            }
+          }
+        >
+           -  - 
+        </Component>,
+        <GooglePlacesAutocomplete
+          GooglePlacesSearchQuery={
+            Object {
+              "rankby": "distance",
+            }
+          }
+          GoogleReverseGeocodingQuery={Object {}}
+          autoFillOnNotFound={false}
+          autoFocus={false}
+          currentLocation={true}
+          currentLocationLabel="Current location"
+          debounce={200}
+          editable={true}
+          enableEmptySections={true}
+          enableHighAccuracyLocation={true}
+          enablePoweredByContainer={true}
+          fetchDetails={true}
+          filterReverseGeocodingByTypes={
+            Array [
+              "locality",
+              "administrative_area_level_3",
+            ]
+          }
+          getDefaultValue={[Function]}
+          isRowScrollable={true}
+          keyboardShouldPersistTaps="always"
+          listViewDisplayed="auto"
+          minLength={2}
+          nearbyPlacesAPI="GooglePlacesSearch"
+          numberOfLines={1}
+          onFail={[Function]}
+          onNotFound={[Function]}
+          onPress={[Function]}
+          onSubmitEditing={[Function]}
+          onTimeout={[Function]}
+          placeholder="Search"
+          placeholderTextColor="#A8A8A8"
+          predefinedPlaces={Array []}
+          predefinedPlacesAlwaysVisible={false}
+          query={
+            Object {
+              "key": "AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU",
+              "language": "en",
+            }
+          }
+          returnKeyType="search"
+          styles={
+            Object {
+              "description": Object {
+                "fontWeight": "bold",
+              },
+              "listView": Object {
+                "color": "black",
+                "zIndex": 16,
+              },
+              "predefinedPlacesDescription": Object {
+                "color": "#1faadb",
+              },
+              "textInputContainer": Object {
+                "width": "100%",
+              },
+            }
+          }
+          suppressDefaultStyles={false}
+          textInputHide={false}
+          textInputProps={Object {}}
+          timeout={20000}
+          underlineColorAndroid="transparent"
+        />,
+      ],
+      "style": Object {
+        "flex": 1,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": " -  - ",
+          "style": Object {
+            "flex": 0.1,
+          },
+        },
+        "ref": null,
+        "rendered": " -  - ",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "GooglePlacesSearchQuery": Object {
+            "rankby": "distance",
+          },
+          "GoogleReverseGeocodingQuery": Object {},
+          "autoFillOnNotFound": false,
+          "autoFocus": false,
+          "currentLocation": true,
+          "currentLocationLabel": "Current location",
+          "debounce": 200,
+          "editable": true,
+          "enableEmptySections": true,
+          "enableHighAccuracyLocation": true,
+          "enablePoweredByContainer": true,
+          "fetchDetails": true,
+          "filterReverseGeocodingByTypes": Array [
+            "locality",
+            "administrative_area_level_3",
+          ],
+          "getDefaultValue": [Function],
+          "isRowScrollable": true,
+          "keyboardShouldPersistTaps": "always",
+          "listViewDisplayed": "auto",
+          "minLength": 2,
+          "nearbyPlacesAPI": "GooglePlacesSearch",
+          "numberOfLines": 1,
+          "onFail": [Function],
+          "onNotFound": [Function],
+          "onPress": [Function],
+          "onSubmitEditing": [Function],
+          "onTimeout": [Function],
+          "placeholder": "Search",
+          "placeholderTextColor": "#A8A8A8",
+          "predefinedPlaces": Array [],
+          "predefinedPlacesAlwaysVisible": false,
+          "query": Object {
+            "key": "AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU",
+            "language": "en",
+          },
+          "returnKeyType": "search",
+          "styles": Object {
+            "description": Object {
+              "fontWeight": "bold",
+            },
+            "listView": Object {
+              "color": "black",
+              "zIndex": 16,
+            },
+            "predefinedPlacesDescription": Object {
+              "color": "#1faadb",
+            },
+            "textInputContainer": Object {
+              "width": "100%",
+            },
+          },
+          "suppressDefaultStyles": false,
+          "textInputHide": false,
+          "textInputProps": Object {},
+          "timeout": 20000,
+          "underlineColorAndroid": "transparent",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Component
+            style={
+              Object {
+                "flex": 0.1,
+              }
+            }
+          >
+             -  - 
+          </Component>,
+          <GooglePlacesAutocomplete
+            GooglePlacesSearchQuery={
+              Object {
+                "rankby": "distance",
+              }
+            }
+            GoogleReverseGeocodingQuery={Object {}}
+            autoFillOnNotFound={false}
+            autoFocus={false}
+            currentLocation={true}
+            currentLocationLabel="Current location"
+            debounce={200}
+            editable={true}
+            enableEmptySections={true}
+            enableHighAccuracyLocation={true}
+            enablePoweredByContainer={true}
+            fetchDetails={true}
+            filterReverseGeocodingByTypes={
+              Array [
+                "locality",
+                "administrative_area_level_3",
+              ]
+            }
+            getDefaultValue={[Function]}
+            isRowScrollable={true}
+            keyboardShouldPersistTaps="always"
+            listViewDisplayed="auto"
+            minLength={2}
+            nearbyPlacesAPI="GooglePlacesSearch"
+            numberOfLines={1}
+            onFail={[Function]}
+            onNotFound={[Function]}
+            onPress={[Function]}
+            onSubmitEditing={[Function]}
+            onTimeout={[Function]}
+            placeholder="Search"
+            placeholderTextColor="#A8A8A8"
+            predefinedPlaces={Array []}
+            predefinedPlacesAlwaysVisible={false}
+            query={
+              Object {
+                "key": "AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU",
+                "language": "en",
+              }
+            }
+            returnKeyType="search"
+            styles={
+              Object {
+                "description": Object {
+                  "fontWeight": "bold",
+                },
+                "listView": Object {
+                  "color": "black",
+                  "zIndex": 16,
+                },
+                "predefinedPlacesDescription": Object {
+                  "color": "#1faadb",
+                },
+                "textInputContainer": Object {
+                  "width": "100%",
+                },
+              }
+            }
+            suppressDefaultStyles={false}
+            textInputHide={false}
+            textInputProps={Object {}}
+            timeout={20000}
+            underlineColorAndroid="transparent"
+          />,
+        ],
+        "style": Object {
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": " -  - ",
+            "style": Object {
+              "flex": 0.1,
+            },
+          },
+          "ref": null,
+          "rendered": " -  - ",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "GooglePlacesSearchQuery": Object {
+              "rankby": "distance",
+            },
+            "GoogleReverseGeocodingQuery": Object {},
+            "autoFillOnNotFound": false,
+            "autoFocus": false,
+            "currentLocation": true,
+            "currentLocationLabel": "Current location",
+            "debounce": 200,
+            "editable": true,
+            "enableEmptySections": true,
+            "enableHighAccuracyLocation": true,
+            "enablePoweredByContainer": true,
+            "fetchDetails": true,
+            "filterReverseGeocodingByTypes": Array [
+              "locality",
+              "administrative_area_level_3",
+            ],
+            "getDefaultValue": [Function],
+            "isRowScrollable": true,
+            "keyboardShouldPersistTaps": "always",
+            "listViewDisplayed": "auto",
+            "minLength": 2,
+            "nearbyPlacesAPI": "GooglePlacesSearch",
+            "numberOfLines": 1,
+            "onFail": [Function],
+            "onNotFound": [Function],
+            "onPress": [Function],
+            "onSubmitEditing": [Function],
+            "onTimeout": [Function],
+            "placeholder": "Search",
+            "placeholderTextColor": "#A8A8A8",
+            "predefinedPlaces": Array [],
+            "predefinedPlacesAlwaysVisible": false,
+            "query": Object {
+              "key": "AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU",
+              "language": "en",
+            },
+            "returnKeyType": "search",
+            "styles": Object {
+              "description": Object {
+                "fontWeight": "bold",
+              },
+              "listView": Object {
+                "color": "black",
+                "zIndex": 16,
+              },
+              "predefinedPlacesDescription": Object {
+                "color": "#1faadb",
+              },
+              "textInputContainer": Object {
+                "width": "100%",
+              },
+            },
+            "suppressDefaultStyles": false,
+            "textInputHide": false,
+            "textInputProps": Object {},
+            "timeout": 20000,
+            "underlineColorAndroid": "transparent",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

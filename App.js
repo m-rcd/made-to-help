@@ -1,4 +1,5 @@
 import React from 'react';
+import * as firebase from 'firebase';
 import {
   Platform, StatusBar, StyleSheet, View,
 } from 'react-native';
@@ -6,6 +7,17 @@ import {
   AppLoading, Asset, Font, Icon,
 } from 'expo';
 import AppNavigator from './navigation/AppNavigator';
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyCwF76W5Y9qC_ow3ilkweB7IqoCxBuLUKY',
+  authDomain: 'made-to-help.firebaseapp.com',
+  databaseURL: 'https://made-to-help.firebaseio.com',
+  projectId: 'made-to-help',
+  storageBucket: 'made-to-help.appspot.com',
+  messagingSenderId: '910630110904',
+};
+
+firebase.initializeApp(firebaseConfig);
 
 const styles = StyleSheet.create({
   container: {
@@ -21,7 +33,6 @@ export default class App extends React.Component {
       isLoadingComplete: false,
     };
   }
-
 
   _loadResourcesAsync = async () => Promise.all([
     Asset.loadAsync([
