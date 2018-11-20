@@ -39,14 +39,21 @@ export default class Alerts extends React.Component {
       latitude: this.state.latitude,
       longitude: this.state.longitude,
     });
+    this.setState({text: ''})
   };
+
+  onHandleChange = (event) => {
+    this.setState({text: event})
+  }
 
   render() {
     return (
       <View>
         <Text>Report a Bad Route</Text>
-        <TextInput placeholder="Body" onChangeText={text => this.setState({ text })} />
-        {this.state.text !== '' && <Button title="Submit" onPress={this.sendData} />}
+        <TextInput placeholder="Enter Here" onChangeText={this.onHandleChange}>
+          {this.state.text}
+        </TextInput>
+        {this.state.text !== '' && <Button title="Submit" onPress={this.sendData}  />}
       </View>
     );
   }
