@@ -6,11 +6,14 @@ import {
 import { Location } from 'expo';
 
 export default class Alerts extends React.Component {
-  state = {
-    longitude: null,
-    latitude: null,
-    text: '',
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      longitude: null,
+      latitude: null,
+      text: '',
+    };
+  }
 
   componentWillMount = async () => {
     const location = await Location.getCurrentPositionAsync({});
@@ -39,11 +42,16 @@ export default class Alerts extends React.Component {
       latitude: this.state.latitude,
       longitude: this.state.longitude,
     });
-    this.setState({text: ''})
+    this.setState({ text: '' });
+    this.navigateHome();
   };
 
+  navigateHome = () => {
+    this.props.navigation.navigate('Home');
+  }
+
   onHandleChange = (event) => {
-    this.setState({text: event})
+    this.setState({ text: event });
   }
 
   render() {
@@ -53,7 +61,7 @@ export default class Alerts extends React.Component {
         <TextInput placeholder="Enter Here" onChangeText={this.onHandleChange}>
           {this.state.text}
         </TextInput>
-        {this.state.text !== '' && <Button title="Submit" onPress={this.sendData}  />}
+        {this.state.text !== '' && <Button title="Submit" onPress={this.sendData} />}
       </View>
     );
   }

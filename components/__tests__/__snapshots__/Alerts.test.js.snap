@@ -24,9 +24,11 @@ ShallowWrapper {
         <TextInput
           allowFontScaling={true}
           onChangeText={[Function]}
-          placeholder="Body"
+          placeholder="Enter Here"
           underlineColorAndroid="transparent"
-        />,
+        >
+          
+        </TextInput>,
         false,
       ],
     },
@@ -49,12 +51,13 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "allowFontScaling": true,
+          "children": "",
           "onChangeText": [Function],
-          "placeholder": "Body",
+          "placeholder": "Enter Here",
           "underlineColorAndroid": "transparent",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "",
         "type": [Function],
       },
       false,
@@ -74,9 +77,11 @@ ShallowWrapper {
           <TextInput
             allowFontScaling={true}
             onChangeText={[Function]}
-            placeholder="Body"
+            placeholder="Enter Here"
             underlineColorAndroid="transparent"
-          />,
+          >
+            
+          </TextInput>,
           false,
         ],
       },
@@ -99,12 +104,13 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "allowFontScaling": true,
+            "children": "",
             "onChangeText": [Function],
-            "placeholder": "Body",
+            "placeholder": "Enter Here",
             "underlineColorAndroid": "transparent",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": "",
           "type": [Function],
         },
         false,

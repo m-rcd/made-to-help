@@ -10,7 +10,7 @@ export default class AlertsScreen extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Alerts />
+        <Alerts navigation={this.props.navigation} />
       </ScrollView>
     );
   }
