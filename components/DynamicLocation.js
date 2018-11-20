@@ -36,18 +36,20 @@ export default class DynamicLocation extends React.Component {
     journeyTime: null,
     isLoading: true,
     alertIsLoading: true,
+    alertVisibility: true,
     markers: [],
     alertMarkers: [],
   };
 
-  getMarkerData = () => {
-    this.setState({ alertIsLoading: false });
+  toggleMarkerData = () => {
+    if (this.state.alertVisibility === true) {
+      this.setState({ alertIsLoading: false, alertVisibility: false });
+    } else {
+      this.setState({ alertIsLoading: true, alertVisibility: true });
+    }
   };
 
-  componentDidMount = async () => {
-    await Permissions.askAsync(Permissions.LOCATION);
-    Location.watchPositionAsync(GEOLOCATION_OPTIONS, this.locationChanged);
-    this.fetchMarkerData();
+  fetchAlertMarkers = () => {
     firebase
       .database()
       .ref('alerts/')
@@ -56,6 +58,16 @@ export default class DynamicLocation extends React.Component {
         const items = Object.values(data);
         this.setState({ alertMarkers: items });
       });
+  };
+
+  componentWillMount() {
+    this.fetchAlertMarkers();
+  }
+
+  componentDidMount = async () => {
+    await Permissions.askAsync(Permissions.LOCATION);
+    Location.watchPositionAsync(GEOLOCATION_OPTIONS, this.locationChanged);
+    this.fetchMarkerData();
   };
 
   /* eslint-disable */
@@ -118,6 +130,7 @@ export default class DynamicLocation extends React.Component {
                     latitude: marker.location.latitude,
                     longitude: marker.location.longitude,
                   }}
+                  image={require('../assets/images/alert.png')}
                   title={alertData}
                 />
               );
@@ -149,7 +162,7 @@ export default class DynamicLocation extends React.Component {
             </Text>
           </View>
         </MapView.Callout>
-        <Button title="Alerts" style={{ margin: 10 }} onPress={this.getMarkerData} />
+        <Button title="Alerts" style={{ margin: 10 }} onPress={this.toggleMarkerData} />
       </View>
     );
   }
