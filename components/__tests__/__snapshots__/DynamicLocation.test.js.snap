@@ -46,6 +46,46 @@ exports[`Renders DynamicLocation component 1`] = `
       </Text>
     </View>
   </Callout>
+  <View
+    accessibilityRole="button"
+    accessibilityStates={Array []}
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#007AFF",
+              "fontSize": 18,
+              "padding": 8,
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        Alerts
+      </Text>
+    </View>
+  </View>
 </View>
 `;
 
@@ -113,6 +153,15 @@ ShallowWrapper {
             </Component>
           </Component>
         </Unknown>,
+        <Button
+          onPress={[Function]}
+          style={
+            Object {
+              "margin": 10,
+            }
+          }
+          title="Alerts"
+        />,
       ],
       "style": Object {
         "flex": 1,
@@ -128,6 +177,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": Array [
+            null,
             null,
             <MapViewDirections
               apikey="AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU"
@@ -148,6 +198,7 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
+          null,
           null,
           Object {
             "instance": null,
@@ -254,6 +305,21 @@ ShallowWrapper {
         },
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "onPress": [Function],
+          "style": Object {
+            "margin": 10,
+          },
+          "title": "Alerts",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": [Function],
   },
@@ -310,6 +376,15 @@ ShallowWrapper {
               </Component>
             </Component>
           </Unknown>,
+          <Button
+            onPress={[Function]}
+            style={
+              Object {
+                "margin": 10,
+              }
+            }
+            title="Alerts"
+          />,
         ],
         "style": Object {
           "flex": 1,
@@ -325,6 +400,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": Array [
+              null,
               null,
               <MapViewDirections
                 apikey="AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU"
@@ -345,6 +421,7 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
+            null,
             null,
             Object {
               "instance": null,
@@ -451,6 +528,21 @@ ShallowWrapper {
           },
           "type": [Function],
         },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "onPress": [Function],
+            "style": Object {
+              "margin": 10,
+            },
+            "title": "Alerts",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
       ],
       "type": [Function],
     },
@@ -477,6 +569,8 @@ ShallowWrapper {
 
 exports[`Should test for setState changes to locationChanged: Something Updated 1`] = `
 Object {
+  "alertIsLoading": true,
+  "alertMarkers": Array [],
   "isLoading": true,
   "journeyDistance": null,
   "journeyTime": null,
@@ -498,6 +592,8 @@ Object {
 
 exports[`Should test for setState changes to locationChanged: something 1`] = `
 Object {
+  "alertIsLoading": true,
+  "alertMarkers": Array [],
   "isLoading": true,
   "journeyDistance": null,
   "journeyTime": null,

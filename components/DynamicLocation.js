@@ -85,6 +85,7 @@ export default class DynamicLocation extends React.Component {
     return (
       <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
         <MapView style={{ flex: 1 }} showsUserLocation region={this.state.region} provider="google">
+          {/** For Accessibility Markers: */}
           {this.state.isLoading
             ? null
             : this.state.markers.map((marker, index) => {
