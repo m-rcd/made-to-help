@@ -75,14 +75,6 @@ export default class Alerts extends React.Component {
     this.props.navigation.navigate('Home');
   };
 
-  iconSelector = () => {
-    if (this.state.typeOfReport === 'Broken Lift') {
-      this.setState({ icon: IMAGES[1] });
-    } else {
-      this.setState({ icon: IMAGES[0] });
-    }
-  };
-
   onHandleChange = (event) => {
     this.setState({ text: event, icon: IMAGES[0], typeOfReport: 'Other' });
   };
