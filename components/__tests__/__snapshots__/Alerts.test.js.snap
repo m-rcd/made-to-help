@@ -19,15 +19,24 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Component>
-          Report a Bad Route
+          Inaccessibility Report
         </Component>,
+        <Button
+          onPress={[Function]}
+          title="Broken Lift"
+        />,
         <TextInput
           allowFontScaling={true}
           onChangeText={[Function]}
-          placeholder="Body"
+          placeholder="Extra Info"
           underlineColorAndroid="transparent"
+        >
+          
+        </TextInput>,
+        <Button
+          onPress={[Function]}
+          title="Submit"
         />,
-        false,
       ],
     },
     "ref": null,
@@ -37,10 +46,22 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": "Report a Bad Route",
+          "children": "Inaccessibility Report",
         },
         "ref": null,
-        "rendered": "Report a Bad Route",
+        "rendered": "Inaccessibility Report",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "onPress": [Function],
+          "title": "Broken Lift",
+        },
+        "ref": null,
+        "rendered": null,
         "type": [Function],
       },
       Object {
@@ -49,15 +70,27 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "allowFontScaling": true,
+          "children": "",
           "onChangeText": [Function],
-          "placeholder": "Body",
+          "placeholder": "Extra Info",
           "underlineColorAndroid": "transparent",
+        },
+        "ref": null,
+        "rendered": "",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "onPress": [Function],
+          "title": "Submit",
         },
         "ref": null,
         "rendered": null,
         "type": [Function],
       },
-      false,
     ],
     "type": [Function],
   },
@@ -69,15 +102,24 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Component>
-            Report a Bad Route
+            Inaccessibility Report
           </Component>,
+          <Button
+            onPress={[Function]}
+            title="Broken Lift"
+          />,
           <TextInput
             allowFontScaling={true}
             onChangeText={[Function]}
-            placeholder="Body"
+            placeholder="Extra Info"
             underlineColorAndroid="transparent"
+          >
+            
+          </TextInput>,
+          <Button
+            onPress={[Function]}
+            title="Submit"
           />,
-          false,
         ],
       },
       "ref": null,
@@ -87,10 +129,22 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": "Report a Bad Route",
+            "children": "Inaccessibility Report",
           },
           "ref": null,
-          "rendered": "Report a Bad Route",
+          "rendered": "Inaccessibility Report",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "onPress": [Function],
+            "title": "Broken Lift",
+          },
+          "ref": null,
+          "rendered": null,
           "type": [Function],
         },
         Object {
@@ -99,15 +153,27 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "allowFontScaling": true,
+            "children": "",
             "onChangeText": [Function],
-            "placeholder": "Body",
+            "placeholder": "Extra Info",
             "underlineColorAndroid": "transparent",
+          },
+          "ref": null,
+          "rendered": "",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "onPress": [Function],
+            "title": "Submit",
           },
           "ref": null,
           "rendered": null,
           "type": [Function],
         },
-        false,
       ],
       "type": [Function],
     },

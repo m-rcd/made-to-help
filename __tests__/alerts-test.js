@@ -2,16 +2,16 @@ import 'react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import NavigationTestUtils from 'react-navigation/NavigationTestUtils';
-import LinksScreen from '../screens/LinksScreen';
+import AlertsScreen from '../screens/AlertsScreen';
 
-describe('Links snapshot', () => {
+describe('Alerts snapshot', () => {
   jest.useFakeTimers();
   beforeEach(() => {
     NavigationTestUtils.resetInternalState();
   });
 
-  it('renders directions form', async () => {
-    const tree = renderer.create(<LinksScreen />).toJSON();
+  it('renders report form', async () => {
+    const tree = renderer.create(<AlertsScreen />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

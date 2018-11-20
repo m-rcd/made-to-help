@@ -5,25 +5,34 @@ import {
 } from 'react-native';
 import { Location } from 'expo';
 
+const IMAGES = ['https://i.imgur.com/Pr7KWEL.png', 'https://i.imgur.com/ZEGDS72.png'];
+
 export default class Alerts extends React.Component {
-  state = {
-    longitude: null,
-    latitude: null,
-    text: '',
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      longitude: null,
+      latitude: null,
+      text: '',
+      typeOfReport: '',
+      icon: IMAGES[0],
+    };
+  }
 
   componentWillMount = async () => {
     const location = await Location.getCurrentPositionAsync({});
     this.setState({ longitude: location.coords.longitude, latitude: location.coords.latitude });
   };
 
-  writeAlertData = (body, location) => {
+  writeAlertData = (body, location, typeOfReport, icon) => {
     firebase
       .database()
       .ref('alerts/')
       .push({
         body,
         location,
+        typeOfReport,
+        icon,
       })
       .then((data) => {
         console.log('data ', data);
@@ -35,18 +44,58 @@ export default class Alerts extends React.Component {
   };
 
   sendData = () => {
-    this.writeAlertData(this.state.text, {
-      latitude: this.state.latitude,
-      longitude: this.state.longitude,
-    });
+    this.writeAlertData(
+      this.state.text,
+      {
+        latitude: this.state.latitude,
+        longitude: this.state.longitude,
+      },
+      this.state.typeOfReport,
+      this.state.icon,
+    );
+    this.setState({ text: '', typeOfReport: '', icon: '' });
+    this.navigateHome();
+  };
+
+  sendTypeOfReportData = () => {
+    this.setState({ typeOfReport: 'Broken Lift', icon: IMAGES[1] });
+    this.writeAlertData(
+      this.state.text,
+      {
+        latitude: this.state.latitude,
+        longitude: this.state.longitude,
+      },
+      this.state.typeOfReport,
+      this.state.icon,
+    );
+    this.navigateHome();
+  };
+
+  navigateHome = () => {
+    this.props.navigation.navigate('Home');
+  };
+
+  iconSelector = () => {
+    if (this.state.typeOfReport === 'Broken Lift') {
+      this.setState({ icon: IMAGES[1] });
+    } else {
+      this.setState({ icon: IMAGES[0] });
+    }
+  };
+
+  onHandleChange = (event) => {
+    this.setState({ text: event, icon: IMAGES[0], typeOfReport: 'Other' });
   };
 
   render() {
     return (
       <View>
-        <Text>Report a Bad Route</Text>
-        <TextInput placeholder="Body" onChangeText={text => this.setState({ text })} />
-        {this.state.text !== '' && <Button title="Submit" onPress={this.sendData} />}
+        <Text>Inaccessibility Report</Text>
+        <Button title="Broken Lift" onPress={this.sendTypeOfReportData} />
+        <TextInput placeholder="Extra Info" onChangeText={this.onHandleChange}>
+          {this.state.text}
+        </TextInput>
+        <Button title="Submit" onPress={this.sendData} />
       </View>
     );
   }
