@@ -11,12 +11,6 @@ test('Renders Destination component', () => {
   expect(snapshot).toMatchSnapshot();
 })
 
-it('State should start empty', () => {
-  const wrapper = shallow(<Destination />);
-  expect(wrapper.instance().state.latitude).toBe('');
-  expect(wrapper.instance().state.longitude).toBe('');
-})
-
 it('Should test for setState changes', () => {
   const wrapper = shallow(<Destination />);
   const instance = wrapper.instance()

@@ -11,11 +11,6 @@ test('Renders Origin component', () => {
   expect(snapshot).toMatchSnapshot();
 })
 
-it('State should start empty', () => {
-  const wrapper = shallow(<Origin />);
-  expect(wrapper.instance().state.latitude).toBe('');
-  expect(wrapper.instance().state.longitude).toBe('');
-})
 
 it('Should test for setState changes', () => {
   const wrapper = shallow(<Origin />);
