@@ -1,30 +1,67 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import * as firebase from 'firebase';
+import {
+  View, Text, StyleSheet, Button,
+} from 'react-native';
 import { MapView, Location, Permissions } from 'expo';
 import MapViewDirections from 'react-native-maps-directions';
 import KEY from '../env.config';
 
 const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
 
+const styles = StyleSheet.create({
+  calloutView: {
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    width: 500,
+  },
+  calloutText: {
+    fontSize: 40,
+    color: 'hotpink',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontFamily: 'Verdana',
+  },
+});
+
 const DB_URL = KEY;
 
 export default class DynamicLocation extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      /* eslint-disable-next-line */
-        location: { coords: { latitude: -0.09, longitude: 51 } },
-      journeyDistance: null,
-      journeyTime: null,
-      isLoading: true,
-      markers: [],
-    };
-  }
+  state = {
+    /* eslint-disable-next-line */
+    location: { coords: { latitude: -0.09, longitude: 51 } },
+    journeyDistance: null,
+    journeyTime: null,
+    isLoading: true,
+    alertIsLoading: true,
+    alertVisibility: true,
+    markers: [],
+    alertMarkers: [],
+  };
+
+  toggleMarkerData = () => {
+    if (this.state.alertVisibility === true) {
+      this.setState({ alertIsLoading: false, alertVisibility: false });
+    } else {
+      this.setState({ alertIsLoading: true, alertVisibility: true });
+    }
+  };
+
+  fetchAlertMarkers = () => {
+    firebase
+      .database()
+      .ref('alerts/')
+      .on('value', (snapshot) => {
+        const data = snapshot.val();
+        const items = Object.values(data);
+        this.setState({ alertMarkers: items });
+      });
+  };
 
   componentDidMount = async () => {
     await Permissions.askAsync(Permissions.LOCATION);
     Location.watchPositionAsync(GEOLOCATION_OPTIONS, this.locationChanged);
     this.fetchMarkerData();
+    this.fetchAlertMarkers();
   };
 
   /* eslint-disable */
@@ -48,22 +85,15 @@ export default class DynamicLocation extends React.Component {
       .catch((error) => {
         console.log(error);
       });
-  }
+  };
 
   render() {
     return (
-      <View style={{ flex: 1 }}>
-        <Text style={{ flex: 0.25 }}>
-          {' '}
-          {`${this.state.journeyTime} - Time \n ${this.state.journeyDistance} - Distance`}
-        </Text>
-        <MapView
-          style={{ flex: 0.75 }}
-          showsUserLocation
-          region={this.state.region}
-          provider="google"
-        >
-          {this.state.isLoading ? null
+      <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
+        <MapView style={{ flex: 1 }} showsUserLocation region={this.state.region} provider="google">
+          {/** For Accessibility Markers: */}
+          {this.state.isLoading
+            ? null
             : this.state.markers.map((marker, index) => {
               const coords = {
                 latitude: marker.latitude,
@@ -81,6 +111,24 @@ export default class DynamicLocation extends React.Component {
                 />
               );
             })}
+          {/** For Alert Markers:  */}
+          {this.state.alertIsLoading
+            ? null
+            : this.state.alertMarkers.map((marker, index) => {
+              const alertData = `${marker.body}`;
+              return (
+                <MapView.Marker
+                  key={index}
+                  coordinate={{
+                    latitude: marker.location.latitude,
+                    longitude: marker.location.longitude,
+                  }}
+                  image={marker.icon}
+                  title={marker.typeOfReport}
+                  description={alertData}
+                />
+              );
+            })}
           <MapViewDirections
             origin={this.props.origin}
             destination={this.props.destination}
@@ -89,10 +137,26 @@ export default class DynamicLocation extends React.Component {
             strokeColor="hotpink"
             mode="walking"
             onReady={(result) => {
-              this.setState({ journeyTime: result.duration, journeyDistance: result.distance });
+              this.setState({
+                journeyTime: result.duration,
+                journeyDistance: result.distance.toFixed(2),
+              });
             }}
           />
         </MapView>
+        <MapView.Callout>
+          <View style={styles.calloutView}>
+            <Text
+              style={styles.calloutText}
+              accessibilityLabel={`Hello! Journey Time is ${Math.round(
+                this.state.journeyTime,
+              )} Minutes and the distance is \n ${this.state.journeyDistance} KM`}
+            >
+              {`${Math.round(this.state.journeyTime)} Minutes \n ${this.state.journeyDistance} KM`}
+            </Text>
+          </View>
+        </MapView.Callout>
+        <Button title="Alerts" onPress={this.toggleMarkerData} />
       </View>
     );
   }
