@@ -38,7 +38,7 @@ export default class Origin extends React.Component {
           returnKeyType="search"
           listViewDisplayed={false}
           fetchDetails
-          onPress={(details = null) => {
+          onPress={(data, details = null) => {
             this.savingLocation(details.geometry.location.lat, details.geometry.location.lng);
             this.handleState();
           }}
