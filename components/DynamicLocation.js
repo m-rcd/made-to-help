@@ -126,7 +126,7 @@ export default class DynamicLocation extends React.Component {
                     latitude: marker.location.latitude,
                     longitude: marker.location.longitude,
                   }}
-                  image={require('../assets/images/alert.png')}
+                  image={marker.icon}
                   title={marker.typeOfReport}
                   description={alertData}
                 />

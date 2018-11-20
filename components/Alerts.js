@@ -5,6 +5,8 @@ import {
 } from 'react-native';
 import { Location } from 'expo';
 
+const IMAGES = ['https://i.imgur.com/Pr7KWEL.png', 'https://i.imgur.com/ZEGDS72.png'];
+
 export default class Alerts extends React.Component {
   constructor(props) {
     super(props);
@@ -13,7 +15,7 @@ export default class Alerts extends React.Component {
       latitude: null,
       text: '',
       typeOfReport: '',
-      icon: 'https://i.imgur.com/87ooZpt.png',
+      icon: IMAGES[0],
     };
   }
 
@@ -42,35 +44,47 @@ export default class Alerts extends React.Component {
   };
 
   sendData = () => {
-    this.writeAlertData(this.state.text, {
-      latitude: this.state.latitude,
-      longitude: this.state.longitude,
-    },
-    this.state.typeOfReport,
-    this.state.icon,
-  );
-    this.setState({ text: '', typeOfReport: '' });
+    this.writeAlertData(
+      this.state.text,
+      {
+        latitude: this.state.latitude,
+        longitude: this.state.longitude,
+      },
+      this.state.typeOfReport,
+      this.state.icon,
+    );
+    this.setState({ text: '', typeOfReport: '', icon: '' });
     this.navigateHome();
   };
 
   navigateHome = () => {
     this.props.navigation.navigate('Home');
-  }
+  };
+
+  iconSelector = () => {
+    if (this.state.typeOfReport === 'Broken Lift') {
+      this.setState({ icon: IMAGES[1] });
+    } else {
+      this.setState({ icon: IMAGES[0] });
+    }
+  };
 
   onHandleChange = (event) => {
-    this.setState({ text: event });
-  }
+    this.setState({ text: event, icon: IMAGES[0], typeOfReport: 'Other' });
+  };
 
   render() {
     return (
       <View>
-        <Text>Inaccessibility Report </Text>
-        <Button title="Broken Lift" onPress={ () => this.setState({typeOfReport: 'Broken Lift'})}
-          />
+        <Text>Inaccessibility Report</Text>
+        <Button
+          title="Broken Lift"
+          onPress={() => this.setState({ typeOfReport: 'Broken Lift', icon: IMAGES[1] })}
+        />
         <TextInput placeholder="Extra Info" onChangeText={this.onHandleChange}>
           {this.state.text}
         </TextInput>
-        {this.state.text !== '' || this.state.typeOfReport !== '' && <Button title="Submit" onPress={this.sendData} />}
+        <Button title="Submit" onPress={this.sendData} />
       </View>
     );
   }
