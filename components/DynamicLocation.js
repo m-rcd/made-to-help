@@ -3,7 +3,6 @@ import { View, Text } from 'react-native';
 import { MapView, Location, Permissions } from 'expo';
 import MapViewDirections from 'react-native-maps-directions';
 import KEY from '../env.config';
-import MapScreen from '../screens/MapScreen';
 
 const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
 
@@ -11,18 +10,16 @@ const DB_URL = KEY;
 
 export default class DynamicLocation extends React.Component {
   constructor(props) {
-    super(props)
-      this.state = {
-        /* eslint-disable-next-line */
+    super(props);
+    this.state = {
+      /* eslint-disable-next-line */
         location: { coords: { latitude: -0.09, longitude: 51 } },
-        journeyDistance: null,
-        journeyTime: null,
-        isLoading: true,
-        markers: [],
-        origin: '',
-        destination: ''
+      journeyDistance: null,
+      journeyTime: null,
+      isLoading: true,
+      markers: [],
+    };
   }
-};
 
   componentDidMount = async () => {
     await Permissions.askAsync(Permissions.LOCATION);
@@ -58,7 +55,7 @@ export default class DynamicLocation extends React.Component {
       <View style={{ flex: 1 }}>
         <Text style={{ flex: 0.25 }}>
           {' '}
-          {`${JSON.stringify(this.props.origin)} \n ${this.props.destination} `}
+          {`${this.state.journeyTime} - Time \n ${this.state.journeyDistance} - Distance`}
         </Text>
         <MapView
           style={{ flex: 0.75 }}

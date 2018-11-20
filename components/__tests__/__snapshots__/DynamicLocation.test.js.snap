@@ -71,20 +71,8 @@ ShallowWrapper {
         >
           <MapViewDirections
             apikey="AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU"
-            destination={
-              Object {
-                "latitude": 51.523018,
-                "longitude": -0.087029,
-              }
-            }
             mode="walking"
             onReady={[Function]}
-            origin={
-              Object {
-                "latitude": 51.5002,
-                "longitude": 0.1332,
-              }
-            }
             strokeColor="hotpink"
             strokeWidth={3}
           />
@@ -127,20 +115,8 @@ ShallowWrapper {
             null,
             <MapViewDirections
               apikey="AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU"
-              destination={
-                Object {
-                  "latitude": 51.523018,
-                  "longitude": -0.087029,
-                }
-              }
               mode="walking"
               onReady={[Function]}
-              origin={
-                Object {
-                  "latitude": 51.5002,
-                  "longitude": 0.1332,
-                }
-              }
               strokeColor="hotpink"
               strokeWidth={3}
             />,
@@ -161,16 +137,10 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "apikey": "AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU",
-              "destination": Object {
-                "latitude": 51.523018,
-                "longitude": -0.087029,
-              },
+              "destination": undefined,
               "mode": "walking",
               "onReady": [Function],
-              "origin": Object {
-                "latitude": 51.5002,
-                "longitude": 0.1332,
-              },
+              "origin": undefined,
               "strokeColor": "hotpink",
               "strokeWidth": 3,
             },
@@ -213,20 +183,8 @@ ShallowWrapper {
           >
             <MapViewDirections
               apikey="AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU"
-              destination={
-                Object {
-                  "latitude": 51.523018,
-                  "longitude": -0.087029,
-                }
-              }
               mode="walking"
               onReady={[Function]}
-              origin={
-                Object {
-                  "latitude": 51.5002,
-                  "longitude": 0.1332,
-                }
-              }
               strokeColor="hotpink"
               strokeWidth={3}
             />
@@ -269,20 +227,8 @@ ShallowWrapper {
               null,
               <MapViewDirections
                 apikey="AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU"
-                destination={
-                  Object {
-                    "latitude": 51.523018,
-                    "longitude": -0.087029,
-                  }
-                }
                 mode="walking"
                 onReady={[Function]}
-                origin={
-                  Object {
-                    "latitude": 51.5002,
-                    "longitude": 0.1332,
-                  }
-                }
                 strokeColor="hotpink"
                 strokeWidth={3}
               />,
@@ -303,16 +249,10 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "apikey": "AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU",
-                "destination": Object {
-                  "latitude": 51.523018,
-                  "longitude": -0.087029,
-                },
+                "destination": undefined,
                 "mode": "walking",
                 "onReady": [Function],
-                "origin": Object {
-                  "latitude": 51.5002,
-                  "longitude": 0.1332,
-                },
+                "origin": undefined,
                 "strokeColor": "hotpink",
                 "strokeWidth": 3,
               },

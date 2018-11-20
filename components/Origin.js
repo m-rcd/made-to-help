@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import KEY from '../env.config';
-import App from '../App';
 
 
 export default class Origin extends React.Component {
@@ -40,7 +39,7 @@ export default class Origin extends React.Component {
           listViewDisplayed="auto"
           fetchDetails
           onPress={(data, details = null) => {
-            this.savingLocation(details.geometry.location.lat, details.geometry.location.lng),
+            this.savingLocation(details.geometry.location.lat, details.geometry.location.lng);
             this.handleState();
           }}
 

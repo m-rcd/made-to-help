@@ -2,21 +2,20 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import KEY from '../env.config';
-import App from '../App';
 
 export default class Destination extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { destinationLatitude: '', destinationLongitude: '' };
+    this.state = { latitude: '', longitude: '' };
     this.savingLocation = this.savingLocation.bind(this);
     this.handleState = this.handleState.bind(this);
   }
 
-  savingLocation(destinationLatitude, destinationLongitude) {
+  savingLocation(latitude, longitude) {
     this.setState(
       {
-        destinationLatitude,
-        destinationLongitude,
+        latitude,
+        longitude,
       },
     );
   }
@@ -29,7 +28,7 @@ export default class Destination extends React.Component {
     return (
       <View style={{ flex: 1 }}>
         <Text style={{ flex: 0.10 }}>
-          {`${this.state.destinationLatitude} - ${this.state.destinationLongitude}`}
+          {`${this.state.latitude} - ${this.state.longitude}`}
         </Text>
         <GooglePlacesAutocomplete
           placeholder="Destination"

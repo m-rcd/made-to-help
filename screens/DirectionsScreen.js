@@ -17,38 +17,39 @@ export default class DirectionScreen extends React.Component {
     this.updateDestination = this.updateDestination.bind(this);
     this.state = {
       origin: '',
-      destination: ''
+      destination: '',
     };
   }
+
     static navigationOptions = {
       title: 'Directions',
-  };
+    };
 
-  updateOrigin(newOrigin) {
-    this.setState({
-      origin: newOrigin
-    })
-  }
+    updateOrigin(newOrigin) {
+      this.setState({
+        origin: newOrigin,
+      });
+    }
 
-  updateDestination(newDestination) {
-    this.setState({
-      destination: newDestination
-    })
-  }
+    updateDestination(newDestination) {
+      this.setState({
+        destination: newDestination,
+      });
+    }
 
-  render() {
-    return (
-      <View style={{ flex: 1 }} testID="directions">
-        <Origin updateOrigin={this.updateOrigin} />
-        <Destination updateDestination={this.updateDestination} />
+    render() {
+      return (
+        <View style={{ flex: 1 }} testID="directions">
+          <Origin updateOrigin={this.updateOrigin} />
+          <Destination updateDestination={this.updateDestination} />
 
-        <TouchableOpacity
-          style={{ flex: 1.25 }}
-          onPress={() => this.props.navigation.navigate('Home', {origin: this.state.origin}, {destination: this.state.destination})}
-        >
-          <Text> Search </Text>
-        </TouchableOpacity>
-      </View>
-    );
-  }
+          <TouchableOpacity
+            style={{ flex: 1.25 }}
+            onPress={() => this.props.navigation.navigate('Home', { origin: this.state.origin, destination: this.state.destination })}
+          >
+            <Text> Search </Text>
+          </TouchableOpacity>
+        </View>
+      );
+    }
 }
