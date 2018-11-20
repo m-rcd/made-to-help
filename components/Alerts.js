@@ -13,6 +13,7 @@ export default class Alerts extends React.Component {
       latitude: null,
       text: '',
       typeOfReport: '',
+      icon: 'https://i.imgur.com/87ooZpt.png',
     };
   }
 
@@ -21,7 +22,7 @@ export default class Alerts extends React.Component {
     this.setState({ longitude: location.coords.longitude, latitude: location.coords.latitude });
   };
 
-  writeAlertData = (body, location, typeOfReport) => {
+  writeAlertData = (body, location, typeOfReport, icon) => {
     firebase
       .database()
       .ref('alerts/')
@@ -29,6 +30,7 @@ export default class Alerts extends React.Component {
         body,
         location,
         typeOfReport,
+        icon,
       })
       .then((data) => {
         console.log('data ', data);
@@ -44,7 +46,8 @@ export default class Alerts extends React.Component {
       latitude: this.state.latitude,
       longitude: this.state.longitude,
     },
-    this.state.typeOfReport
+    this.state.typeOfReport,
+    this.state.icon,
   );
     this.setState({ text: '', typeOfReport: '' });
     this.navigateHome();
