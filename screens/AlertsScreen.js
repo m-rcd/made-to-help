@@ -1,16 +1,16 @@
 import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
-import Alert from '../components/Alerts';
+import Alerts from '../components/Alerts';
 
-export default class LinksScreen extends React.Component {
+export default class AlertsScreen extends React.Component {
   static navigationOptions = {
-    title: 'Links',
+    title: 'Report',
   };
 
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Alert />
+        <Alerts />
       </ScrollView>
     );
   }
