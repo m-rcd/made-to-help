@@ -1,0 +1,32 @@
+class App extends Component {
+  this.updateOriginAndDestination = this.updateOriginAndDestination.bind(this);
+  this.state = {
+    origin: x,
+    destination: y
+  }
+
+  updateOriginAndDestination(newOrigin, newDestination) {
+    this.setState({
+      origin: newOrigin,
+      destination: newDestination
+    })
+  }
+
+  render() {
+    return (
+      <Directions updateOriginAndDestination={this.updateOriginAndDestination} />
+      <DynamicLocation origin={this.state.origin} destination={this.state.destination} />
+    )
+  }
+}
+
+Directions
++
+
+
+
+
+
+
+
+  onPress={this.props.updateOriginAndDestination(newOrigin, newDestination)}

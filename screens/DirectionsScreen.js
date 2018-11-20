@@ -11,19 +11,40 @@ const App = createStackNavigator({
 });
 
 export default class DirectionScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Directions',
+  constructor(props) {
+    super(props);
+    this.updateOrigin = this.updateOrigin.bind(this);
+    this.updateDestination = this.updateDestination.bind(this);
+    this.state = {
+      origin: '',
+      destination: ''
+    };
+  }
+    static navigationOptions = {
+      title: 'Directions',
   };
+
+  updateOrigin(newOrigin) {
+    this.setState({
+      origin: newOrigin
+    })
+  }
+
+  updateDestination(newDestination) {
+    this.setState({
+      destination: newDestination
+    })
+  }
 
   render() {
     return (
       <View style={{ flex: 1 }} testID="directions">
-        <Origin />
-        <Destination />
+        <Origin updateOrigin={this.updateOrigin} />
+        <Destination updateDestination={this.updateDestination} />
 
         <TouchableOpacity
           style={{ flex: 1.25 }}
-          onPress={() => this.props.navigation.navigate('Home')}
+          onPress={() => this.props.navigation.navigate('Home', {origin: this.state.origin}, {destination: this.state.destination})}
         >
           <Text> Search </Text>
         </TouchableOpacity>
