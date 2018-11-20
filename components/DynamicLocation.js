@@ -122,7 +122,6 @@ export default class DynamicLocation extends React.Component {
             ? null
             : this.state.alertMarkers.map((marker, index) => {
               const alertData = `${marker.body}`;
-              console.log(marker.location);
               return (
                 <MapView.Marker
                   key={index}
