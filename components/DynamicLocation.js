@@ -127,7 +127,8 @@ export default class DynamicLocation extends React.Component {
                     longitude: marker.location.longitude,
                   }}
                   image={require('../assets/images/alert.png')}
-                  title={alertData}
+                  title={marker.typeOfReport}
+                  description={alertData}
                 />
               );
             })}

@@ -12,6 +12,7 @@ export default class Alerts extends React.Component {
       longitude: null,
       latitude: null,
       text: '',
+      typeOfReport: '',
     };
   }
 
@@ -20,13 +21,14 @@ export default class Alerts extends React.Component {
     this.setState({ longitude: location.coords.longitude, latitude: location.coords.latitude });
   };
 
-  writeAlertData = (body, location) => {
+  writeAlertData = (body, location, typeOfReport) => {
     firebase
       .database()
       .ref('alerts/')
       .push({
         body,
         location,
+        typeOfReport,
       })
       .then((data) => {
         console.log('data ', data);
@@ -41,8 +43,10 @@ export default class Alerts extends React.Component {
     this.writeAlertData(this.state.text, {
       latitude: this.state.latitude,
       longitude: this.state.longitude,
-    });
-    this.setState({ text: '' });
+    },
+    this.state.typeOfReport
+  );
+    this.setState({ text: '', typeOfReport: '' });
     this.navigateHome();
   };
 
@@ -57,11 +61,13 @@ export default class Alerts extends React.Component {
   render() {
     return (
       <View>
-        <Text>Report a Bad Route</Text>
-        <TextInput placeholder="Enter Here" onChangeText={this.onHandleChange}>
+        <Text>Inaccessibility Report </Text>
+        <Button title="Broken Lift" onPress={ () => this.setState({typeOfReport: 'Broken Lift'})}
+          />
+        <TextInput placeholder="Extra Info" onChangeText={this.onHandleChange}>
           {this.state.text}
         </TextInput>
-        {this.state.text !== '' && <Button title="Submit" onPress={this.sendData} />}
+        {this.state.text !== '' || this.state.typeOfReport !== '' && <Button title="Submit" onPress={this.sendData} />}
       </View>
     );
   }
