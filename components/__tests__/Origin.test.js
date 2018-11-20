@@ -21,13 +21,12 @@ it('Should test for setState changes', () => {
 })
 
 // it('setStates onPress', () => {
-//   const data = 'test'
-//   const details = 'hi'
-//   const onPress = jest.fn();
-//   const component = shallow(<Directions onPress={onPress}/>);
+//   const component = shallow(<Origin/>);
+//   const instance = component.instance()
+//   const details = { latitude: -0.09, longitude: 51 }
 //   component.find('GooglePlacesAutocomplete').simulate('press', {
-//         target: {  details, data},
+//         target: { details.geometry.location }
 //       });
 //
-//     expect(onPress).toBeCalledWith(details, data);
+//     expect(instance.savingLocation).toBeCalledWith(details);
 // });

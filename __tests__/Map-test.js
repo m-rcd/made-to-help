@@ -20,10 +20,11 @@ jest.mock('react-native-maps', () => {
     let navigation;
     beforeEach(() => {
       navigation = jest.fn();
+      navigation.getParam = jest.fn();
     })
     it('renders successfully', async () => {
-      // const tree = renderer.create(<MapScreen/>).toJSON();
-      // expect(tree).toMatchSnapshot();
+      const tree = renderer.create(<MapScreen navigation = { navigation }/>).toJSON();
+      expect(tree).toMatchSnapshot();
 
   });
 });
