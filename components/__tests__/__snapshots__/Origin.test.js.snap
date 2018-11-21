@@ -8,15 +8,6 @@ exports[`Renders Origin component 1`] = `
     }
   }
 >
-  <Text
-    style={
-      Object {
-        "flex": 0.1,
-      }
-    }
-  >
-     - 
-  </Text>
   <View
     pointerEvents="box-none"
     style={

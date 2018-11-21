@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import KEY from '../env.config';
 
@@ -29,9 +29,6 @@ export default class Origin extends React.Component {
   render() {
     return (
       <View style={{ flex: 0.5 }}>
-        <Text style={{ flex: 0.10 }}>
-          {`${this.state.longitude} - ${this.state.latitude}`}
-        </Text>
         <GooglePlacesAutocomplete
           placeholder="Start"
           minLength={2}

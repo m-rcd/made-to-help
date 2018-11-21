@@ -16,15 +16,6 @@ exports[`Directions snapshot renders directions form 1`] = `
       }
     }
   >
-    <Text
-      style={
-        Object {
-          "flex": 0.1,
-        }
-      }
-    >
-       - 
-    </Text>
     <View
       pointerEvents="box-none"
       style={
@@ -97,15 +88,6 @@ exports[`Directions snapshot renders directions form 1`] = `
       }
     }
   >
-    <Text
-      style={
-        Object {
-          "flex": 0.1,
-        }
-      }
-    >
-       - 
-    </Text>
     <View
       pointerEvents="box-none"
       style={
