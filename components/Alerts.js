@@ -83,7 +83,7 @@ export default class Alerts extends React.Component {
     return (
       <View>
         <Text>Inaccessibility Report</Text>
-        <Button title="Broken Lift" onPress={this.sendTypeOfReportData} />
+        <Button id="brokenLift" title="Broken Lift" onPress={this.sendTypeOfReportData} />
         <TextInput placeholder="Extra Info" onChangeText={this.onHandleChange}>
           {this.state.text}
         </TextInput>

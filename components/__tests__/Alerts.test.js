@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { TextInput } from "react-native";
+import { TextInput, Button } from "react-native";
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Alerts from '../Alerts';
@@ -17,4 +17,11 @@ test('Input changes', () => {
   userInput = snapshot.find(TextInput)
   userInput.simulate('changeText', 'Lift broken')
   expect(snapshot.state().text).toEqual('Lift broken')
+});
+
+test('Sending report data', () => {
+  const snapshot = shallow(<Alerts />);
+  const button = snapshot.find('#brokenLift')
+  button.simulate('press')
+  expect(snapshot.state().typeOfReport).toEqual('Broken Lift')
 });
