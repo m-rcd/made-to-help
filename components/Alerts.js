@@ -16,6 +16,7 @@ export default class Alerts extends React.Component {
       text: '',
       typeOfReport: '',
       icon: '',
+      visibleForm: false,
     };
   }
 
@@ -76,7 +77,11 @@ export default class Alerts extends React.Component {
   };
 
   showForm = () => {
-
+    if ( this.state.visibleForm === true ) {
+      this.setState( { visibleForm: false })
+    } else {
+      this.setState( { visibleForm: true })
+    }
   }
 
   render() {
@@ -95,15 +100,17 @@ export default class Alerts extends React.Component {
         />
         <Text>Blocked Path</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={this.}
+        <TouchableOpacity onPress={this.showForm}>
         <Image
           source={require('../assets/images/alert.png')}
           />
-        <TextInput placeholder="Extra Info" onChangeText={this.onHandleChange}>
-          {this.state.text}
-        </TextInput>
-        <Button title="Submit" onPress={this.sendData} />
         </TouchableOpacity>
+        // {this.state.visibleForm &&
+        //   <TextInput placeholder="Extra Info" onChangeText={this.onHandleChange}>
+        //   {this.state.text}
+        // </TextInput>
+        // <Button title="Submit" onPress={this.sendData} />
+        // }
       </View>
     );
   }
