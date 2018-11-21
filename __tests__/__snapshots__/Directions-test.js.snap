@@ -40,7 +40,13 @@ exports[`Directions snapshot renders directions form 1`] = `
               "height": 44,
             },
             Object {
-              "width": "100%",
+              "backgroundColor": "#fff",
+              "borderColor": "grey",
+              "borderRadius": 10,
+              "borderWidth": 0.5,
+              "height": 50,
+              "marginTop": 15,
+              "textAlign": "center",
             },
           ]
         }
@@ -112,7 +118,12 @@ exports[`Directions snapshot renders directions form 1`] = `
               "height": 44,
             },
             Object {
-              "width": "100%",
+              "backgroundColor": "#fff",
+              "borderColor": "grey",
+              "borderRadius": 10,
+              "borderWidth": 0.5,
+              "height": 50,
+              "textAlign": "center",
             },
           ]
         }
@@ -164,8 +175,16 @@ exports[`Directions snapshot renders directions form 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "flex": 1.25,
+        "backgroundColor": "#fff",
+        "borderColor": "grey",
+        "borderRadius": 7,
+        "borderWidth": 0.5,
+        "justifyContent": "center",
+        "marginBottom": 200,
         "opacity": 1,
+        "padding": 25,
+        "textAlign": "center",
+        "width": "100%",
       }
     }
   >

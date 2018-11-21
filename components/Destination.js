@@ -51,7 +51,12 @@ export default class Destination extends React.Component {
 
           styles={{
             textInputContainer: {
-              width: '100%',
+              height: 50,
+              borderColor: 'grey',
+              backgroundColor: '#fff',
+              borderWidth: 0.5,
+              textAlign: 'center',
+              borderRadius: 10,
             },
             description: {
               fontWeight: 'bold',
