@@ -6,7 +6,8 @@ import {
 import { Location } from 'expo';
 
 const IMAGES = ['https://i.imgur.com/Pr7KWEL.png', 'https://i.imgur.com/ZEGDS72.png',
- 'https://i.imgur.com/rxKLzCF.png', 'https://i.imgur.com/RZ5g8QB.png'];
+ 'https://i.imgur.com/rxKLzCF.png', 'https://i.imgur.com/RZ5g8QB.png',
+  'https://i.imgur.com/Pn1xPAR.png'];
 
 export default class Alerts extends React.Component {
   constructor(props) {
@@ -78,6 +79,11 @@ export default class Alerts extends React.Component {
     this.sendData();
   };
 
+  sendNarrowPathData = async() => {
+    await this.setState({ typeOfReport: 'Narrow Path', icon: IMAGES[4] });
+    this.sendData();
+  };
+
   onHandleChange = (event) => {
     this.setState({ text: event, icon: IMAGES[0], typeOfReport: 'Other' });
   };
@@ -111,6 +117,12 @@ export default class Alerts extends React.Component {
           source={require('../assets/images/stairs.png')}
         />
         <Text>Stairs</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={this.sendNarrowPathData} >
+          <Image
+          source={require('../assets/images/narrow-road-ahead.png')}
+        />
+        <Text>Narrow Path</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={this.showForm}>
         <Image
