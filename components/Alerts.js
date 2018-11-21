@@ -7,7 +7,7 @@ import { Location } from 'expo';
 
 const IMAGES = ['https://i.imgur.com/Pr7KWEL.png', 'https://i.imgur.com/ZEGDS72.png',
  'https://i.imgur.com/rxKLzCF.png', 'https://i.imgur.com/RZ5g8QB.png',
-  'https://i.imgur.com/Pn1xPAR.png'];
+  'https://i.imgur.com/Pn1xPAR.png', 'https://i.imgur.com/ep1Fedt.png'];
 
 export default class Alerts extends React.Component {
   constructor(props) {
@@ -84,6 +84,11 @@ export default class Alerts extends React.Component {
     this.sendData();
   };
 
+  sendNoRampData = async() => {
+    await this.setState({ typeOfReport: 'No Ramp', icon: IMAGES[5] });
+    this.sendData();
+  };
+
   onHandleChange = (event) => {
     this.setState({ text: event, icon: IMAGES[0], typeOfReport: 'Other' });
   };
@@ -124,14 +129,20 @@ export default class Alerts extends React.Component {
         />
         <Text>Narrow Path</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={this.sendNoRampData} >
+          <Image
+          source={require('../assets/images/no-ramp.png')}
+        />
+        <Text>No Ramp</Text>
+        </TouchableOpacity>
         <TouchableOpacity onPress={this.showForm}>
         <Image
           source={require('../assets/images/alert.png')}
           />
         </TouchableOpacity>
+        <Text>Other</Text>
         {this.state.visibleForm &&
         <View>
-        <Text>Other</Text>
           <TextInput placeholder="Add Issue" onChangeText={this.onHandleChange}>
         </TextInput>
         <Button title="Submit" onPress={this.sendData} />
