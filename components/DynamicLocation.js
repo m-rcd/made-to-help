@@ -150,7 +150,7 @@ export default class DynamicLocation extends React.Component {
                   latitude: parseFloat(JSON.stringify(this.props.origin.latitude)),
                   longitude: parseFloat(JSON.stringify(this.props.origin.longitude)),
                 }}
-                description="Start"
+                description={this.props.origin.address}
                 title="Start"
               />
             )
@@ -163,7 +163,7 @@ export default class DynamicLocation extends React.Component {
                   latitude: parseFloat(JSON.stringify(this.props.destination.latitude)),
                   longitude: parseFloat(JSON.stringify(this.props.destination.longitude)),
                 }}
-                description="End"
+                description={this.props.destination.address}
                 title="End"
               />
             )
