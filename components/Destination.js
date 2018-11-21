@@ -6,16 +6,17 @@ import KEY from '../env.config';
 export default class Destination extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { latitude: '', longitude: '' };
+    this.state = { latitude: '', longitude: '', address: '' };
     this.savingLocation = this.savingLocation.bind(this);
     this.handleState = this.handleState.bind(this);
   }
 
-  savingLocation(latitude, longitude) {
+  savingLocation(latitude, longitude, address) {
     this.setState(
       {
         latitude,
         longitude,
+        address,
       },
     );
   }
@@ -38,7 +39,9 @@ export default class Destination extends React.Component {
           listViewDisplayed={false}
           fetchDetails
           onPress={(data, details = null) => {
-            this.savingLocation(details.geometry.location.lat, details.geometry.location.lng);
+            this.savingLocation(details.geometry.location.lat,
+              details.geometry.location.lng,
+              data.description);
             this.handleState();
           }}
 

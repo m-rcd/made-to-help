@@ -28,7 +28,7 @@ describe('Current Location', () => {
     expect(wrapper.state('longitude')).toBe(51);
     expect(wrapper.state('latitude')).toBe(-0.03);
   });
-  
+
   it('test location async', () => {
     const wrapper = shallow(<CurrentLocation />)
     const location = {coords:{latitude: -0.03, longitude: 50}}
@@ -37,4 +37,16 @@ describe('Current Location', () => {
     expect(wrapper.state('latitude')).toBe(-0.03)
     expect(wrapper.state('longitude')).toBe(50)
   })
-})
+
+  it('does something', async () => {
+    const wrapper = shallow(<CurrentLocation />);
+    const instanceComponent = wrapper.instance();
+    instanceComponent._getLocationAsync = () => {
+      wrapper.setState({ longitude: 51 });
+      wrapper.setState({ latitude: -0.03 });
+    };
+    instanceComponent.componentWillMount();
+    expect(wrapper.state('latitude')).toBe(-0.03)
+    expect(wrapper.state('longitude')).toBe(51)
+  });
+});

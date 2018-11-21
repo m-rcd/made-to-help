@@ -177,6 +177,8 @@ ShallowWrapper {
               strokeColor="hotpink"
               strokeWidth={3}
             />,
+            null,
+            null,
           ],
           "provider": "google",
           "region": undefined,
@@ -206,6 +208,8 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
+          null,
+          null,
         ],
         "type": [Function],
       },
@@ -384,6 +388,8 @@ ShallowWrapper {
                 strokeColor="hotpink"
                 strokeWidth={3}
               />,
+              null,
+              null,
             ],
             "provider": "google",
             "region": undefined,
@@ -413,6 +419,8 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
+            null,
+            null,
           ],
           "type": [Function],
         },

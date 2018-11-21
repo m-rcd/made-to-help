@@ -105,6 +105,7 @@ export default class Alerts extends React.Component {
     return (
       <View>
         <Text>Inaccessibility Report</Text>
+
         <TouchableOpacity onPress={this.sendBrokenLiftData}>
           <Image
             source={require('../assets/images/broken-lift.png')}
