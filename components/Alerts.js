@@ -66,6 +66,7 @@ export default class Alerts extends React.Component {
     this.setState({ text: '' });
     this.props.navigation.navigate('Home');
   };
+
   sendBlockedPathData = async () => {
     await this.setState({ typeOfReport: 'Blocked Path', icon: IMAGES[2] });
     this.sendData();
@@ -100,7 +101,7 @@ export default class Alerts extends React.Component {
           />
           <Text>Blocked Path</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={this.showForm}>
+        <TouchableOpacity id="show-form" onPress={this.showForm}>
           <Image
             source={require('../assets/images/alert.png')}
           />

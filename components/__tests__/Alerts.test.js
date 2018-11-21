@@ -14,6 +14,7 @@ test('Renders CurrentLocation component', () => {
 
 test('Input changes', () => {
   const snapshot = shallow(<Alerts />);
+  snapshot.find('#show-form').simulate('press')
   userInput = snapshot.find(TextInput)
   userInput.simulate('changeText', 'Lift broken')
   expect(snapshot.state().text).toEqual('Lift broken')
