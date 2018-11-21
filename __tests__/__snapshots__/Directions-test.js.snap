@@ -12,7 +12,7 @@ exports[`Directions snapshot renders directions form 1`] = `
   <View
     style={
       Object {
-        "flex": 1,
+        "flex": 0.5,
       }
     }
   >
@@ -23,7 +23,7 @@ exports[`Directions snapshot renders directions form 1`] = `
         }
       }
     >
-       -  - 
+       - 
     </Text>
     <View
       pointerEvents="box-none"
@@ -62,7 +62,7 @@ exports[`Directions snapshot renders directions form 1`] = `
           onChangeText={[Function]}
           onFocus={[Function]}
           onSubmitEditing={[Function]}
-          placeholder="Search"
+          placeholder="Start"
           placeholderTextColor="#A8A8A8"
           returnKeyType="search"
           style={
@@ -89,6 +89,107 @@ exports[`Directions snapshot renders directions form 1`] = `
         />
       </View>
     </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "flex": 0.1,
+        }
+      }
+    >
+       - 
+    </Text>
+    <View
+      pointerEvents="box-none"
+      style={
+        Array [
+          Object {
+            "flex": 1,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#C9C9CE",
+              "borderBottomColor": "#b5b5b5",
+              "borderBottomWidth": 0.5,
+              "borderTopColor": "#7e7e7e",
+              "borderTopWidth": 0.5,
+              "flexDirection": "row",
+              "height": 44,
+            },
+            Object {
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          autoFocus={false}
+          clearButtonMode="while-editing"
+          editable={true}
+          onChangeText={[Function]}
+          onFocus={[Function]}
+          onSubmitEditing={[Function]}
+          placeholder="End"
+          placeholderTextColor="#A8A8A8"
+          returnKeyType="search"
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 5,
+                "flex": 1,
+                "fontSize": 15,
+                "height": 28,
+                "marginLeft": 8,
+                "marginRight": 8,
+                "marginTop": 7.5,
+                "paddingBottom": 4.5,
+                "paddingLeft": 10,
+                "paddingRight": 10,
+                "paddingTop": 4.5,
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+          value=""
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flex": 1.25,
+        "opacity": 1,
+      }
+    }
+  >
+    <Text>
+       Search 
+    </Text>
   </View>
 </View>
 `;
