@@ -1,11 +1,12 @@
 import * as firebase from 'firebase';
 import React from 'react';
 import {
-  View, TextInput, Text, Button, Alert, TouchableOpacity, Image,
+  View, TextInput, Text, Button, Alert, TouchableOpacity, Image
 } from 'react-native';
 import { Location } from 'expo';
 
-const IMAGES = ['https://i.imgur.com/Pr7KWEL.png', 'https://i.imgur.com/ZEGDS72.png', 'https://i.imgur.com/rxKLzCF.png'];
+const IMAGES = ['https://i.imgur.com/Pr7KWEL.png', 'https://i.imgur.com/ZEGDS72.png',
+ 'https://i.imgur.com/rxKLzCF.png', 'https://i.imgur.com/RZ5g8QB.png'];
 
 export default class Alerts extends React.Component {
   constructor(props) {
@@ -57,18 +58,23 @@ export default class Alerts extends React.Component {
     this.navigateHome();
   };
 
-  sendBrokenLiftData = async () => {
+  sendBrokenLiftData = async() => {
     await this.setState({ typeOfReport: 'Broken Lift', icon: IMAGES[1] });
     this.sendData();
   };
 
   navigateHome = () => {
-    this.setState({ text: '' });
+    this.setState({text: ''});
     this.props.navigation.navigate('Home');
   };
 
-  sendBlockedPathData = async () => {
+  sendBlockedPathData = async() => {
     await this.setState({ typeOfReport: 'Blocked Path', icon: IMAGES[2] });
+    this.sendData();
+  };
+
+  sendStairsData = async() => {
+    await this.setState({ typeOfReport: 'Stairs', icon: IMAGES[3] });
     this.sendData();
   };
 
@@ -77,10 +83,10 @@ export default class Alerts extends React.Component {
   };
 
   showForm = () => {
-    if (this.state.visibleForm === true) {
-      this.setState({ visibleForm: false });
+    if ( this.state.visibleForm === true ) {
+      this.setState( { visibleForm: false })
     } else {
-      this.setState({ visibleForm: true });
+      this.setState( { visibleForm: true })
     }
   }
 
@@ -88,30 +94,36 @@ export default class Alerts extends React.Component {
     return (
       <View>
         <Text>Inaccessibility Report</Text>
-        <TouchableOpacity onPress={this.sendBrokenLiftData}>
+        <TouchableOpacity onPress={this.sendBrokenLiftData} >
           <Image
             source={require('../assets/images/broken-lift.png')}
           />
           <Text>Broken Lift</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={this.sendBlockedPathData}>
+          </TouchableOpacity>
+        <TouchableOpacity onPress={this.sendBlockedPathData} >
           <Image
-            source={require('../assets/images/blockedPath.png')}
-          />
-          <Text>Blocked Path</Text>
+          source={require('../assets/images/blockedPath.png')}
+        />
+        <Text>Blocked Path</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={this.sendStairsData} >
+          <Image
+          source={require('../assets/images/stairs.png')}
+        />
+        <Text>Stairs</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={this.showForm}>
-          <Image
-            source={require('../assets/images/alert.png')}
+        <Image
+          source={require('../assets/images/alert.png')}
           />
         </TouchableOpacity>
-        {this.state.visibleForm
-          && (
-          <View>
-            <TextInput placeholder="Extra Info" onChangeText={this.onHandleChange} />
-            <Button title="Submit" onPress={this.sendData} />
-          </View>
-          )
+        {this.state.visibleForm &&
+        <View>
+        <Text>Other</Text>
+          <TextInput placeholder="Add Issue" onChangeText={this.onHandleChange}>
+        </TextInput>
+        <Button title="Submit" onPress={this.sendData} />
+        </View>
         }
       </View>
     );
