@@ -34,7 +34,6 @@ exports[`Renders DynamicLocation component 1`] = `
         style={
           Object {
             "color": "hotpink",
-            "fontFamily": "Verdana",
             "fontSize": 40,
             "fontWeight": "bold",
             "textAlign": "center",
@@ -139,7 +138,6 @@ ShallowWrapper {
               style={
                 Object {
                   "color": "hotpink",
-                  "fontFamily": "Verdana",
                   "fontSize": 40,
                   "fontWeight": "bold",
                   "textAlign": "center",
@@ -230,7 +228,6 @@ ShallowWrapper {
               style={
                 Object {
                   "color": "hotpink",
-                  "fontFamily": "Verdana",
                   "fontSize": 40,
                   "fontWeight": "bold",
                   "textAlign": "center",
@@ -254,7 +251,6 @@ ShallowWrapper {
               style={
                 Object {
                   "color": "hotpink",
-                  "fontFamily": "Verdana",
                   "fontSize": 40,
                   "fontWeight": "bold",
                   "textAlign": "center",
@@ -281,7 +277,6 @@ ShallowWrapper {
  null KM",
               "style": Object {
                 "color": "hotpink",
-                "fontFamily": "Verdana",
                 "fontSize": 40,
                 "fontWeight": "bold",
                 "textAlign": "center",
@@ -350,7 +345,6 @@ ShallowWrapper {
                 style={
                   Object {
                     "color": "hotpink",
-                    "fontFamily": "Verdana",
                     "fontSize": 40,
                     "fontWeight": "bold",
                     "textAlign": "center",
@@ -441,7 +435,6 @@ ShallowWrapper {
                 style={
                   Object {
                     "color": "hotpink",
-                    "fontFamily": "Verdana",
                     "fontSize": 40,
                     "fontWeight": "bold",
                     "textAlign": "center",
@@ -465,7 +458,6 @@ ShallowWrapper {
                 style={
                   Object {
                     "color": "hotpink",
-                    "fontFamily": "Verdana",
                     "fontSize": 40,
                     "fontWeight": "bold",
                     "textAlign": "center",
@@ -492,7 +484,6 @@ ShallowWrapper {
  null KM",
                 "style": Object {
                   "color": "hotpink",
-                  "fontFamily": "Verdana",
                   "fontSize": 40,
                   "fontWeight": "bold",
                   "textAlign": "center",

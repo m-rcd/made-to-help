@@ -50,7 +50,43 @@ ShallowWrapper {
           <Component
             source={1}
           />
+          <Component>
+            Stairs
+          </Component>
         </TouchableOpacity>,
+        <TouchableOpacity
+          activeOpacity={0.2}
+          onPress={[Function]}
+        >
+          <Component
+            source={1}
+          />
+          <Component>
+            Narrow Path
+          </Component>
+        </TouchableOpacity>,
+        <TouchableOpacity
+          activeOpacity={0.2}
+          onPress={[Function]}
+        >
+          <Component
+            source={1}
+          />
+          <Component>
+            No Ramp
+          </Component>
+        </TouchableOpacity>,
+        <TouchableOpacity
+          activeOpacity={0.2}
+          onPress={[Function]}
+        >
+          <Component
+            source={1}
+          />
+        </TouchableOpacity>,
+        <Component>
+          Other
+        </Component>,
         false,
       ],
     },
@@ -159,6 +195,135 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "activeOpacity": 0.2,
+          "children": Array [
+            <Component
+              source={1}
+            />,
+            <Component>
+              Stairs
+            </Component>,
+          ],
+          "onPress": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "source": 1,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Stairs",
+            },
+            "ref": null,
+            "rendered": "Stairs",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "activeOpacity": 0.2,
+          "children": Array [
+            <Component
+              source={1}
+            />,
+            <Component>
+              Narrow Path
+            </Component>,
+          ],
+          "onPress": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "source": 1,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Narrow Path",
+            },
+            "ref": null,
+            "rendered": "Narrow Path",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "activeOpacity": 0.2,
+          "children": Array [
+            <Component
+              source={1}
+            />,
+            <Component>
+              No Ramp
+            </Component>,
+          ],
+          "onPress": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "source": 1,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "No Ramp",
+            },
+            "ref": null,
+            "rendered": "No Ramp",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "activeOpacity": 0.2,
           "children": <Component
             source={1}
           />,
@@ -176,6 +341,17 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Other",
+        },
+        "ref": null,
+        "rendered": "Other",
         "type": [Function],
       },
       false,
@@ -221,7 +397,43 @@ ShallowWrapper {
             <Component
               source={1}
             />
+            <Component>
+              Stairs
+            </Component>
           </TouchableOpacity>,
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+          >
+            <Component
+              source={1}
+            />
+            <Component>
+              Narrow Path
+            </Component>
+          </TouchableOpacity>,
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+          >
+            <Component
+              source={1}
+            />
+            <Component>
+              No Ramp
+            </Component>
+          </TouchableOpacity>,
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+          >
+            <Component
+              source={1}
+            />
+          </TouchableOpacity>,
+          <Component>
+            Other
+          </Component>,
           false,
         ],
       },
@@ -330,6 +542,135 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "activeOpacity": 0.2,
+            "children": Array [
+              <Component
+                source={1}
+              />,
+              <Component>
+                Stairs
+              </Component>,
+            ],
+            "onPress": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "source": 1,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Stairs",
+              },
+              "ref": null,
+              "rendered": "Stairs",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "activeOpacity": 0.2,
+            "children": Array [
+              <Component
+                source={1}
+              />,
+              <Component>
+                Narrow Path
+              </Component>,
+            ],
+            "onPress": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "source": 1,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Narrow Path",
+              },
+              "ref": null,
+              "rendered": "Narrow Path",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "activeOpacity": 0.2,
+            "children": Array [
+              <Component
+                source={1}
+              />,
+              <Component>
+                No Ramp
+              </Component>,
+            ],
+            "onPress": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "source": 1,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "No Ramp",
+              },
+              "ref": null,
+              "rendered": "No Ramp",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "activeOpacity": 0.2,
             "children": <Component
               source={1}
             />,
@@ -347,6 +688,17 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Other",
+          },
+          "ref": null,
+          "rendered": "Other",
           "type": [Function],
         },
         false,
