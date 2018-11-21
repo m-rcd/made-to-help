@@ -45,6 +45,7 @@ ShallowWrapper {
         </TouchableOpacity>,
         <TouchableOpacity
           activeOpacity={0.2}
+          id="show-form"
           onPress={[Function]}
         >
           <Component
@@ -162,6 +163,7 @@ ShallowWrapper {
           "children": <Component
             source={1}
           />,
+          "id": "show-form",
           "onPress": [Function],
         },
         "ref": null,
@@ -216,6 +218,7 @@ ShallowWrapper {
           </TouchableOpacity>,
           <TouchableOpacity
             activeOpacity={0.2}
+            id="show-form"
             onPress={[Function]}
           >
             <Component
@@ -333,6 +336,7 @@ ShallowWrapper {
             "children": <Component
               source={1}
             />,
+            "id": "show-form",
             "onPress": [Function],
           },
           "ref": null,

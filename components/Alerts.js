@@ -88,6 +88,7 @@ export default class Alerts extends React.Component {
     return (
       <View>
         <Text>Inaccessibility Report</Text>
+
         <TouchableOpacity onPress={this.sendBrokenLiftData}>
           <Image
             source={require('../assets/images/broken-lift.png')}
@@ -100,7 +101,7 @@ export default class Alerts extends React.Component {
           />
           <Text>Blocked Path</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={this.showForm}>
+        <TouchableOpacity id="show-form" onPress={this.showForm}>
           <Image
             source={require('../assets/images/alert.png')}
           />

@@ -31,6 +31,7 @@ export default class DirectionScreen extends React.Component {
       });
     }
 
+
     updateDestination(newDestination) {
       this.setState({
         destination: newDestination,
