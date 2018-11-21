@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import DynamicLocation from '../DynamicLocation';
+import MapScreen from '../../screens/MapScreen';
 
 Enzyme.configure({ adapter: new Adapter() });
 

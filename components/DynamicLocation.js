@@ -9,9 +9,6 @@ import KEY from '../env.config';
 
 const GEOLOCATION_OPTIONS = { enableHighAccuracy: true };
 
-const origin = '50 commercial st UK';
-const destination = 'Westminster Bridge, London SE1 7GP';
-
 const styles = StyleSheet.create({
   calloutView: {
     backgroundColor: 'rgba(255, 255, 255, 0.3)',
@@ -133,8 +130,8 @@ export default class DynamicLocation extends React.Component {
               );
             })}
           <MapViewDirections
-            origin={origin}
-            destination={destination}
+            origin={this.props.origin}
+            destination={this.props.destination}
             apikey={DB_URL}
             strokeWidth={3}
             strokeColor="hotpink"
