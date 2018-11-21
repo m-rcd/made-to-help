@@ -3,7 +3,6 @@ import { View } from 'react-native';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import KEY from '../env.config';
 
-
 export default class Origin extends React.Component {
   constructor(props) {
     super(props);
@@ -83,9 +82,6 @@ export default class Origin extends React.Component {
           currentLocation
         />
       </View>
-
     );
   }
 }
-
-// AppRegistry.registerComponent('made-to-help', () => Directions);

@@ -81,9 +81,6 @@ export default class Destination extends React.Component {
           currentLocation
         />
       </View>
-
     );
   }
 }
-
-// AppRegistry.registerComponent('made-to-help', () => Directions);
