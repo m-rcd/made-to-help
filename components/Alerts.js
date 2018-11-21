@@ -1,11 +1,11 @@
 import * as firebase from 'firebase';
 import React from 'react';
 import {
-  View, TextInput, Text, Button, Alert,
+  View, TextInput, Text, Button, Alert, TouchableOpacity, Image,
 } from 'react-native';
 import { Location } from 'expo';
 
-const IMAGES = ['https://i.imgur.com/Pr7KWEL.png', 'https://i.imgur.com/ZEGDS72.png'];
+const IMAGES = ['https://i.imgur.com/Pr7KWEL.png', 'https://i.imgur.com/ZEGDS72.png', 'https://i.imgur.com/rxKLzCF.png'];
 
 export default class Alerts extends React.Component {
   constructor(props) {
@@ -15,7 +15,8 @@ export default class Alerts extends React.Component {
       latitude: null,
       text: '',
       typeOfReport: '',
-      icon: IMAGES[0],
+      icon: '',
+      visibleForm: false,
     };
   }
 
@@ -53,49 +54,65 @@ export default class Alerts extends React.Component {
       this.state.typeOfReport,
       this.state.icon,
     );
-    this.setState({ text: '', typeOfReport: '', icon: '' });
     this.navigateHome();
   };
 
-  sendTypeOfReportData = () => {
-    this.setState({ typeOfReport: 'Broken Lift', icon: IMAGES[1] });
-    this.writeAlertData(
-      this.state.text,
-      {
-        latitude: this.state.latitude,
-        longitude: this.state.longitude,
-      },
-      this.state.typeOfReport,
-      this.state.icon,
-    );
-    this.navigateHome();
+  sendBrokenLiftData = async () => {
+    await this.setState({ typeOfReport: 'Broken Lift', icon: IMAGES[1] });
+    this.sendData();
   };
 
   navigateHome = () => {
+    this.setState({ text: '' });
     this.props.navigation.navigate('Home');
   };
 
-  iconSelector = () => {
-    if (this.state.typeOfReport === 'Broken Lift') {
-      this.setState({ icon: IMAGES[1] });
-    } else {
-      this.setState({ icon: IMAGES[0] });
-    }
+  sendBlockedPathData = async () => {
+    await this.setState({ typeOfReport: 'Blocked Path', icon: IMAGES[2] });
+    this.sendData();
   };
 
   onHandleChange = (event) => {
     this.setState({ text: event, icon: IMAGES[0], typeOfReport: 'Other' });
   };
 
+  showForm = () => {
+    if (this.state.visibleForm === true) {
+      this.setState({ visibleForm: false });
+    } else {
+      this.setState({ visibleForm: true });
+    }
+  }
+
   render() {
     return (
       <View>
         <Text>Inaccessibility Report</Text>
-        <Button title="Broken Lift" onPress={this.sendTypeOfReportData} />
-        <TextInput placeholder="Extra Info" onChangeText={this.onHandleChange}>
-          {this.state.text}
-        </TextInput>
-        <Button title="Submit" onPress={this.sendData} />
+        <TouchableOpacity onPress={this.sendBrokenLiftData}>
+          <Image
+            source={require('../assets/images/broken-lift.png')}
+          />
+          <Text>Broken Lift</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={this.sendBlockedPathData}>
+          <Image
+            source={require('../assets/images/blockedPath.png')}
+          />
+          <Text>Blocked Path</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={this.showForm}>
+          <Image
+            source={require('../assets/images/alert.png')}
+          />
+        </TouchableOpacity>
+        {this.state.visibleForm
+          && (
+          <View>
+            <TextInput placeholder="Extra Info" onChangeText={this.onHandleChange} />
+            <Button title="Submit" onPress={this.sendData} />
+          </View>
+          )
+        }
       </View>
     );
   }
