@@ -19,14 +19,3 @@ it('Should test for setState changes', () => {
   expect(instance.state.latitude).toBe(-0.09)
   expect(instance.state.longitude).toBe(51)
 })
-
-// it('setStates onPress', () => {
-//   const component = shallow(<Origin/>);
-//   const instance = component.instance()
-//   const details = { latitude: -0.09, longitude: 51 }
-//   component.find('GooglePlacesAutocomplete').simulate('press', {
-//         target: { details.geometry.location }
-//       });
-//
-//     expect(instance.savingLocation).toBeCalledWith(details);
-// });
