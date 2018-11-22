@@ -33,6 +33,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  submitButton: {
+    backgroundColor: '#228ac4',
+    width: 100,
+    height: 30,
+    borderRadius: 10,
+  },
+  submitButtonText: {
+    textAlign: 'center',
+    paddingTop: 6,
+    color: '#fff',
+  },
 });
 
 const IMAGES = [
@@ -186,14 +197,20 @@ export default class Alerts extends React.Component {
           }}
         >
           <View style={styles.submitForm}>
-            <TextInput placeholder="Enter Your Report" onChangeText={this.onHandleChange} />
-            <Button title="Submit" onPress={this.sendOtherReportData} />
+            <TextInput
+              style={{ fontSize: 25, marginBottom: 10 }}
+              placeholder="Enter Your Report"
+              onChangeText={this.onHandleChange}
+            />
+            <TouchableHighlight onPress={this.sendOtherReportData} style={styles.submitButton}>
+              <Text style={styles.submitButtonText}>Submit</Text>
+            </TouchableHighlight>
             <TouchableHighlight
               onPress={() => {
                 this.setModalVisible(!this.state.showFormModal);
               }}
             >
-              <Text style={{ fontSize: 30 }}>Close Report</Text>
+              <Text style={{ fontSize: 20 }}>Close Report</Text>
             </TouchableHighlight>
           </View>
         </Modal>
