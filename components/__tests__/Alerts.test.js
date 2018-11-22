@@ -37,3 +37,9 @@ test('Sending report data for stairs', () => {
   snapshot.find('#stairs').simulate('press')
   expect(snapshot.state().typeOfReport).toEqual('Stairs')
 });
+
+test('Sending report data for narrow path', () => {
+  const snapshot = shallow(<Alerts />);
+  snapshot.find('#narrowPath').simulate('press')
+  expect(snapshot.state().typeOfReport).toEqual('Narrow Path')
+});

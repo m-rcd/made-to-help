@@ -133,7 +133,7 @@ export default class Alerts extends React.Component {
           />
           <Text>Stairs</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={this.sendNarrowPathData}>
+        <TouchableOpacity id='narrowPath' onPress={this.sendNarrowPathData}>
           <Image
             source={require('../assets/images/narrow-road-ahead.png')}
           />

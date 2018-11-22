@@ -59,6 +59,7 @@ ShallowWrapper {
         </TouchableOpacity>,
         <TouchableOpacity
           activeOpacity={0.2}
+          id="narrowPath"
           onPress={[Function]}
         >
           <Component
@@ -253,6 +254,7 @@ ShallowWrapper {
               Narrow Path
             </Component>,
           ],
+          "id": "narrowPath",
           "onPress": [Function],
         },
         "ref": null,
@@ -414,6 +416,7 @@ ShallowWrapper {
           </TouchableOpacity>,
           <TouchableOpacity
             activeOpacity={0.2}
+            id="narrowPath"
             onPress={[Function]}
           >
             <Component
@@ -608,6 +611,7 @@ ShallowWrapper {
                 Narrow Path
               </Component>,
             ],
+            "id": "narrowPath",
             "onPress": [Function],
           },
           "ref": null,
