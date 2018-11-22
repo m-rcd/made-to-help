@@ -43,7 +43,7 @@ export default class DirectionScreen extends React.Component {
           <Destination updateDestination={this.updateDestination} />
 
           <TouchableOpacity
-            id='direction'
+            id="direction"
             style={{
               borderWidth: 0.5,
               padding: 25,

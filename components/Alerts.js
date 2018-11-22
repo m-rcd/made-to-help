@@ -108,7 +108,7 @@ export default class Alerts extends React.Component {
         <Text>Inaccessibility Report</Text>
 
         <TouchableOpacity
-          id='brokenLift'
+          id="brokenLift"
           onPress={this.sendBrokenLiftData}
         >
           <Image
@@ -117,30 +117,30 @@ export default class Alerts extends React.Component {
           <Text>Broken Lift</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          id='blockedPath'
+          id="blockedPath"
           onPress={this.sendBlockedPathData}
-          >
+        >
           <Image
             source={require('../assets/images/blockedPath.png')}
           />
           <Text>Blocked Path</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          id='stairs'
+          id="stairs"
           onPress={this.sendStairsData}
-          >
+        >
           <Image
             source={require('../assets/images/stairs.png')}
           />
           <Text>Stairs</Text>
         </TouchableOpacity>
-        <TouchableOpacity id='narrowPath' onPress={this.sendNarrowPathData}>
+        <TouchableOpacity id="narrowPath" onPress={this.sendNarrowPathData}>
           <Image
             source={require('../assets/images/narrow-road-ahead.png')}
           />
           <Text>Narrow Path</Text>
         </TouchableOpacity>
-        <TouchableOpacity id='noRamp' onPress={this.sendNoRampData}>
+        <TouchableOpacity id="noRamp" onPress={this.sendNoRampData}>
           <Image
             source={require('../assets/images/no-ramp.png')}
           />
