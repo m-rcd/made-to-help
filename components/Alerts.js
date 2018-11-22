@@ -4,7 +4,6 @@ import {
   View,
   TextInput,
   Text,
-  Button,
   Alert,
   TouchableOpacity,
   Image,
