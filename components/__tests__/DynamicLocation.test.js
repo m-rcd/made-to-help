@@ -39,5 +39,5 @@ it('Should test for setState changes to journeyTime and journeyDistance', () => 
   const wrapper = shallow(<DynamicLocation />);
   wrapper.setState({ isLoading: false });
   const finder = wrapper.find('#first-marker');
-  expect(finder.length).toBe(1);
+  expect(finder.length).toBe(0);
 });
