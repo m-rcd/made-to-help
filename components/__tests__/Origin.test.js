@@ -12,10 +12,11 @@ test('Renders Origin component', () => {
 })
 
 
-it('Should test for setState changes', () => {
+it('Should test for setState changes for origin location', () => {
   const wrapper = shallow(<Origin />);
   const instance = wrapper.instance()
-  instance.savingLocation(-0.09, 51)
+  instance.savingLocation(-0.09, 51, "Makers London")
   expect(instance.state.latitude).toBe(-0.09)
   expect(instance.state.longitude).toBe(51)
+  expect(instance.state.address).toBe("Makers London")
 })
