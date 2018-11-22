@@ -391,6 +391,42 @@ ShallowWrapper {
 }
 `;
 
+exports[`Should test for setState changes to journeyTime and journeyDistance: After setting state 1`] = `
+Object {
+  "alertIsLoading": false,
+  "alertMarkers": Array [],
+  "alertVisibility": true,
+  "isLoading": true,
+  "journeyDistance": null,
+  "journeyTime": null,
+  "location": Object {
+    "coords": Object {
+      "latitude": -0.09,
+      "longitude": 51,
+    },
+  },
+  "markers": Array [],
+}
+`;
+
+exports[`Should test for setState changes to journeyTime and journeyDistance: Before Setting State 1`] = `
+Object {
+  "alertIsLoading": true,
+  "alertMarkers": Array [],
+  "alertVisibility": true,
+  "isLoading": true,
+  "journeyDistance": null,
+  "journeyTime": null,
+  "location": Object {
+    "coords": Object {
+      "latitude": -0.09,
+      "longitude": 51,
+    },
+  },
+  "markers": Array [],
+}
+`;
+
 exports[`Should test for setState changes to locationChanged: Something Updated 1`] = `
 Object {
   "alertIsLoading": true,
