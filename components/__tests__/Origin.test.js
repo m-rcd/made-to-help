@@ -20,3 +20,15 @@ it('Should test for setState changes for origin location', () => {
   expect(instance.state.longitude).toBe(51)
   expect(instance.state.address).toBe("Makers London")
 })
+
+// it('test onPress', () => {
+//   const geometry = jest.fn()
+//   const details = {latitude: 0.3, longitude: 42, address: 'Makers'}
+//
+//   const wrapper = shallow(<Origin  details={details} geometry={geometry} />)
+//   const instance = wrapper.instance();
+//   wrapper.find('#origin').simulate('change', { target: { value: details }})
+//   wrapper.find('#origin').simulate('press')
+//   expect(savingLocation).toHaveBeenCalledWith(0.3, 42, 'Makers')
+//   expect(handleState).toHaveBeenCalled()
+// })
