@@ -5,6 +5,9 @@
 
 **MADE to Help** is a mobile app that helps find you the best, and most accessible, routes for those who need  help navigating the city.
 
+![Logo](./assets/images/MADEtoHelp!.JPG)
+
+
 ## Motivation
 
 
@@ -25,7 +28,18 @@
 [Mocha](https://github.com/mochajs/mocha)
 
 
-## Features
+## User stories
+
+```
+As a User
+So that I can see where I am
+I want to open the app and see my location
+```
+```
+As a User
+So that i can plan my journey
+I want to enter a start and end destination
+```
 
 
 ## How to run the App
@@ -42,6 +56,7 @@
 - Download `expo` app on your phone
 - run `expo start`
 - Iphone: scan the QR code with the camera and open expo.
+
   Android: scan the QR code from expo app.
 
 - You can also go to this link `https://expo.io/@alexkharouk/made-to-help` and scan the QR code from there or open the app in the browser!
