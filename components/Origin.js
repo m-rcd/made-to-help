@@ -10,22 +10,20 @@ export default class Origin extends React.Component {
   }
 
   savingLocation = (latitude, longitude, address) => {
-    this.setState(
-      {
-        latitude,
-        longitude,
-        address,
-      },
-    );
-  }
+    this.setState({
+      latitude,
+      longitude,
+      address,
+    });
+  };
 
   handleState = () => {
     this.props.updateOrigin(this.state);
-  }
+  };
 
   render() {
     return (
-      <View style={{ flex: 0.5 }}>
+      <View style={{ flex: 0.7 }}>
         <GooglePlacesAutocomplete
           placeholder="Start"
           minLength={2}
@@ -34,19 +32,18 @@ export default class Origin extends React.Component {
           listViewDisplayed={false}
           fetchDetails
           onPress={(data, details = null) => {
-            this.savingLocation(details.geometry.location.lat,
+            this.savingLocation(
+              details.geometry.location.lat,
               details.geometry.location.lng,
-              data.description);
+              data.description,
+            );
             this.handleState();
           }}
-
           getDefaultValue={() => ''}
-
           query={{
             key: KEY,
             language: 'en',
           }}
-
           styles={{
             textInputContainer: {
               height: 50,
@@ -69,12 +66,10 @@ export default class Origin extends React.Component {
             },
           }}
           nearbyPlacesAPI="GooglePlacesSearch"
-          GoogleReverseGeocodingQuery={{
-          }}
+          GoogleReverseGeocodingQuery={{}}
           GooglePlacesSearchQuery={{
             rankby: 'distance',
           }}
-
           filterReverseGeocodingByTypes={['locality', 'administrative_area_level_3']}
           debounce={200}
           currentLocation

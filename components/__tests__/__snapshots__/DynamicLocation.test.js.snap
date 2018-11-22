@@ -19,72 +19,35 @@ exports[`Renders DynamicLocation component 1`] = `
       }
     }
   />
-  <Callout>
-    <View
-      style={
-        Object {
-          "backgroundColor": "rgba(255, 255, 255, 0.3)",
-          "width": 500,
-        }
-      }
-    >
-      <Text
-        accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
- null KM"
-        style={
-          Object {
-            "color": "hotpink",
-            "fontSize": 40,
-            "fontWeight": "bold",
-            "textAlign": "center",
-          }
-        }
-      >
-        0 Minutes 
- null KM
-      </Text>
-    </View>
-  </Callout>
-  <View
-    accessibilityRole="button"
-    accessibilityStates={Array []}
-    accessible={true}
-    isTVSelectable={true}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
+  <Callout
     style={
       Object {
-        "opacity": 1,
+        "bottom": 10,
+        "position": "absolute",
+        "right": 10,
       }
     }
   >
     <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
-        Array [
-          Object {},
-        ]
+        Object {
+          "opacity": 1,
+        }
       }
     >
-      <Text
-        style={
-          Array [
-            Object {
-              "color": "#007AFF",
-              "fontSize": 18,
-              "padding": 8,
-              "textAlign": "center",
-            },
-          ]
-        }
-      >
-        Alerts
-      </Text>
+      <Image
+        source={1}
+      />
     </View>
-  </View>
+  </Callout>
 </View>
 `;
 
@@ -123,36 +86,25 @@ ShallowWrapper {
             strokeWidth={3}
           />
         </MockMapView>,
-        <Unknown>
-          <Component
-            style={
-              Object {
-                "backgroundColor": "rgba(255, 255, 255, 0.3)",
-                "width": 500,
-              }
+        null,
+        <Unknown
+          style={
+            Object {
+              "bottom": 10,
+              "position": "absolute",
+              "right": 10,
             }
+          }
+        >
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
           >
             <Component
-              accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
- null KM"
-              style={
-                Object {
-                  "color": "hotpink",
-                  "fontSize": 40,
-                  "fontWeight": "bold",
-                  "textAlign": "center",
-                }
-              }
-            >
-              0 Minutes 
- null KM
-            </Component>
-          </Component>
+              source={1}
+            />
+          </TouchableOpacity>
         </Unknown>,
-        <Button
-          onPress={[Function]}
-          title="Alerts"
-        />,
       ],
       "style": Object {
         "flex": 1,
@@ -213,35 +165,25 @@ ShallowWrapper {
         ],
         "type": [Function],
       },
+      null,
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <Component
-            style={
-              Object {
-                "backgroundColor": "rgba(255, 255, 255, 0.3)",
-                "width": 500,
-              }
-            }
+          "children": <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
           >
             <Component
-              accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
- null KM"
-              style={
-                Object {
-                  "color": "hotpink",
-                  "fontSize": 40,
-                  "fontWeight": "bold",
-                  "textAlign": "center",
-                }
-              }
-            >
-              0 Minutes 
- null KM
-            </Component>
-          </Component>,
+              source={1}
+            />
+          </TouchableOpacity>,
+          "style": Object {
+            "bottom": 10,
+            "position": "absolute",
+            "right": 10,
+          },
         },
         "ref": null,
         "rendered": Object {
@@ -249,25 +191,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "activeOpacity": 0.2,
             "children": <Component
-              accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
- null KM"
-              style={
-                Object {
-                  "color": "hotpink",
-                  "fontSize": 40,
-                  "fontWeight": "bold",
-                  "textAlign": "center",
-                }
-              }
-            >
-              0 Minutes 
- null KM
-            </Component>,
-            "style": Object {
-              "backgroundColor": "rgba(255, 255, 255, 0.3)",
-              "width": 500,
-            },
+              source={1}
+            />,
+            "onPress": [Function],
           },
           "ref": null,
           "rendered": Object {
@@ -275,36 +203,14 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "accessibilityLabel": "Hello! Journey Time is 0 Minutes and the distance is 
- null KM",
-              "children": "0 Minutes 
- null KM",
-              "style": Object {
-                "color": "hotpink",
-                "fontSize": 40,
-                "fontWeight": "bold",
-                "textAlign": "center",
-              },
+              "source": 1,
             },
             "ref": null,
-            "rendered": "0 Minutes 
- null KM",
+            "rendered": null,
             "type": [Function],
           },
           "type": [Function],
         },
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "onPress": [Function],
-          "title": "Alerts",
-        },
-        "ref": null,
-        "rendered": null,
         "type": [Function],
       },
     ],
@@ -334,36 +240,25 @@ ShallowWrapper {
               strokeWidth={3}
             />
           </MockMapView>,
-          <Unknown>
-            <Component
-              style={
-                Object {
-                  "backgroundColor": "rgba(255, 255, 255, 0.3)",
-                  "width": 500,
-                }
+          null,
+          <Unknown
+            style={
+              Object {
+                "bottom": 10,
+                "position": "absolute",
+                "right": 10,
               }
+            }
+          >
+            <TouchableOpacity
+              activeOpacity={0.2}
+              onPress={[Function]}
             >
               <Component
-                accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
- null KM"
-                style={
-                  Object {
-                    "color": "hotpink",
-                    "fontSize": 40,
-                    "fontWeight": "bold",
-                    "textAlign": "center",
-                  }
-                }
-              >
-                0 Minutes 
- null KM
-              </Component>
-            </Component>
+                source={1}
+              />
+            </TouchableOpacity>
           </Unknown>,
-          <Button
-            onPress={[Function]}
-            title="Alerts"
-          />,
         ],
         "style": Object {
           "flex": 1,
@@ -424,35 +319,25 @@ ShallowWrapper {
           ],
           "type": [Function],
         },
+        null,
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <Component
-              style={
-                Object {
-                  "backgroundColor": "rgba(255, 255, 255, 0.3)",
-                  "width": 500,
-                }
-              }
+            "children": <TouchableOpacity
+              activeOpacity={0.2}
+              onPress={[Function]}
             >
               <Component
-                accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
- null KM"
-                style={
-                  Object {
-                    "color": "hotpink",
-                    "fontSize": 40,
-                    "fontWeight": "bold",
-                    "textAlign": "center",
-                  }
-                }
-              >
-                0 Minutes 
- null KM
-              </Component>
-            </Component>,
+                source={1}
+              />
+            </TouchableOpacity>,
+            "style": Object {
+              "bottom": 10,
+              "position": "absolute",
+              "right": 10,
+            },
           },
           "ref": null,
           "rendered": Object {
@@ -460,25 +345,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "activeOpacity": 0.2,
               "children": <Component
-                accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
- null KM"
-                style={
-                  Object {
-                    "color": "hotpink",
-                    "fontSize": 40,
-                    "fontWeight": "bold",
-                    "textAlign": "center",
-                  }
-                }
-              >
-                0 Minutes 
- null KM
-              </Component>,
-              "style": Object {
-                "backgroundColor": "rgba(255, 255, 255, 0.3)",
-                "width": 500,
-              },
+                source={1}
+              />,
+              "onPress": [Function],
             },
             "ref": null,
             "rendered": Object {
@@ -486,36 +357,14 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "accessibilityLabel": "Hello! Journey Time is 0 Minutes and the distance is 
- null KM",
-                "children": "0 Minutes 
- null KM",
-                "style": Object {
-                  "color": "hotpink",
-                  "fontSize": 40,
-                  "fontWeight": "bold",
-                  "textAlign": "center",
-                },
+                "source": 1,
               },
               "ref": null,
-              "rendered": "0 Minutes 
- null KM",
+              "rendered": null,
               "type": [Function],
             },
             "type": [Function],
           },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "onPress": [Function],
-            "title": "Alerts",
-          },
-          "ref": null,
-          "rendered": null,
           "type": [Function],
         },
       ],

@@ -12,7 +12,7 @@ exports[`Directions snapshot renders directions form 1`] = `
   <View
     style={
       Object {
-        "flex": 0.5,
+        "flex": 0.7,
       }
     }
   >
