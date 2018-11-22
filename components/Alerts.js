@@ -57,6 +57,7 @@ export default class Alerts extends React.Component {
     };
   }
 
+
   componentWillMount = async () => {
     const location = await Location.getCurrentPositionAsync({});
     this.setState({ longitude: location.coords.longitude, latitude: location.coords.latitude });
@@ -98,14 +99,14 @@ export default class Alerts extends React.Component {
     this.navigateHome();
   };
 
-  sendBrokenLiftData = async () => {
-    await this.setState({ typeOfReport: 'Broken Lift', icon: IMAGES[1] });
-    this.sendData();
-  };
-
   navigateHome = () => {
     this.setState({ text: '' });
     this.props.navigation.navigate('Home');
+  };
+
+  sendBrokenLiftData = async () => {
+    await this.setState({ typeOfReport: 'Broken Lift', icon: IMAGES[1] });
+    this.sendData();
   };
 
   sendBlockedPathData = async () => {
@@ -147,23 +148,23 @@ export default class Alerts extends React.Component {
   render() {
     return (
       <View style={styles.icons}>
-        <TouchableOpacity style={styles.icon} onPress={this.sendBrokenLiftData}>
+        <TouchableOpacity id="brokenLift" style={styles.icon} onPress={this.sendBrokenLiftData}>
           <Image source={require('../assets/images/broken-lift.png')} />
           <Text style={styles.iconText}>Broken Lift</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.icon} onPress={this.sendBlockedPathData}>
+        <TouchableOpacity id="blockedPath" style={styles.icon} onPress={this.sendBlockedPathData}>
           <Image source={require('../assets/images/blockedPath.png')} />
           <Text style={styles.iconText}>Blocked Path</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.icon} onPress={this.sendStairsData}>
+        <TouchableOpacity id="stairs" style={styles.icon} onPress={this.sendStairsData}>
           <Image source={require('../assets/images/stairs.png')} />
           <Text style={styles.iconText}>Stairs</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.icon} onPress={this.sendNarrowPathData}>
+        <TouchableOpacity id="narrowPath" style={styles.icon} onPress={this.sendNarrowPathData}>
           <Image source={require('../assets/images/narrow-road-ahead.png')} />
           <Text style={styles.iconText}>Narrow Path</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.icon} onPress={this.sendNoRampData}>
+        <TouchableOpacity id="noRamp" style={styles.icon} onPress={this.sendNoRampData}>
           <Image source={require('../assets/images/no-ramp.png')} />
           <Text style={styles.iconText}>No Ramp</Text>
         </TouchableOpacity>

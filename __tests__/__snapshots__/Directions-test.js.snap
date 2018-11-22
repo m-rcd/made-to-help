@@ -7,7 +7,6 @@ exports[`Directions snapshot renders directions form 1`] = `
       "flex": 1,
     }
   }
-  testID="directions"
 >
   <View
     style={

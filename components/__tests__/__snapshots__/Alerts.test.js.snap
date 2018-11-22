@@ -20,6 +20,7 @@ ShallowWrapper {
       "children": Array [
         <TouchableOpacity
           activeOpacity={0.2}
+          id="brokenLift"
           onPress={[Function]}
           style={
             Object {
@@ -44,6 +45,7 @@ ShallowWrapper {
         </TouchableOpacity>,
         <TouchableOpacity
           activeOpacity={0.2}
+          id="blockedPath"
           onPress={[Function]}
           style={
             Object {
@@ -68,6 +70,7 @@ ShallowWrapper {
         </TouchableOpacity>,
         <TouchableOpacity
           activeOpacity={0.2}
+          id="stairs"
           onPress={[Function]}
           style={
             Object {
@@ -92,6 +95,7 @@ ShallowWrapper {
         </TouchableOpacity>,
         <TouchableOpacity
           activeOpacity={0.2}
+          id="narrowPath"
           onPress={[Function]}
           style={
             Object {
@@ -116,6 +120,7 @@ ShallowWrapper {
         </TouchableOpacity>,
         <TouchableOpacity
           activeOpacity={0.2}
+          id="noRamp"
           onPress={[Function]}
           style={
             Object {
@@ -236,6 +241,7 @@ ShallowWrapper {
               Broken Lift
             </Component>,
           ],
+          "id": "brokenLift",
           "onPress": [Function],
           "style": Object {
             "height": 80,
@@ -293,6 +299,7 @@ ShallowWrapper {
               Blocked Path
             </Component>,
           ],
+          "id": "blockedPath",
           "onPress": [Function],
           "style": Object {
             "height": 80,
@@ -350,6 +357,7 @@ ShallowWrapper {
               Stairs
             </Component>,
           ],
+          "id": "stairs",
           "onPress": [Function],
           "style": Object {
             "height": 80,
@@ -407,6 +415,7 @@ ShallowWrapper {
               Narrow Path
             </Component>,
           ],
+          "id": "narrowPath",
           "onPress": [Function],
           "style": Object {
             "height": 80,
@@ -464,6 +473,7 @@ ShallowWrapper {
               No Ramp
             </Component>,
           ],
+          "id": "noRamp",
           "onPress": [Function],
           "style": Object {
             "height": 80,
@@ -727,6 +737,7 @@ ShallowWrapper {
         "children": Array [
           <TouchableOpacity
             activeOpacity={0.2}
+            id="brokenLift"
             onPress={[Function]}
             style={
               Object {
@@ -751,6 +762,7 @@ ShallowWrapper {
           </TouchableOpacity>,
           <TouchableOpacity
             activeOpacity={0.2}
+            id="blockedPath"
             onPress={[Function]}
             style={
               Object {
@@ -775,6 +787,7 @@ ShallowWrapper {
           </TouchableOpacity>,
           <TouchableOpacity
             activeOpacity={0.2}
+            id="stairs"
             onPress={[Function]}
             style={
               Object {
@@ -799,6 +812,7 @@ ShallowWrapper {
           </TouchableOpacity>,
           <TouchableOpacity
             activeOpacity={0.2}
+            id="narrowPath"
             onPress={[Function]}
             style={
               Object {
@@ -823,6 +837,7 @@ ShallowWrapper {
           </TouchableOpacity>,
           <TouchableOpacity
             activeOpacity={0.2}
+            id="noRamp"
             onPress={[Function]}
             style={
               Object {
@@ -943,6 +958,7 @@ ShallowWrapper {
                 Broken Lift
               </Component>,
             ],
+            "id": "brokenLift",
             "onPress": [Function],
             "style": Object {
               "height": 80,
@@ -1000,6 +1016,7 @@ ShallowWrapper {
                 Blocked Path
               </Component>,
             ],
+            "id": "blockedPath",
             "onPress": [Function],
             "style": Object {
               "height": 80,
@@ -1057,6 +1074,7 @@ ShallowWrapper {
                 Stairs
               </Component>,
             ],
+            "id": "stairs",
             "onPress": [Function],
             "style": Object {
               "height": 80,
@@ -1114,6 +1132,7 @@ ShallowWrapper {
                 Narrow Path
               </Component>,
             ],
+            "id": "narrowPath",
             "onPress": [Function],
             "style": Object {
               "height": 80,
@@ -1171,6 +1190,7 @@ ShallowWrapper {
                 No Ramp
               </Component>,
             ],
+            "id": "noRamp",
             "onPress": [Function],
             "style": Object {
               "height": 80,

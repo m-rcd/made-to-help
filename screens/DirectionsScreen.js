@@ -38,11 +38,12 @@ export default class DirectionScreen extends React.Component {
 
     render() {
       return (
-        <View style={{ flex: 1 }} testID="directions">
+        <View style={{ flex: 1 }}>
           <Origin updateOrigin={this.updateOrigin} />
           <Destination updateDestination={this.updateDestination} />
 
           <TouchableOpacity
+            id="direction"
             style={{
               borderWidth: 0.5,
               padding: 25,

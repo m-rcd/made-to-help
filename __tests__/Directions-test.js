@@ -14,6 +14,12 @@ describe('Directions snapshot', () => {
     NavigationTestUtils.resetInternalState();
   });
 
+  let navigation;
+  beforeEach(() => {
+    navigation = jest.fn();
+    navigation.navigate = jest.fn();
+  })
+
   it('renders directions form', () => {
     const tree = renderer.create(<DirectionsScreen />).toJSON();
     expect(tree).toMatchSnapshot();
@@ -33,4 +39,9 @@ describe('Directions snapshot', () => {
     expect(instance.state.destination).toEqual({latitude: -0.09, longitude: 51})
   })
 
+  it('test onPRess', () => {
+    const wrapper = shallow(<DirectionsScreen navigation={navigation} />);
+    wrapper.find('#direction').simulate('press')
+    expect(navigation.navigate).toHaveBeenCalled()
+  })
 });

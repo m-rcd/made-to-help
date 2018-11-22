@@ -20,9 +20,32 @@ test('Input changes', () => {
   expect(snapshot.state().text).toEqual('Lift broken')
 });
 
-// test('Sending report data', () => {
-//   const snapshot = shallow(<Alerts />);
-//   const button = snapshot.find('#brokenLift')
-//   button.simulate('press')
-//   expect(snapshot.state().typeOfReport).toEqual('Broken Lift')
-// });
+test('Sending report data for broken lift', () => {
+  const snapshot = shallow(<Alerts />);
+  snapshot.find('#brokenLift').simulate('press')
+  expect(snapshot.state().typeOfReport).toEqual('Broken Lift')
+});
+
+test('Sending report data for blocked path', () => {
+  const snapshot = shallow(<Alerts />);
+  snapshot.find('#blockedPath').simulate('press')
+  expect(snapshot.state().typeOfReport).toEqual('Blocked Path')
+});
+
+test('Sending report data for stairs', () => {
+  const snapshot = shallow(<Alerts />);
+  snapshot.find('#stairs').simulate('press')
+  expect(snapshot.state().typeOfReport).toEqual('Stairs')
+});
+
+test('Sending report data for narrow path', () => {
+  const snapshot = shallow(<Alerts />);
+  snapshot.find('#narrowPath').simulate('press')
+  expect(snapshot.state().typeOfReport).toEqual('Narrow Path')
+});
+
+test('Sending report data for No Ramp', () => {
+  const snapshot = shallow(<Alerts />);
+  snapshot.find('#noRamp').simulate('press')
+  expect(snapshot.state().typeOfReport).toEqual('No Ramp')
+});
