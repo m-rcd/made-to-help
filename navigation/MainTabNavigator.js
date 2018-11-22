@@ -1,8 +1,7 @@
 import React from 'react';
 import Platform from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
-
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import { Feather } from '@expo/vector-icons';
 import TabBarIcon from '../components/TabBarIcon';
 import AlertsScreen from '../screens/AlertsScreen';
 import DirectionsScreen from '../screens/DirectionsScreen';
@@ -15,16 +14,19 @@ const HomeStack = createStackNavigator({
 HomeStack.navigationOptions = {
   tabBarLabel: 'Map',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon
+    <Feather
       focused={focused}
+      size={30}
       name={
         Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
+          ? `map${focused ? '' : '-outline'}`
+          : 'map'
       }
     />
   ),
 };
+
+<ion-icon name="map"></ion-icon>
 
 const LinksStack = createStackNavigator({
   Report: AlertsScreen,
