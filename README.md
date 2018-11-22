@@ -1,21 +1,24 @@
 # MADE to Help
-[![link](https://img.shields.io/badge/trello-board-green.svg)](https://trello.com/b/2cdiYIh2/made-to-help)
-[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
-[![Build Status](https://travis-ci.org/m-rcd/made-to-help.svg?branch=master)](https://travis-ci.org/m-rcd/made-to-help)
+
+[Motivation](#motivation) | [Build status](#build-status) | [Technologies](#technologies) | [User Stories](#user-stories) | [Running the App](#running-the-app) | [Running tests](#running-tests)  | [Contributing](#contributing) | [Leaning documentation](#documentation) | [MADE Engineers](#engineers)
+
 
 **MADE to Help** is a mobile app that helps find you the best, and most accessible, routes for those who need  help navigating the city.
 
 ![Logo](./assets/images/MADEtoHelp!.JPG)
 
 
-## Motivation
+##  <a name="motivation">**Motivation**</a>
 
 
 The card wall is [here](https://trello.com/b/2cdiYIh2/made-to-help)
 ## Build Status
+[![link](https://img.shields.io/badge/trello-board-green.svg)](https://trello.com/b/2cdiYIh2/made-to-help)
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
+[![Build Status](https://travis-ci.org/m-rcd/made-to-help.svg?branch=master)](https://travis-ci.org/m-rcd/made-to-help)
 
 
-## Tech used
+##  <a name="technologies">**Technologies**</a>
 
 
 [React Native](https://facebook.github.io/react-native/)
@@ -29,7 +32,7 @@ The card wall is [here](https://trello.com/b/2cdiYIh2/made-to-help)
 [Mocha](https://github.com/mochajs/mocha)
 
 
-## User stories
+##  <a name="user-stories">**User stories**</a>
 
 ```
 As a User
@@ -52,7 +55,7 @@ So that I am aware of reports
 I want to see potential blockers on my journey
 ```
 
-## How to run the App
+##  <a name="running-the-app">**Running the app**</a>
 
 
 - Clone this repository:
@@ -65,7 +68,7 @@ I want to see potential blockers on my journey
 - Install dependencies:
 
 ```
-yarn install
+$ yarn install
 ```
 
 - Download `expo` app on your phone
@@ -79,7 +82,7 @@ $ expo start
 
 - Android: scan the QR code from expo app.
 
-## How to run the tests
+##  <a name="running-tests">**Running tests**</a>
 
 - To run unit tests:
 
@@ -102,7 +105,7 @@ $ yarn coverage
 
 
 
-## Contributing to the project
+##  <a name="contributing">**Contributing**</a>
 
 Pull Requests are always welcome.
 
@@ -111,14 +114,14 @@ When you edit the code, please run `yarn test` to check all the tests pass. Also
 Ensure the PR description clearly describes the problem and solution. It should include the relevant issue number, if applicable.
 
 
-## Learning documentation
+## <a name="documentation">**Learning documentation**</a>
 
 
 https://github.com/m-rcd/made-to-help/wiki
 
 
 
-## MADE Engineers:
+## <a name="engineers">**MADE Engineers**</a>
 
 [Emma Albury][1]
 
