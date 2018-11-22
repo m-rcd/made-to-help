@@ -139,7 +139,7 @@ export default class Alerts extends React.Component {
           />
           <Text>Narrow Path</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={this.sendNoRampData}>
+        <TouchableOpacity id='noRamp' onPress={this.sendNoRampData}>
           <Image
             source={require('../assets/images/no-ramp.png')}
           />
