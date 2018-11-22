@@ -1,7 +1,7 @@
 import React from 'react';
 import * as firebase from 'firebase';
 import {
-  View, Text, StyleSheet, Button,
+  View, Text, StyleSheet, TouchableOpacity, Image,
 } from 'react-native';
 import { MapView, Location, Permissions } from 'expo';
 import MapViewDirections from 'react-native-maps-directions';
@@ -20,6 +20,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'bold',
     fontFamily: 'Verdana',
+  },
+  alertButton: {
+    position: 'absolute',
+    bottom: 10,
+    right: 10,
   },
 });
 
@@ -185,7 +190,11 @@ export default class DynamicLocation extends React.Component {
           ) : null}
         </MapView>
         {this.showRouteInformation()}
-        <Button title="Alerts" onPress={this.toggleMarkerData} />
+        <MapView.Callout style={styles.alertButton}>
+          <TouchableOpacity onPress={this.toggleMarkerData}>
+            <Image source={require('../assets/images/alertMap.png')} />
+          </TouchableOpacity>
+        </MapView.Callout>
       </View>
     );
   }
