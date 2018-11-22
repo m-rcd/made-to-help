@@ -46,12 +46,12 @@ const styles = StyleSheet.create({
 });
 
 const IMAGES = [
-  'https://i.imgur.com/Pr7KWEL.png',
-  'https://i.imgur.com/ZEGDS72.png',
-  'https://i.imgur.com/rxKLzCF.png',
-  'https://i.imgur.com/RZ5g8QB.png',
-  'https://i.imgur.com/Pn1xPAR.png',
-  'https://i.imgur.com/ep1Fedt.png',
+  'https://i.imgur.com/0HBhlFV.png',
+  'https://i.imgur.com/sGMHChF.png',
+  'https://i.imgur.com/03ciaHj.png',
+  'https://i.imgur.com/r3QzsYf.png',
+  'https://i.imgur.com/0j9t7R4.png',
+  'https://i.imgur.com/6aeFpmo.png',
 ];
 
 export default class Alerts extends React.Component {
