@@ -1,6 +1,6 @@
 # MADE to Help
 
-[Motivation](#motivation) | [Build status](#build-status) | [Technologies](#technologies) | [User Stories](#user-stories) | [Running the App](#running-the-app) | [Running tests](#running-tests)  | [Contributing](#contributing) | [Leaning documentation](#documentation) | [MADE Engineers](#engineers)
+[Motivation](#motivation) | [Build status](#build-status) | [Technologies](#technologies) | [User Stories](#user-stories) | [Mock up](#mock-up) | [Running the App](#running-the-app) | [Running tests](#running-tests)  | [Contributing](#contributing) | [Leaning documentation](#documentation) | [MADE Engineers](#engineers)
 
 
 **MADE to Help** is a mobile app that helps find you the best, and most accessible, routes for those who need  help navigating the city.
@@ -56,6 +56,10 @@ As a User
 So that I am aware of reports
 I want to see potential blockers on my journey
 ```
+
+## <a name="mock-up">**Mock up**</a>
+
+![MVP](./assets/images/MVP.png)
 
 ##  <a name="running-the-app">**Running the app**</a>
 
