@@ -129,6 +129,8 @@ export default class DynamicLocation extends React.Component {
               return (
                 <MapView.Marker
                   key={index}
+                  id="first-marker"
+                  data-test="first-marker"
                   coordinate={coords}
                   title={marker.station}
                   description={stepData}
