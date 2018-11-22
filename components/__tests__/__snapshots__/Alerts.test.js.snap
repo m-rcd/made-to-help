@@ -23,6 +23,7 @@ ShallowWrapper {
         </Component>,
         <TouchableOpacity
           activeOpacity={0.2}
+          id="brokenLift"
           onPress={[Function]}
         >
           <Component
@@ -118,6 +119,7 @@ ShallowWrapper {
               Broken Lift
             </Component>,
           ],
+          "id": "brokenLift",
           "onPress": [Function],
         },
         "ref": null,
@@ -372,6 +374,7 @@ ShallowWrapper {
           </Component>,
           <TouchableOpacity
             activeOpacity={0.2}
+            id="brokenLift"
             onPress={[Function]}
           >
             <Component
@@ -467,6 +470,7 @@ ShallowWrapper {
                 Broken Lift
               </Component>,
             ],
+            "id": "brokenLift",
             "onPress": [Function],
           },
           "ref": null,

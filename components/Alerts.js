@@ -59,14 +59,14 @@ export default class Alerts extends React.Component {
     this.navigateHome();
   };
 
-  sendBrokenLiftData = async () => {
-    await this.setState({ typeOfReport: 'Broken Lift', icon: IMAGES[1] });
-    this.sendData();
-  };
-
   navigateHome = () => {
     this.setState({ text: '' });
     this.props.navigation.navigate('Home');
+  };
+
+  sendBrokenLiftData = async () => {
+    await this.setState({ typeOfReport: 'Broken Lift', icon: IMAGES[1] });
+    this.sendData();
   };
 
   sendBlockedPathData = async () => {
@@ -106,7 +106,10 @@ export default class Alerts extends React.Component {
       <View>
         <Text>Inaccessibility Report</Text>
 
-        <TouchableOpacity onPress={this.sendBrokenLiftData}>
+        <TouchableOpacity
+          id='brokenLift'
+          onPress={this.sendBrokenLiftData}
+        >
           <Image
             source={require('../assets/images/broken-lift.png')}
           />

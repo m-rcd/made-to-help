@@ -20,9 +20,8 @@ test('Input changes', () => {
   expect(snapshot.state().text).toEqual('Lift broken')
 });
 
-// test('Sending report data', () => {
-//   const snapshot = shallow(<Alerts />);
-//   const button = snapshot.find('#brokenLift')
-//   button.simulate('press')
-//   expect(snapshot.state().typeOfReport).toEqual('Broken Lift')
-// });
+test('Sending report data for broken lift', () => {
+  const snapshot = shallow(<Alerts />);
+  snapshot.find('#brokenLift').simulate('press')
+  expect(snapshot.state().typeOfReport).toEqual('Broken Lift')
+});
