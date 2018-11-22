@@ -27,46 +27,35 @@ exports[`Map snapshot renders successfully 1`] = `
         }
       }
     />
-    <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
-      accessible={true}
-      isTVSelectable={true}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+    <Callout
       style={
         Object {
-          "opacity": 1,
+          "bottom": 10,
+          "position": "absolute",
+          "right": 10,
         }
       }
     >
       <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
-          Array [
-            Object {},
-          ]
+          Object {
+            "opacity": 1,
+          }
         }
       >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#007AFF",
-                "fontSize": 18,
-                "padding": 8,
-                "textAlign": "center",
-              },
-            ]
-          }
-        >
-          Alerts
-        </Text>
+        <Image
+          source={1}
+        />
       </View>
-    </View>
+    </Callout>
   </View>
 </View>
 `;
