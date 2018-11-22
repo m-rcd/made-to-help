@@ -66,6 +66,11 @@ To check coverage:
 
 ## Contributing to the project
 
+Pull Requests are always welcome.
+
+When you edit the code, please run `yarn test` to check all the tests pass. Also run `yarn lint` to formatting of your code before you git commit.
+
+Ensure the PR description clearly describes the problem and solution. It should include the relevant issue number, if applicable.
 
 
 ## Learning documentation
