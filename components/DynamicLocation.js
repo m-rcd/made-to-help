@@ -143,6 +143,32 @@ export default class DynamicLocation extends React.Component {
               });
             }}
           />
+          {this.state.journeyTime
+            ? (
+              <MapView.Marker
+                coordinate={{
+                  latitude: parseFloat(JSON.stringify(this.props.origin.latitude)),
+                  longitude: parseFloat(JSON.stringify(this.props.origin.longitude)),
+                }}
+                description={this.props.origin.address}
+                title="Start"
+              />
+            )
+            : null
+          }
+          {this.state.journeyTime
+            ? (
+              <MapView.Marker
+                coordinate={{
+                  latitude: parseFloat(JSON.stringify(this.props.destination.latitude)),
+                  longitude: parseFloat(JSON.stringify(this.props.destination.longitude)),
+                }}
+                description={this.props.destination.address}
+                title="End"
+              />
+            )
+            : null
+          }
         </MapView>
         <MapView.Callout>
           <View style={styles.calloutView}>
