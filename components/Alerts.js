@@ -103,7 +103,7 @@ export default class Alerts extends React.Component {
 
   render() {
     return (
-      <View>
+      <View accessible={true}>
         <Text>Inaccessibility Report</Text>
 
         <TouchableOpacity onPress={this.sendBrokenLiftData}>
@@ -144,7 +144,7 @@ export default class Alerts extends React.Component {
         <Text>Other</Text>
         {this.state.visibleForm
         && (
-        <View>
+        <View accessible={true}>
           <TextInput placeholder="Add Issue" onChangeText={this.onHandleChange} />
           <Button title="Submit" onPress={this.sendData} />
         </View>

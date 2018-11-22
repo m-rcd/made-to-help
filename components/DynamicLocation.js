@@ -85,7 +85,7 @@ export default class DynamicLocation extends React.Component {
     if (this.state.journeyDistance !== null) {
       return (
         <MapView.Callout>
-          <View style={styles.calloutView}>
+          <View style={styles.calloutView} accessible={true}>
             <Text
               style={styles.calloutText}
               accessibilityLabel={`Hello! Journey Time is ${Math.round(
@@ -114,7 +114,7 @@ export default class DynamicLocation extends React.Component {
 
   render() {
     return (
-      <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
+      <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }} accessible={true}>
         <MapView style={{ flex: 1 }} showsUserLocation region={this.state.region} provider="google">
           {/** For Accessibility Markers: */}
           {this.state.isLoading

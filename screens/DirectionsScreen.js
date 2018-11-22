@@ -38,7 +38,7 @@ export default class DirectionScreen extends React.Component {
 
     render() {
       return (
-        <View style={{ flex: 1 }} testID="directions">
+        <View style={{ flex: 1 }} accessible={true} testID="directions">
           <Origin updateOrigin={this.updateOrigin} />
           <Destination updateDestination={this.updateDestination} />
 

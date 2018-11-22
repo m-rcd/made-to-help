@@ -23,7 +23,7 @@ export default class Origin extends React.Component {
 
   render() {
     return (
-      <View style={{ flex: 0.7 }}>
+      <View style={{ flex: 0.7 }} accessible={true}>
         <GooglePlacesAutocomplete
           placeholder="Start"
           minLength={2}
