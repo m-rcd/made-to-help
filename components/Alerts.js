@@ -160,7 +160,7 @@ export default class Alerts extends React.Component {
           <Image source={require('../assets/images/stairs.png')} />
           <Text style={styles.iconText}>Stairs</Text>
         </TouchableOpacity>
-        <TouchableOpacity  id="narrowPath" style={styles.icon} onPress={this.sendNarrowPathData}>
+        <TouchableOpacity id="narrowPath" style={styles.icon} onPress={this.sendNarrowPathData}>
           <Image source={require('../assets/images/narrow-road-ahead.png')} />
           <Text style={styles.iconText}>Narrow Path</Text>
         </TouchableOpacity>
