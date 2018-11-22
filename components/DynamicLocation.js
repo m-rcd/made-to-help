@@ -76,6 +76,26 @@ export default class DynamicLocation extends React.Component {
   };
   /* eslint-enable */
 
+  showRouteInformation = () => {
+    if (this.state.journeyDistance !== null) {
+      return (
+        <MapView.Callout>
+          <View style={styles.calloutView}>
+            <Text
+              style={styles.calloutText}
+              accessibilityLabel={`Hello! Journey Time is ${Math.round(
+                this.state.journeyTime,
+              )} Minutes and the distance is \n ${this.state.journeyDistance} KM`}
+            >
+              {`${Math.round(this.state.journeyTime)} Minutes \n ${this.state.journeyDistance} KM`}
+            </Text>
+          </View>
+        </MapView.Callout>
+      );
+    }
+    return null;
+  };
+
   fetchMarkerData = () => {
     fetch('https://made-to-help.herokuapp.com/api/stations')
       .then(response => response.json())
@@ -143,45 +163,28 @@ export default class DynamicLocation extends React.Component {
               });
             }}
           />
-          {this.state.journeyTime
-            ? (
-              <MapView.Marker
-                coordinate={{
-                  latitude: parseFloat(JSON.stringify(this.props.origin.latitude)),
-                  longitude: parseFloat(JSON.stringify(this.props.origin.longitude)),
-                }}
-                description={this.props.origin.address}
-                title="Start"
-              />
-            )
-            : null
-          }
-          {this.state.journeyTime
-            ? (
-              <MapView.Marker
-                coordinate={{
-                  latitude: parseFloat(JSON.stringify(this.props.destination.latitude)),
-                  longitude: parseFloat(JSON.stringify(this.props.destination.longitude)),
-                }}
-                description={this.props.destination.address}
-                title="End"
-              />
-            )
-            : null
-          }
+          {this.state.journeyTime ? (
+            <MapView.Marker
+              coordinate={{
+                latitude: parseFloat(JSON.stringify(this.props.origin.latitude)),
+                longitude: parseFloat(JSON.stringify(this.props.origin.longitude)),
+              }}
+              description={this.props.origin.address}
+              title="Start"
+            />
+          ) : null}
+          {this.state.journeyTime ? (
+            <MapView.Marker
+              coordinate={{
+                latitude: parseFloat(JSON.stringify(this.props.destination.latitude)),
+                longitude: parseFloat(JSON.stringify(this.props.destination.longitude)),
+              }}
+              description={this.props.destination.address}
+              title="End"
+            />
+          ) : null}
         </MapView>
-        <MapView.Callout>
-          <View style={styles.calloutView}>
-            <Text
-              style={styles.calloutText}
-              accessibilityLabel={`Hello! Journey Time is ${Math.round(
-                this.state.journeyTime,
-              )} Minutes and the distance is \n ${this.state.journeyDistance} KM`}
-            >
-              {`${Math.round(this.state.journeyTime)} Minutes \n ${this.state.journeyDistance} KM`}
-            </Text>
-          </View>
-        </MapView.Callout>
+        {this.showRouteInformation()}
         <Button title="Alerts" onPress={this.toggleMarkerData} />
       </View>
     );
