@@ -27,43 +27,7 @@ exports[`Map snapshot renders successfully 1`] = `
         }
       }
     />
-    <Callout>
-      <View
-        style={
-          Object {
-            "backgroundColor": "rgba(255, 255, 255, 0.3)",
-            "width": 500,
-          }
-        }
-      >
-        <Text
-          accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
- null KM"
-          style={
-            Object {
-              "color": "hotpink",
-              "fontSize": 40,
-              "fontWeight": "bold",
-              "textAlign": "center",
-            }
-          }
-        >
-          0 Minutes 
- null KM
-        </Text>
-      </View>
-    </Callout>
-    <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
-      accessible={true}
-      isTVSelectable={true}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+    <Callout
       style={
         Object {
           "bottom": 10,
