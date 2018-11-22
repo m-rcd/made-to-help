@@ -1,18 +1,15 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import KEY from '../env.config';
-
 
 export default class Origin extends React.Component {
   constructor(props) {
     super(props);
     this.state = { latitude: '', longitude: '', address: '' };
-    this.savingLocation = this.savingLocation.bind(this);
-    this.handleState = this.handleState.bind(this);
   }
 
-  savingLocation(latitude, longitude, address) {
+  savingLocation = (latitude, longitude, address) => {
     this.setState(
       {
         latitude,
@@ -29,9 +26,6 @@ export default class Origin extends React.Component {
   render() {
     return (
       <View style={{ flex: 0.5 }}>
-        <Text style={{ flex: 0.10 }}>
-          {`${this.state.longitude} - ${this.state.latitude}`}
-        </Text>
         <GooglePlacesAutocomplete
           placeholder="Start"
           minLength={2}
@@ -55,7 +49,13 @@ export default class Origin extends React.Component {
 
           styles={{
             textInputContainer: {
-              width: '100%',
+              height: 50,
+              marginTop: 15,
+              borderColor: 'grey',
+              backgroundColor: '#fff',
+              borderWidth: 0.5,
+              textAlign: 'center',
+              borderRadius: 10,
             },
             description: {
               fontWeight: 'bold',
@@ -80,9 +80,6 @@ export default class Origin extends React.Component {
           currentLocation
         />
       </View>
-
     );
   }
 }
-
-// AppRegistry.registerComponent('made-to-help', () => Directions);

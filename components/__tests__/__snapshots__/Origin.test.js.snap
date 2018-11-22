@@ -8,15 +8,6 @@ exports[`Renders Origin component 1`] = `
     }
   }
 >
-  <Text
-    style={
-      Object {
-        "flex": 0.1,
-      }
-    }
-  >
-     - 
-  </Text>
   <View
     pointerEvents="box-none"
     style={
@@ -41,7 +32,13 @@ exports[`Renders Origin component 1`] = `
             "height": 44,
           },
           Object {
-            "width": "100%",
+            "backgroundColor": "#fff",
+            "borderColor": "grey",
+            "borderRadius": 10,
+            "borderWidth": 0.5,
+            "height": 50,
+            "marginTop": 15,
+            "textAlign": "center",
           },
         ]
       }

@@ -13,8 +13,6 @@ const App = createStackNavigator({
 export default class DirectionScreen extends React.Component {
   constructor(props) {
     super(props);
-    this.updateOrigin = this.updateOrigin.bind(this);
-    this.updateDestination = this.updateDestination.bind(this);
     this.state = {
       origin: '',
       destination: '',
@@ -25,14 +23,14 @@ export default class DirectionScreen extends React.Component {
       title: 'Directions',
     };
 
-    updateOrigin(newOrigin) {
+    updateOrigin = (newOrigin) => {
       this.setState({
         origin: newOrigin,
       });
     }
 
 
-    updateDestination(newDestination) {
+    updateDestination = (newDestination) => {
       this.setState({
         destination: newDestination,
       });
@@ -45,7 +43,17 @@ export default class DirectionScreen extends React.Component {
           <Destination updateDestination={this.updateDestination} />
 
           <TouchableOpacity
-            style={{ flex: 1.25 }}
+            style={{
+              borderWidth: 0.5,
+              padding: 25,
+              borderColor: 'grey',
+              width: '100%',
+              textAlign: 'center',
+              justifyContent: 'center',
+              borderRadius: 7,
+              backgroundColor: '#fff',
+              marginBottom: 200,
+            }}
             onPress={() => this.props.navigation.navigate('Home', { origin: this.state.origin, destination: this.state.destination })}
           >
             <Text> Search </Text>
