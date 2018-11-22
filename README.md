@@ -6,14 +6,14 @@
 **MADE to Help** is a mobile app that helps find you the best, and most accessible, routes for those who need  help navigating the city.
 
 ## Motivation
----
+
 
 ## Build Status
----
+
 
 ## Tech used
 
----
+
 [React Native](https://facebook.github.io/react-native/)
 
 [Expo](https://expo.io/)
@@ -26,10 +26,10 @@
 
 
 ## Features
----
+
 
 ## How to run the App
----
+
 
 - Clone this repository:
 `git clone https://github.com/m-rcd/made-to-help`
@@ -47,7 +47,7 @@
 - You can also go to this link `https://expo.io/@alexkharouk/made-to-help` and scan the QR code from there or open the app in the browser!
 
 ## How to run the tests
----
+
 To run unit tests:
 
 `yarn test`
@@ -65,11 +65,11 @@ To check coverage:
 
 
 ## Contributing to the project
----
+
 
 
 ## Learning documentation
----
+
 
 https://github.com/m-rcd/made-to-help/wiki
 
