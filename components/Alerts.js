@@ -5,7 +5,9 @@ import {
 } from 'react-native';
 import { Location } from 'expo';
 
-const IMAGES = ['https://i.imgur.com/Pr7KWEL.png', 'https://i.imgur.com/ZEGDS72.png', 'https://i.imgur.com/rxKLzCF.png'];
+const IMAGES = ['https://i.imgur.com/Pr7KWEL.png', 'https://i.imgur.com/ZEGDS72.png',
+  'https://i.imgur.com/rxKLzCF.png', 'https://i.imgur.com/RZ5g8QB.png',
+  'https://i.imgur.com/Pn1xPAR.png', 'https://i.imgur.com/ep1Fedt.png'];
 
 export default class Alerts extends React.Component {
   constructor(props) {
@@ -72,6 +74,21 @@ export default class Alerts extends React.Component {
     this.sendData();
   };
 
+  sendStairsData = async () => {
+    await this.setState({ typeOfReport: 'Stairs', icon: IMAGES[3] });
+    this.sendData();
+  };
+
+  sendNarrowPathData = async () => {
+    await this.setState({ typeOfReport: 'Narrow Path', icon: IMAGES[4] });
+    this.sendData();
+  };
+
+  sendNoRampData = async () => {
+    await this.setState({ typeOfReport: 'No Ramp', icon: IMAGES[5] });
+    this.sendData();
+  };
+
   onHandleChange = (event) => {
     this.setState({ text: event, icon: IMAGES[0], typeOfReport: 'Other' });
   };
@@ -101,18 +118,37 @@ export default class Alerts extends React.Component {
           />
           <Text>Blocked Path</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={this.sendStairsData}>
+          <Image
+            source={require('../assets/images/stairs.png')}
+          />
+          <Text>Stairs</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={this.sendNarrowPathData}>
+          <Image
+            source={require('../assets/images/narrow-road-ahead.png')}
+          />
+          <Text>Narrow Path</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={this.sendNoRampData}>
+          <Image
+            source={require('../assets/images/no-ramp.png')}
+          />
+          <Text>No Ramp</Text>
+        </TouchableOpacity>
         <TouchableOpacity id="show-form" onPress={this.showForm}>
           <Image
             source={require('../assets/images/alert.png')}
           />
         </TouchableOpacity>
+        <Text>Other</Text>
         {this.state.visibleForm
-          && (
-          <View>
-            <TextInput placeholder="Extra Info" onChangeText={this.onHandleChange} />
-            <Button title="Submit" onPress={this.sendData} />
-          </View>
-          )
+        && (
+        <View>
+          <TextInput placeholder="Add Issue" onChangeText={this.onHandleChange} />
+          <Button title="Submit" onPress={this.sendData} />
+        </View>
+        )
         }
       </View>
     );

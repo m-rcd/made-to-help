@@ -42,7 +42,6 @@ exports[`Map snapshot renders successfully 1`] = `
           style={
             Object {
               "color": "hotpink",
-              "fontFamily": "Verdana",
               "fontSize": 40,
               "fontWeight": "bold",
               "textAlign": "center",
