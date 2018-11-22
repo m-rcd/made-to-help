@@ -115,13 +115,19 @@ export default class Alerts extends React.Component {
           />
           <Text>Broken Lift</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={this.sendBlockedPathData}>
+        <TouchableOpacity
+          id='blockedPath'
+          onPress={this.sendBlockedPathData}
+          >
           <Image
             source={require('../assets/images/blockedPath.png')}
           />
           <Text>Blocked Path</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={this.sendStairsData}>
+        <TouchableOpacity
+          id='stairs'
+          onPress={this.sendStairsData}
+          >
           <Image
             source={require('../assets/images/stairs.png')}
           />

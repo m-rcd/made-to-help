@@ -35,6 +35,7 @@ ShallowWrapper {
         </TouchableOpacity>,
         <TouchableOpacity
           activeOpacity={0.2}
+          id="blockedPath"
           onPress={[Function]}
         >
           <Component
@@ -46,6 +47,7 @@ ShallowWrapper {
         </TouchableOpacity>,
         <TouchableOpacity
           activeOpacity={0.2}
+          id="stairs"
           onPress={[Function]}
         >
           <Component
@@ -163,6 +165,7 @@ ShallowWrapper {
               Blocked Path
             </Component>,
           ],
+          "id": "blockedPath",
           "onPress": [Function],
         },
         "ref": null,
@@ -206,6 +209,7 @@ ShallowWrapper {
               Stairs
             </Component>,
           ],
+          "id": "stairs",
           "onPress": [Function],
         },
         "ref": null,
@@ -386,6 +390,7 @@ ShallowWrapper {
           </TouchableOpacity>,
           <TouchableOpacity
             activeOpacity={0.2}
+            id="blockedPath"
             onPress={[Function]}
           >
             <Component
@@ -397,6 +402,7 @@ ShallowWrapper {
           </TouchableOpacity>,
           <TouchableOpacity
             activeOpacity={0.2}
+            id="stairs"
             onPress={[Function]}
           >
             <Component
@@ -514,6 +520,7 @@ ShallowWrapper {
                 Blocked Path
               </Component>,
             ],
+            "id": "blockedPath",
             "onPress": [Function],
           },
           "ref": null,
@@ -557,6 +564,7 @@ ShallowWrapper {
                 Stairs
               </Component>,
             ],
+            "id": "stairs",
             "onPress": [Function],
           },
           "ref": null,

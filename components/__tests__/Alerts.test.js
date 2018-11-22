@@ -25,3 +25,15 @@ test('Sending report data for broken lift', () => {
   snapshot.find('#brokenLift').simulate('press')
   expect(snapshot.state().typeOfReport).toEqual('Broken Lift')
 });
+
+test('Sending report data for blocked path', () => {
+  const snapshot = shallow(<Alerts />);
+  snapshot.find('#blockedPath').simulate('press')
+  expect(snapshot.state().typeOfReport).toEqual('Blocked Path')
+});
+
+test('Sending report data for stairs', () => {
+  const snapshot = shallow(<Alerts />);
+  snapshot.find('#stairs').simulate('press')
+  expect(snapshot.state().typeOfReport).toEqual('Stairs')
+});
