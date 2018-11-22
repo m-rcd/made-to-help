@@ -162,6 +162,10 @@ export default class Alerts extends React.Component {
           <Image source={require('../assets/images/broken-lift.png')} />
           <Text style={styles.iconText}>Broken Lift</Text>
         </TouchableOpacity>
+        <TouchableOpacity id="noRamp" style={styles.icon} onPress={this.sendNoRampData}>
+          <Image source={require('../assets/images/no-ramp.png')} />
+          <Text style={styles.iconText}>No Ramp</Text>
+        </TouchableOpacity>
         <TouchableOpacity id="blockedPath" style={styles.icon} onPress={this.sendBlockedPathData}>
           <Image source={require('../assets/images/blockedPath.png')} />
           <Text style={styles.iconText}>Blocked Path</Text>
@@ -173,10 +177,6 @@ export default class Alerts extends React.Component {
         <TouchableOpacity id="narrowPath" style={styles.icon} onPress={this.sendNarrowPathData}>
           <Image source={require('../assets/images/narrow-road-ahead.png')} />
           <Text style={styles.iconText}>Narrow Path</Text>
-        </TouchableOpacity>
-        <TouchableOpacity id="noRamp" style={styles.icon} onPress={this.sendNoRampData}>
-          <Image source={require('../assets/images/no-ramp.png')} />
-          <Text style={styles.iconText}>No Ramp</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.icon}

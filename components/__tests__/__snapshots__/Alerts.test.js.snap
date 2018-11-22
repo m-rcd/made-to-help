@@ -45,6 +45,31 @@ ShallowWrapper {
         </TouchableOpacity>,
         <TouchableOpacity
           activeOpacity={0.2}
+          id="noRamp"
+          onPress={[Function]}
+          style={
+            Object {
+              "height": 80,
+              "margin": 30,
+              "width": 70,
+            }
+          }
+        >
+          <Component
+            source={1}
+          />
+          <Component
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            No Ramp
+          </Component>
+        </TouchableOpacity>,
+        <TouchableOpacity
+          activeOpacity={0.2}
           id="blockedPath"
           onPress={[Function]}
           style={
@@ -116,31 +141,6 @@ ShallowWrapper {
             }
           >
             Narrow Path
-          </Component>
-        </TouchableOpacity>,
-        <TouchableOpacity
-          activeOpacity={0.2}
-          id="noRamp"
-          onPress={[Function]}
-          style={
-            Object {
-              "height": 80,
-              "margin": 30,
-              "width": 70,
-            }
-          }
-        >
-          <Component
-            source={1}
-          />
-          <Component
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            No Ramp
           </Component>
         </TouchableOpacity>,
         <TouchableOpacity
@@ -324,6 +324,64 @@ ShallowWrapper {
                 }
               }
             >
+              No Ramp
+            </Component>,
+          ],
+          "id": "noRamp",
+          "onPress": [Function],
+          "style": Object {
+            "height": 80,
+            "margin": 30,
+            "width": 70,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "source": 1,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "No Ramp",
+              "style": Object {
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": "No Ramp",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "activeOpacity": 0.2,
+          "children": Array [
+            <Component
+              source={1}
+            />,
+            <Component
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
               Blocked Path
             </Component>,
           ],
@@ -476,64 +534,6 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": "Narrow Path",
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "activeOpacity": 0.2,
-          "children": Array [
-            <Component
-              source={1}
-            />,
-            <Component
-              style={
-                Object {
-                  "textAlign": "center",
-                }
-              }
-            >
-              No Ramp
-            </Component>,
-          ],
-          "id": "noRamp",
-          "onPress": [Function],
-          "style": Object {
-            "height": 80,
-            "margin": 30,
-            "width": 70,
-          },
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "source": 1,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "No Ramp",
-              "style": Object {
-                "textAlign": "center",
-              },
-            },
-            "ref": null,
-            "rendered": "No Ramp",
             "type": [Function],
           },
         ],
@@ -884,6 +884,31 @@ ShallowWrapper {
           </TouchableOpacity>,
           <TouchableOpacity
             activeOpacity={0.2}
+            id="noRamp"
+            onPress={[Function]}
+            style={
+              Object {
+                "height": 80,
+                "margin": 30,
+                "width": 70,
+              }
+            }
+          >
+            <Component
+              source={1}
+            />
+            <Component
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+              No Ramp
+            </Component>
+          </TouchableOpacity>,
+          <TouchableOpacity
+            activeOpacity={0.2}
             id="blockedPath"
             onPress={[Function]}
             style={
@@ -955,31 +980,6 @@ ShallowWrapper {
               }
             >
               Narrow Path
-            </Component>
-          </TouchableOpacity>,
-          <TouchableOpacity
-            activeOpacity={0.2}
-            id="noRamp"
-            onPress={[Function]}
-            style={
-              Object {
-                "height": 80,
-                "margin": 30,
-                "width": 70,
-              }
-            }
-          >
-            <Component
-              source={1}
-            />
-            <Component
-              style={
-                Object {
-                  "textAlign": "center",
-                }
-              }
-            >
-              No Ramp
             </Component>
           </TouchableOpacity>,
           <TouchableOpacity
@@ -1163,6 +1163,64 @@ ShallowWrapper {
                   }
                 }
               >
+                No Ramp
+              </Component>,
+            ],
+            "id": "noRamp",
+            "onPress": [Function],
+            "style": Object {
+              "height": 80,
+              "margin": 30,
+              "width": 70,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "source": 1,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "No Ramp",
+                "style": Object {
+                  "textAlign": "center",
+                },
+              },
+              "ref": null,
+              "rendered": "No Ramp",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "activeOpacity": 0.2,
+            "children": Array [
+              <Component
+                source={1}
+              />,
+              <Component
+                style={
+                  Object {
+                    "textAlign": "center",
+                  }
+                }
+              >
                 Blocked Path
               </Component>,
             ],
@@ -1315,64 +1373,6 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": "Narrow Path",
-              "type": [Function],
-            },
-          ],
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "activeOpacity": 0.2,
-            "children": Array [
-              <Component
-                source={1}
-              />,
-              <Component
-                style={
-                  Object {
-                    "textAlign": "center",
-                  }
-                }
-              >
-                No Ramp
-              </Component>,
-            ],
-            "id": "noRamp",
-            "onPress": [Function],
-            "style": Object {
-              "height": 80,
-              "margin": 30,
-              "width": 70,
-            },
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "source": 1,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": "No Ramp",
-                "style": Object {
-                  "textAlign": "center",
-                },
-              },
-              "ref": null,
-              "rendered": "No Ramp",
               "type": [Function],
             },
           ],
