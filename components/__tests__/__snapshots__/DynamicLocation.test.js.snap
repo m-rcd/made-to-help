@@ -19,33 +19,6 @@ exports[`Renders DynamicLocation component 1`] = `
       }
     }
   />
-  <Callout>
-    <View
-      style={
-        Object {
-          "backgroundColor": "rgba(255, 255, 255, 0.3)",
-          "width": 500,
-        }
-      }
-    >
-      <Text
-        accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
- null KM"
-        style={
-          Object {
-            "color": "hotpink",
-            "fontFamily": "Verdana",
-            "fontSize": 40,
-            "fontWeight": "bold",
-            "textAlign": "center",
-          }
-        }
-      >
-        0 Minutes 
- null KM
-      </Text>
-    </View>
-  </Callout>
   <View
     accessibilityRole="button"
     accessibilityStates={Array []}
@@ -124,33 +97,7 @@ ShallowWrapper {
             strokeWidth={3}
           />
         </MockMapView>,
-        <Unknown>
-          <Component
-            style={
-              Object {
-                "backgroundColor": "rgba(255, 255, 255, 0.3)",
-                "width": 500,
-              }
-            }
-          >
-            <Component
-              accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
- null KM"
-              style={
-                Object {
-                  "color": "hotpink",
-                  "fontFamily": "Verdana",
-                  "fontSize": 40,
-                  "fontWeight": "bold",
-                  "textAlign": "center",
-                }
-              }
-            >
-              0 Minutes 
- null KM
-            </Component>
-          </Component>
-        </Unknown>,
+        null,
         <Button
           onPress={[Function]}
           title="Alerts"
@@ -215,91 +162,7 @@ ShallowWrapper {
         ],
         "type": [Function],
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": <Component
-            style={
-              Object {
-                "backgroundColor": "rgba(255, 255, 255, 0.3)",
-                "width": 500,
-              }
-            }
-          >
-            <Component
-              accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
- null KM"
-              style={
-                Object {
-                  "color": "hotpink",
-                  "fontFamily": "Verdana",
-                  "fontSize": 40,
-                  "fontWeight": "bold",
-                  "textAlign": "center",
-                }
-              }
-            >
-              0 Minutes 
- null KM
-            </Component>
-          </Component>,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": <Component
-              accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
- null KM"
-              style={
-                Object {
-                  "color": "hotpink",
-                  "fontFamily": "Verdana",
-                  "fontSize": 40,
-                  "fontWeight": "bold",
-                  "textAlign": "center",
-                }
-              }
-            >
-              0 Minutes 
- null KM
-            </Component>,
-            "style": Object {
-              "backgroundColor": "rgba(255, 255, 255, 0.3)",
-              "width": 500,
-            },
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "accessibilityLabel": "Hello! Journey Time is 0 Minutes and the distance is 
- null KM",
-              "children": "0 Minutes 
- null KM",
-              "style": Object {
-                "color": "hotpink",
-                "fontFamily": "Verdana",
-                "fontSize": 40,
-                "fontWeight": "bold",
-                "textAlign": "center",
-              },
-            },
-            "ref": null,
-            "rendered": "0 Minutes 
- null KM",
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-        "type": [Function],
-      },
+      null,
       Object {
         "instance": null,
         "key": undefined,
@@ -339,33 +202,7 @@ ShallowWrapper {
               strokeWidth={3}
             />
           </MockMapView>,
-          <Unknown>
-            <Component
-              style={
-                Object {
-                  "backgroundColor": "rgba(255, 255, 255, 0.3)",
-                  "width": 500,
-                }
-              }
-            >
-              <Component
-                accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
- null KM"
-                style={
-                  Object {
-                    "color": "hotpink",
-                    "fontFamily": "Verdana",
-                    "fontSize": 40,
-                    "fontWeight": "bold",
-                    "textAlign": "center",
-                  }
-                }
-              >
-                0 Minutes 
- null KM
-              </Component>
-            </Component>
-          </Unknown>,
+          null,
           <Button
             onPress={[Function]}
             title="Alerts"
@@ -430,91 +267,7 @@ ShallowWrapper {
           ],
           "type": [Function],
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": <Component
-              style={
-                Object {
-                  "backgroundColor": "rgba(255, 255, 255, 0.3)",
-                  "width": 500,
-                }
-              }
-            >
-              <Component
-                accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
- null KM"
-                style={
-                  Object {
-                    "color": "hotpink",
-                    "fontFamily": "Verdana",
-                    "fontSize": 40,
-                    "fontWeight": "bold",
-                    "textAlign": "center",
-                  }
-                }
-              >
-                0 Minutes 
- null KM
-              </Component>
-            </Component>,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": <Component
-                accessibilityLabel="Hello! Journey Time is 0 Minutes and the distance is 
- null KM"
-                style={
-                  Object {
-                    "color": "hotpink",
-                    "fontFamily": "Verdana",
-                    "fontSize": 40,
-                    "fontWeight": "bold",
-                    "textAlign": "center",
-                  }
-                }
-              >
-                0 Minutes 
- null KM
-              </Component>,
-              "style": Object {
-                "backgroundColor": "rgba(255, 255, 255, 0.3)",
-                "width": 500,
-              },
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "accessibilityLabel": "Hello! Journey Time is 0 Minutes and the distance is 
- null KM",
-                "children": "0 Minutes 
- null KM",
-                "style": Object {
-                  "color": "hotpink",
-                  "fontFamily": "Verdana",
-                  "fontSize": 40,
-                  "fontWeight": "bold",
-                  "textAlign": "center",
-                },
-              },
-              "ref": null,
-              "rendered": "0 Minutes 
- null KM",
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-          "type": [Function],
-        },
+        null,
         Object {
           "instance": null,
           "key": undefined,
