@@ -11,6 +11,7 @@
 ## Motivation
 
 
+The card wall is [here](https://trello.com/b/2cdiYIh2/made-to-help)
 ## Build Status
 
 
@@ -55,34 +56,49 @@ I want to see potential blockers on my journey
 
 
 - Clone this repository:
-`git clone https://github.com/m-rcd/made-to-help`
 
-- `cd made-to-help`
+```
+ $ git clone https://github.com/m-rcd/made-to-help
+ $ cd made-to-help
+ ```
 
 - Install dependencies:
-`yarn install`
+
+```
+yarn install
+```
 
 - Download `expo` app on your phone
-- run `expo start`
+
+- Run the app:
+
+```
+$ expo start
+```
 - Iphone: scan the QR code with the camera and open expo.
 
-  Android: scan the QR code from expo app.
+- Android: scan the QR code from expo app.
 
 ## How to run the tests
 
-To run unit tests:
+- To run unit tests:
 
-`yarn test`
+```
+$ yarn test
+```
 
-To run feature tests:
+- To run feature tests:
 
-`expo start`
+```
+$ expo start
+$ yarn feature-tests
+```
 
-`yarn feature-tests`
+- To check coverage:
 
-To check coverage:
-
-`yarn coverage`
+```
+$ yarn coverage
+```
 
 
 
