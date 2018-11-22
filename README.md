@@ -37,10 +37,19 @@ I want to open the app and see my location
 ```
 ```
 As a User
-So that i can plan my journey
+So that I can plan my journey
 I want to enter a start and end destination
 ```
-
+```
+As a User
+So that I can warn others about a broken lift or absence of a ramp
+I want to be able to send an alert
+```
+```
+As a User
+So that I am aware of reports
+I want to see potential blockers on my journey
+```
 
 ## How to run the App
 
@@ -58,8 +67,6 @@ I want to enter a start and end destination
 - Iphone: scan the QR code with the camera and open expo.
 
   Android: scan the QR code from expo app.
-
-- You can also go to this link `https://expo.io/@alexkharouk/made-to-help` and scan the QR code from there or open the app in the browser!
 
 ## How to run the tests
 
