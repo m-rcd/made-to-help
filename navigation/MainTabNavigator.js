@@ -2,6 +2,7 @@ import React from 'react';
 import Platform from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import TabBarIcon from '../components/TabBarIcon';
 import AlertsScreen from '../screens/AlertsScreen';
 import DirectionsScreen from '../screens/DirectionsScreen';
