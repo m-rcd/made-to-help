@@ -12,8 +12,9 @@
 ##  <a name="motivation">**Motivation**</a>
 
 
-The card wall is [here](https://trello.com/b/2cdiYIh2/made-to-help)
+
 ## Build Status
+
 [![link](https://img.shields.io/badge/trello-board-green.svg)](https://trello.com/b/2cdiYIh2/made-to-help)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
 [![Build Status](https://travis-ci.org/m-rcd/made-to-help.svg?branch=master)](https://travis-ci.org/m-rcd/made-to-help)
@@ -30,7 +31,7 @@ The card wall is [here](https://trello.com/b/2cdiYIh2/made-to-help)
 
 [Enzyme](https://github.com/airbnb/enzyme)
 
-[Mocha](https://github.com/mochajs/mocha)
+[Detox](https://github.com/wix/Detox)
 
 
 ##  <a name="user-stories">**User stories**</a>
@@ -103,8 +104,6 @@ $ yarn feature-tests
 ```
 $ yarn coverage
 ```
-
-
 
 ##  <a name="contributing">**Contributing**</a>
 
