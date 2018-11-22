@@ -14,6 +14,16 @@
 ## Tech used
 
 ---
+[React Native](https://facebook.github.io/react-native/)
+
+[Expo](https://expo.io/)
+
+[Jest](https://github.com/facebook/jest)
+
+[Enzyme](https://github.com/airbnb/enzyme)
+
+[Mocha](https://github.com/mochajs/mocha)
+
 
 ## Features
 ---
