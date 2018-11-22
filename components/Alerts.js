@@ -22,6 +22,7 @@ export default class Alerts extends React.Component {
     };
   }
 
+
   componentWillMount = async () => {
     const location = await Location.getCurrentPositionAsync({});
     this.setState({ longitude: location.coords.longitude, latitude: location.coords.latitude });
