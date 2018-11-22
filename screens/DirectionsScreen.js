@@ -13,8 +13,6 @@ const App = createStackNavigator({
 export default class DirectionScreen extends React.Component {
   constructor(props) {
     super(props);
-    this.updateOrigin = this.updateOrigin.bind(this);
-    this.updateDestination = this.updateDestination.bind(this);
     this.state = {
       origin: '',
       destination: '',
@@ -25,14 +23,14 @@ export default class DirectionScreen extends React.Component {
       title: 'Directions',
     };
 
-    updateOrigin(newOrigin) {
+    updateOrigin = (newOrigin) => {
       this.setState({
         origin: newOrigin,
       });
     }
 
 
-    updateDestination(newDestination) {
+    updateDestination = (newDestination) => {
       this.setState({
         destination: newDestination,
       });

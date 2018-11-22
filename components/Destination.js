@@ -7,8 +7,6 @@ export default class Destination extends React.Component {
   constructor(props) {
     super(props);
     this.state = { latitude: '', longitude: '', address: '' };
-    this.savingLocation = this.savingLocation.bind(this);
-    this.handleState = this.handleState.bind(this);
   }
 
   savingLocation =(latitude, longitude, address) => {

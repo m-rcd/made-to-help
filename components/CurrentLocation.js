@@ -8,7 +8,7 @@ export default class CurrentLocation extends React.Component {
     latitude: 0,
   };
 
-  componentWillMount() {
+  componentWillMount = () => {
     this._getLocationAsync();
   }
 
