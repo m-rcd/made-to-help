@@ -11,7 +11,7 @@ export default class Destination extends React.Component {
     this.handleState = this.handleState.bind(this);
   }
 
-  savingLocation(latitude, longitude, address) {
+  savingLocation =(latitude, longitude, address) => {
     this.setState(
       {
         latitude,
