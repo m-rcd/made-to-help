@@ -33,6 +33,22 @@
 
 ## How to run the tests
 ---
+To run unit tests:
+
+`yarn test`
+
+To run feature tests:
+
+`expo start`
+
+`yarn feature-tests`
+
+To check coverage:
+
+`yarn coverage`
+
+
+
 
 ## Contributing to the project
 ---
