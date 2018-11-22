@@ -136,7 +136,7 @@ export default class Alerts extends React.Component {
           />
           <Text>No Ramp</Text>
         </TouchableOpacity>
-        <TouchableOpacity id='show-form' onPress={this.showForm}>
+        <TouchableOpacity id="show-form" onPress={this.showForm}>
           <Image
             source={require('../assets/images/alert.png')}
           />
