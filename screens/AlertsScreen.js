@@ -4,7 +4,7 @@ import Alerts from '../components/Alerts';
 
 export default class AlertsScreen extends React.Component {
   static navigationOptions = {
-    title: 'Report',
+    title: 'Inaccessibility Report',
   };
 
   render() {

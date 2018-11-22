@@ -1,13 +1,48 @@
 import * as firebase from 'firebase';
 import React from 'react';
 import {
-  View, TextInput, Text, Button, Alert, TouchableOpacity, Image,
+  View,
+  TextInput,
+  Text,
+  Button,
+  Alert,
+  TouchableOpacity,
+  Image,
+  StyleSheet,
+  Modal,
+  TouchableHighlight,
 } from 'react-native';
 import { Location } from 'expo';
 
-const IMAGES = ['https://i.imgur.com/Pr7KWEL.png', 'https://i.imgur.com/ZEGDS72.png',
-  'https://i.imgur.com/rxKLzCF.png', 'https://i.imgur.com/RZ5g8QB.png',
-  'https://i.imgur.com/Pn1xPAR.png', 'https://i.imgur.com/ep1Fedt.png'];
+const styles = StyleSheet.create({
+  icons: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+  },
+  icon: {
+    margin: 30,
+    height: 80,
+    width: 70,
+  },
+  iconText: {
+    textAlign: 'center',
+  },
+  submitForm: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
+
+const IMAGES = [
+  'https://i.imgur.com/Pr7KWEL.png',
+  'https://i.imgur.com/ZEGDS72.png',
+  'https://i.imgur.com/rxKLzCF.png',
+  'https://i.imgur.com/RZ5g8QB.png',
+  'https://i.imgur.com/Pn1xPAR.png',
+  'https://i.imgur.com/ep1Fedt.png',
+];
 
 export default class Alerts extends React.Component {
   constructor(props) {
@@ -18,7 +53,7 @@ export default class Alerts extends React.Component {
       text: '',
       typeOfReport: '',
       icon: '',
-      visibleForm: false,
+      showFormModal: false,
     };
   }
 
@@ -26,6 +61,10 @@ export default class Alerts extends React.Component {
   componentWillMount = async () => {
     const location = await Location.getCurrentPositionAsync({});
     this.setState({ longitude: location.coords.longitude, latitude: location.coords.latitude });
+  };
+
+  setModalVisible = (visible) => {
+    this.setState({ showFormModal: visible });
   };
 
   writeAlertData = (body, location, typeOfReport, icon) => {
@@ -90,76 +129,75 @@ export default class Alerts extends React.Component {
     this.sendData();
   };
 
+  sendOtherReportData = async () => {
+    await this.writeAlertData(
+      this.state.text,
+      {
+        latitude: this.state.latitude,
+        longitude: this.state.longitude,
+      },
+      this.state.typeOfReport,
+      this.state.icon,
+    );
+  };
+
   onHandleChange = (event) => {
     this.setState({ text: event, icon: IMAGES[0], typeOfReport: 'Other' });
   };
 
-  showForm = () => {
-    if (this.state.visibleForm === true) {
-      this.setState({ visibleForm: false });
-    } else {
-      this.setState({ visibleForm: true });
-    }
-  }
-
   render() {
     return (
-      <View>
-        <Text>Inaccessibility Report</Text>
-
-        <TouchableOpacity
-          id="brokenLift"
-          onPress={this.sendBrokenLiftData}
-        >
-          <Image
-            source={require('../assets/images/broken-lift.png')}
-          />
-          <Text>Broken Lift</Text>
+      <View style={styles.icons}>
+        <TouchableOpacity id="brokenLift" style={styles.icon} onPress={this.sendBrokenLiftData}>
+          <Image source={require('../assets/images/broken-lift.png')} />
+          <Text style={styles.iconText}>Broken Lift</Text>
+        </TouchableOpacity>
+        <TouchableOpacity id="blockedPath" style={styles.icon} onPress={this.sendBlockedPathData}>
+          <Image source={require('../assets/images/blockedPath.png')} />
+          <Text style={styles.iconText}>Blocked Path</Text>
+        </TouchableOpacity>
+        <TouchableOpacity id="stairs" style={styles.icon} onPress={this.sendStairsData}>
+          <Image source={require('../assets/images/stairs.png')} />
+          <Text style={styles.iconText}>Stairs</Text>
+        </TouchableOpacity>
+        <TouchableOpacity  id="narrowPath" style={styles.icon} onPress={this.sendNarrowPathData}>
+          <Image source={require('../assets/images/narrow-road-ahead.png')} />
+          <Text style={styles.iconText}>Narrow Path</Text>
+        </TouchableOpacity>
+        <TouchableOpacity id="noRamp" style={styles.icon} onPress={this.sendNoRampData}>
+          <Image source={require('../assets/images/no-ramp.png')} />
+          <Text style={styles.iconText}>No Ramp</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          id="blockedPath"
-          onPress={this.sendBlockedPathData}
+          style={styles.icon}
+          id="show-form"
+          onPress={() => {
+            this.setModalVisible(true);
+          }}
         >
-          <Image
-            source={require('../assets/images/blockedPath.png')}
-          />
-          <Text>Blocked Path</Text>
+          <Image source={require('../assets/images/alert.png')} />
+          <Text style={styles.iconText}>Other</Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          id="stairs"
-          onPress={this.sendStairsData}
+        <Modal
+          animationType="slide"
+          transparent={false}
+          visible={this.state.showFormModal}
+          onRequestClose={() => {
+            Alert.alert('Modal has been closed.');
+          }}
         >
-          <Image
-            source={require('../assets/images/stairs.png')}
-          />
-          <Text>Stairs</Text>
-        </TouchableOpacity>
-        <TouchableOpacity id="narrowPath" onPress={this.sendNarrowPathData}>
-          <Image
-            source={require('../assets/images/narrow-road-ahead.png')}
-          />
-          <Text>Narrow Path</Text>
-        </TouchableOpacity>
-        <TouchableOpacity id="noRamp" onPress={this.sendNoRampData}>
-          <Image
-            source={require('../assets/images/no-ramp.png')}
-          />
-          <Text>No Ramp</Text>
-        </TouchableOpacity>
-        <TouchableOpacity id="show-form" onPress={this.showForm}>
-          <Image
-            source={require('../assets/images/alert.png')}
-          />
-        </TouchableOpacity>
-        <Text>Other</Text>
-        {this.state.visibleForm
-        && (
-        <View>
-          <TextInput placeholder="Add Issue" onChangeText={this.onHandleChange} />
-          <Button title="Submit" onPress={this.sendData} />
-        </View>
-        )
-        }
+          <View style={styles.submitForm}>
+            <TextInput placeholder="Enter Your Report" onChangeText={this.onHandleChange} />
+            <Button title="Submit" onPress={this.sendOtherReportData} />
+            <TouchableHighlight
+              onPress={() => {
+                this.setModalVisible(!this.state.showFormModal);
+              }}
+            >
+              <Text style={{ fontSize: 30 }}>Close Report</Text>
+            </TouchableHighlight>
+          </View>
+        </Modal>
       </View>
     );
   }
