@@ -2,7 +2,6 @@ import React from 'react';
 import Platform from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 import { Feather } from '@expo/vector-icons';
-import TabBarIcon from '../components/TabBarIcon';
 import AlertsScreen from '../screens/AlertsScreen';
 import DirectionsScreen from '../screens/DirectionsScreen';
 import MapScreen from '../screens/MapScreen';
@@ -26,8 +25,6 @@ HomeStack.navigationOptions = {
   ),
 };
 
-<ion-icon name="map"></ion-icon>
-
 const LinksStack = createStackNavigator({
   Report: AlertsScreen,
 });
@@ -35,7 +32,7 @@ const LinksStack = createStackNavigator({
 LinksStack.navigationOptions = {
   tabBarLabel: 'Report',
   tabBarIcon: ({ focused }) => (
-    <Feather focused={focused} size={30} name={'alert-circle'} />
+    <Feather focused={focused} size={30} name="alert-circle" />
   ),
 };
 
@@ -50,7 +47,7 @@ DirectionsStack.navigationOptions = {
       testId="Directions"
       focused={focused}
       size={30}
-      name={'send'}
+      name="send"
     />
   ),
 };
