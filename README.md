@@ -6,7 +6,7 @@
 **MADE to Help** is a mobile app that helps find you the best, and most accessible, routes for those who need  help navigating the city.
 
 <p align="center">
-![Logo](./assets/images/MADEtoHelp!.JPG)
+<img src="./assets/images/MADEtoHelp!.JPG">
 </p>
 
 ##  <a name="motivation">**Motivation**</a>
