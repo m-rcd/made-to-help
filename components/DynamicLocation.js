@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     color: 'hotpink',
     textAlign: 'center',
     fontWeight: 'bold',
-    fontFamily: 'Verdana',
+    // fontFamily: 'Verdana',
   },
   alertButton: {
     position: 'absolute',
