@@ -4,39 +4,46 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 import KEY from '../env.config';
 
 
-export default class Directions extends React.Component {
+export default class Origin extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { address: '', latitude: '', longitude: '' };
+    this.state = { latitude: '', longitude: '', address: '' };
     this.savingLocation = this.savingLocation.bind(this);
+    this.handleState = this.handleState.bind(this);
   }
 
-  savingLocation(address, latitude, longitude) {
+  savingLocation(latitude, longitude, address) {
     this.setState(
       {
-        address,
         latitude,
         longitude,
+        address,
       },
     );
   }
 
+  handleState = () => {
+    this.props.updateOrigin(this.state);
+  }
+
   render() {
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 0.5 }}>
         <Text style={{ flex: 0.10 }}>
-          {`${this.state.address} - ${this.state.longitude} - ${this.state.latitude}`}
+          {`${this.state.longitude} - ${this.state.latitude}`}
         </Text>
         <GooglePlacesAutocomplete
-          placeholder="Search"
+          placeholder="Start"
           minLength={2}
           autoFocus={false}
           returnKeyType="search"
-          listViewDisplayed="auto"
+          listViewDisplayed={false}
           fetchDetails
           onPress={(data, details = null) => {
-            this.savingLocation(data.description,
-              details.geometry.location.lat, details.geometry.location.lng);
+            this.savingLocation(details.geometry.location.lat,
+              details.geometry.location.lng,
+              data.description);
+            this.handleState();
           }}
 
           getDefaultValue={() => ''}

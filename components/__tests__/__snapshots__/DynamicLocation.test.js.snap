@@ -118,10 +118,8 @@ ShallowWrapper {
         >
           <MapViewDirections
             apikey="AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU"
-            destination="Westminster Bridge, London SE1 7GP"
             mode="walking"
             onReady={[Function]}
-            origin="50 commercial st UK"
             strokeColor="hotpink"
             strokeWidth={3}
           />
@@ -176,13 +174,13 @@ ShallowWrapper {
             null,
             <MapViewDirections
               apikey="AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU"
-              destination="Westminster Bridge, London SE1 7GP"
               mode="walking"
               onReady={[Function]}
-              origin="50 commercial st UK"
               strokeColor="hotpink"
               strokeWidth={3}
             />,
+            null,
+            null,
           ],
           "provider": "google",
           "region": undefined,
@@ -201,10 +199,10 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "apikey": "AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU",
-              "destination": "Westminster Bridge, London SE1 7GP",
+              "destination": undefined,
               "mode": "walking",
               "onReady": [Function],
-              "origin": "50 commercial st UK",
+              "origin": undefined,
               "strokeColor": "hotpink",
               "strokeWidth": 3,
             },
@@ -212,6 +210,8 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
+          null,
+          null,
         ],
         "type": [Function],
       },
@@ -333,10 +333,8 @@ ShallowWrapper {
           >
             <MapViewDirections
               apikey="AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU"
-              destination="Westminster Bridge, London SE1 7GP"
               mode="walking"
               onReady={[Function]}
-              origin="50 commercial st UK"
               strokeColor="hotpink"
               strokeWidth={3}
             />
@@ -391,13 +389,13 @@ ShallowWrapper {
               null,
               <MapViewDirections
                 apikey="AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU"
-                destination="Westminster Bridge, London SE1 7GP"
                 mode="walking"
                 onReady={[Function]}
-                origin="50 commercial st UK"
                 strokeColor="hotpink"
                 strokeWidth={3}
               />,
+              null,
+              null,
             ],
             "provider": "google",
             "region": undefined,
@@ -416,10 +414,10 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "apikey": "AIzaSyAl_S-rNNLR8Df8XW0wfKVh11sSHbhVnQU",
-                "destination": "Westminster Bridge, London SE1 7GP",
+                "destination": undefined,
                 "mode": "walking",
                 "onReady": [Function],
-                "origin": "50 commercial st UK",
+                "origin": undefined,
                 "strokeColor": "hotpink",
                 "strokeWidth": 3,
               },
@@ -427,6 +425,8 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
+            null,
+            null,
           ],
           "type": [Function],
         },
