@@ -46,10 +46,11 @@ const DirectionsStack = createStackNavigator({
 DirectionsStack.navigationOptions = {
   tabBarLabel: 'Directions',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon
+    <Feather
       testId="Directions"
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
+      size={30}
+      name={'send'}
     />
   ),
 };
