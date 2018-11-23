@@ -11,7 +11,7 @@
 
 ##  <a name="motivation">**Motivation**</a>
 
-
+There are some great navigation mobile apps already in existence, BUT they’re lacking recommended routes for people with accessibility concerns. We decided to create a mobile app that helps people with disabilities and other mobility concerns navigate their way from A to B, avoiding obstacles, while also providing them with the shortest route possible. We think everyone has the right to enjoy and contribute to the wonderful city of London. With that in mind, we created Made to Help.
 
 ## Build Status
 
