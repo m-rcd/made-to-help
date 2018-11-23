@@ -42,13 +42,13 @@ export default class DirectionScreen extends React.Component {
           accessibilityLabel="Directions"
           accessibilityHint="Enter your desired route"
           testID="directions"
-        >
           <Origin updateOrigin={this.updateOrigin} />
           <Destination updateDestination={this.updateDestination} />
 
           <TouchableOpacity
             accessibilityLabel="Search"
             accessibilityHint="Searches for your route"
+            id="direction"
             style={{
               borderWidth: 0.5,
               padding: 25,

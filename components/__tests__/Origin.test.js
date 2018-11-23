@@ -12,10 +12,23 @@ test('Renders Origin component', () => {
 })
 
 
-it('Should test for setState changes', () => {
+it('Should test for setState changes for origin location', () => {
   const wrapper = shallow(<Origin />);
   const instance = wrapper.instance()
-  instance.savingLocation(-0.10, 51)
-  expect(instance.state.latitude).toBe(-0.10)
+  instance.savingLocation(-0.09, 51, "Makers London")
+  expect(instance.state.latitude).toBe(-0.09)
   expect(instance.state.longitude).toBe(51)
+  expect(instance.state.address).toBe("Makers London")
 })
+
+// it('test onPress', () => {
+//   const geometry = jest.fn()
+//   const details = {latitude: 0.3, longitude: 42, address: 'Makers'}
+//
+//   const wrapper = shallow(<Origin  details={details} geometry={geometry} />)
+//   const instance = wrapper.instance();
+//   wrapper.find('#origin').simulate('change', { target: { value: details }})
+//   wrapper.find('#origin').simulate('press')
+//   expect(savingLocation).toHaveBeenCalledWith(0.3, 42, 'Makers')
+//   expect(handleState).toHaveBeenCalled()
+// })

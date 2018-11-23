@@ -18,67 +18,134 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": Array [
-        <Component>
-          Inaccessibility Report
-        </Component>,
         <TouchableOpacity
           accessibilityLabel="Broken lift"
           activeOpacity={0.2}
+          id="brokenLift"
           onPress={[Function]}
+          style={
+            Object {
+              "height": 80,
+              "margin": 30,
+              "width": 70,
+            }
+          }
         >
           <Component
             source={1}
           />
-          <Component>
+          <Component
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
             Broken Lift
           </Component>
         </TouchableOpacity>,
         <TouchableOpacity
           accessibilityLabel="Blocked path"
           activeOpacity={0.2}
+          id="noRamp"
           onPress={[Function]}
+          style={
+            Object {
+              "height": 80,
+              "margin": 30,
+              "width": 70,
+            }
+          }
         >
           <Component
             source={1}
           />
-          <Component>
-            Blocked Path
+          <Component
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            No Ramp
           </Component>
         </TouchableOpacity>,
         <TouchableOpacity
           accessibilityLabel="Stairs"
           activeOpacity={0.2}
+          id="blockedPath"
           onPress={[Function]}
+          style={
+            Object {
+              "height": 80,
+              "margin": 30,
+              "width": 70,
+            }
+          }
         >
           <Component
             source={1}
           />
-          <Component>
-            Stairs
+          <Component
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            Blocked Path
           </Component>
         </TouchableOpacity>,
         <TouchableOpacity
           accessibilityLabel="Narrow path"
           activeOpacity={0.2}
+          id="stairs"
           onPress={[Function]}
+          style={
+            Object {
+              "height": 80,
+              "margin": 30,
+              "width": 70,
+            }
+          }
         >
           <Component
             source={1}
           />
-          <Component>
-            Narrow Path
+          <Component
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            Stairs
           </Component>
         </TouchableOpacity>,
         <TouchableOpacity
           accessibilityLabel="No ramp"
           activeOpacity={0.2}
+          id="narrowPath"
           onPress={[Function]}
+          style={
+            Object {
+              "height": 80,
+              "margin": 30,
+              "width": 70,
+            }
+          }
         >
           <Component
             source={1}
           />
-          <Component>
-            No Ramp
+          <Component
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            Narrow Path
           </Component>
         </TouchableOpacity>,
         <TouchableOpacity
@@ -86,16 +153,105 @@ ShallowWrapper {
           activeOpacity={0.2}
           id="show-form"
           onPress={[Function]}
+          style={
+            Object {
+              "height": 80,
+              "margin": 30,
+              "width": 70,
+            }
+          }
         >
           <Component
             source={1}
           />
+          <Component
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            Other
+          </Component>
         </TouchableOpacity>,
-        <Component>
-          Other
+        <Component
+          animationType="slide"
+          hardwareAccelerated={false}
+          onRequestClose={[Function]}
+          transparent={false}
+          visible={false}
+        >
+          <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              onChangeText={[Function]}
+              placeholder="Enter Your Report"
+              style={
+                Object {
+                  "fontSize": 25,
+                  "marginBottom": 10,
+                }
+              }
+              underlineColorAndroid="transparent"
+            />
+            <TouchableHighlight
+              activeOpacity={0.85}
+              delayPressOut={100}
+              onPress={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#228ac4",
+                  "borderRadius": 10,
+                  "height": 30,
+                  "width": 100,
+                }
+              }
+              underlayColor="black"
+            >
+              <Component
+                style={
+                  Object {
+                    "color": "#fff",
+                    "paddingTop": 6,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Submit
+              </Component>
+            </TouchableHighlight>
+            <TouchableHighlight
+              activeOpacity={0.85}
+              delayPressOut={100}
+              onPress={[Function]}
+              underlayColor="black"
+            >
+              <Component
+                style={
+                  Object {
+                    "fontSize": 20,
+                  }
+                }
+              >
+                Close Report
+              </Component>
+            </TouchableHighlight>
+          </Component>
         </Component>,
-        false,
       ],
+      "style": Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+      },
     },
     "ref": null,
     "rendered": Array [
@@ -104,28 +260,28 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": "Inaccessibility Report",
-        },
-        "ref": null,
-        "rendered": "Inaccessibility Report",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "accessibilityLabel": "Broken lift",
           "activeOpacity": 0.2,
           "children": Array [
             <Component
               source={1}
             />,
-            <Component>
+            <Component
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
               Broken Lift
             </Component>,
           ],
+          "id": "brokenLift",
           "onPress": [Function],
+          "style": Object {
+            "height": 80,
+            "margin": 30,
+            "width": 70,
+          },
         },
         "ref": null,
         "rendered": Array [
@@ -146,6 +302,9 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Broken Lift",
+              "style": Object {
+                "textAlign": "center",
+              },
             },
             "ref": null,
             "rendered": "Broken Lift",
@@ -159,149 +318,29 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "accessibilityLabel": "Blocked path",
+          "accessibilityLabel": "Broken lift",
           "activeOpacity": 0.2,
           "children": Array [
             <Component
               source={1}
             />,
-            <Component>
-              Blocked Path
-            </Component>,
-          ],
-          "onPress": [Function],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "source": 1,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "Blocked Path",
-            },
-            "ref": null,
-            "rendered": "Blocked Path",
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "accessibilityLabel": "Stairs",
-          "activeOpacity": 0.2,
-          "children": Array [
             <Component
-              source={1}
-            />,
-            <Component>
-              Stairs
-            </Component>,
-          ],
-          "onPress": [Function],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "source": 1,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "Stairs",
-            },
-            "ref": null,
-            "rendered": "Stairs",
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "accessibilityLabel": "Narrow path",
-          "activeOpacity": 0.2,
-          "children": Array [
-            <Component
-              source={1}
-            />,
-            <Component>
-              Narrow Path
-            </Component>,
-          ],
-          "onPress": [Function],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "source": 1,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "Narrow Path",
-            },
-            "ref": null,
-            "rendered": "Narrow Path",
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "accessibilityLabel": "No ramp",
-          "activeOpacity": 0.2,
-          "children": Array [
-            <Component
-              source={1}
-            />,
-            <Component>
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
               No Ramp
             </Component>,
           ],
+          "id": "noRamp",
           "onPress": [Function],
+          "style": Object {
+            "height": 80,
+            "margin": 30,
+            "width": 70,
+          },
         },
         "ref": null,
         "rendered": Array [
@@ -322,6 +361,9 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "No Ramp",
+              "style": Object {
+                "textAlign": "center",
+              },
             },
             "ref": null,
             "rendered": "No Ramp",
@@ -335,26 +377,58 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "accessibilityLabel": "Other",
+          "accessibilityLabel": "Blocked path",
           "activeOpacity": 0.2,
-          "children": <Component
-            source={1}
-          />,
-          "id": "show-form",
+          "children": Array [
+            <Component
+              source={1}
+            />,
+            <Component
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+              Blocked Path
+            </Component>,
+          ],
+          "id": "blockedPath",
           "onPress": [Function],
+          "style": Object {
+            "height": 80,
+            "margin": 30,
+            "width": 70,
+          },
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "source": 1,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "source": 1,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Blocked Path",
+              "style": Object {
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": "Blocked Path",
+            "type": [Function],
+          },
+        ],
         "type": [Function],
       },
       Object {
@@ -362,13 +436,430 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": "Other",
+          "accessibilityLabel": "Stairs",
+          "activeOpacity": 0.2,
+          "children": Array [
+            <Component
+              source={1}
+            />,
+            <Component
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+              Stairs
+            </Component>,
+          ],
+          "id": "stairs",
+          "onPress": [Function],
+          "style": Object {
+            "height": 80,
+            "margin": 30,
+            "width": 70,
+          },
         },
         "ref": null,
-        "rendered": "Other",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "source": 1,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Stairs",
+              "style": Object {
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": "Stairs",
+            "type": [Function],
+          },
+        ],
         "type": [Function],
       },
-      false,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "accessibilityLabel": "Narrow path",
+          "activeOpacity": 0.2,
+          "children": Array [
+            <Component
+              source={1}
+            />,
+            <Component
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+              Narrow Path
+            </Component>,
+          ],
+          "id": "narrowPath",
+          "onPress": [Function],
+          "style": Object {
+            "height": 80,
+            "margin": 30,
+            "width": 70,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "source": 1,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Narrow Path",
+              "style": Object {
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": "Narrow Path",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "accessibilityLabel": "No ramp",
+          "activeOpacity": 0.2,
+          "children": Array [
+            <Component
+              source={1}
+            />,
+            <Component
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+              Other
+            </Component>,
+          ],
+          "id": "show-form",
+          "onPress": [Function],
+          "style": Object {
+            "height": 80,
+            "margin": 30,
+            "width": 70,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "source": 1,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Other",
+              "style": Object {
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": "Other",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "accessibilityLabel": "Other",
+          "activeOpacity": 0.2,
+          "animationType": "slide",
+          "children": <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              onChangeText={[Function]}
+              placeholder="Enter Your Report"
+              style={
+                Object {
+                  "fontSize": 25,
+                  "marginBottom": 10,
+                }
+              }
+              underlineColorAndroid="transparent"
+            />
+            <TouchableHighlight
+              activeOpacity={0.85}
+              delayPressOut={100}
+              onPress={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#228ac4",
+                  "borderRadius": 10,
+                  "height": 30,
+                  "width": 100,
+                }
+              }
+              underlayColor="black"
+            >
+              <Component
+                style={
+                  Object {
+                    "color": "#fff",
+                    "paddingTop": 6,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Submit
+              </Component>
+            </TouchableHighlight>
+            <TouchableHighlight
+              activeOpacity={0.85}
+              delayPressOut={100}
+              onPress={[Function]}
+              underlayColor="black"
+            >
+              <Component
+                style={
+                  Object {
+                    "fontSize": 20,
+                  }
+                }
+              >
+                Close Report
+              </Component>
+            </TouchableHighlight>
+          </Component>,
+          "hardwareAccelerated": false,
+          "onRequestClose": [Function],
+          "transparent": false,
+          "visible": false,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <TextInput
+                allowFontScaling={true}
+                onChangeText={[Function]}
+                placeholder="Enter Your Report"
+                style={
+                  Object {
+                    "fontSize": 25,
+                    "marginBottom": 10,
+                  }
+                }
+                underlineColorAndroid="transparent"
+              />,
+              <TouchableHighlight
+                activeOpacity={0.85}
+                delayPressOut={100}
+                onPress={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#228ac4",
+                    "borderRadius": 10,
+                    "height": 30,
+                    "width": 100,
+                  }
+                }
+                underlayColor="black"
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "paddingTop": 6,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Submit
+                </Component>
+              </TouchableHighlight>,
+              <TouchableHighlight
+                activeOpacity={0.85}
+                delayPressOut={100}
+                onPress={[Function]}
+                underlayColor="black"
+              >
+                <Component
+                  style={
+                    Object {
+                      "fontSize": 20,
+                    }
+                  }
+                >
+                  Close Report
+                </Component>
+              </TouchableHighlight>,
+            ],
+            "style": Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "allowFontScaling": true,
+                "onChangeText": [Function],
+                "placeholder": "Enter Your Report",
+                "style": Object {
+                  "fontSize": 25,
+                  "marginBottom": 10,
+                },
+                "underlineColorAndroid": "transparent",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "activeOpacity": 0.85,
+                "children": <Component
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "paddingTop": 6,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Submit
+                </Component>,
+                "delayPressOut": 100,
+                "onPress": [Function],
+                "style": Object {
+                  "backgroundColor": "#228ac4",
+                  "borderRadius": 10,
+                  "height": 30,
+                  "width": 100,
+                },
+                "underlayColor": "black",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Submit",
+                  "style": Object {
+                    "color": "#fff",
+                    "paddingTop": 6,
+                    "textAlign": "center",
+                  },
+                },
+                "ref": null,
+                "rendered": "Submit",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "activeOpacity": 0.85,
+                "children": <Component
+                  style={
+                    Object {
+                      "fontSize": 20,
+                    }
+                  }
+                >
+                  Close Report
+                </Component>,
+                "delayPressOut": 100,
+                "onPress": [Function],
+                "underlayColor": "black",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Close Report",
+                  "style": Object {
+                    "fontSize": 20,
+                  },
+                },
+                "ref": null,
+                "rendered": "Close Report",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
     ],
     "type": [Function],
   },
@@ -379,67 +870,134 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": Array [
-          <Component>
-            Inaccessibility Report
-          </Component>,
           <TouchableOpacity
             accessibilityLabel="Broken lift"
             activeOpacity={0.2}
+            id="brokenLift"
             onPress={[Function]}
+            style={
+              Object {
+                "height": 80,
+                "margin": 30,
+                "width": 70,
+              }
+            }
           >
             <Component
               source={1}
             />
-            <Component>
+            <Component
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
               Broken Lift
             </Component>
           </TouchableOpacity>,
           <TouchableOpacity
             accessibilityLabel="Blocked path"
             activeOpacity={0.2}
+            id="noRamp"
             onPress={[Function]}
+            style={
+              Object {
+                "height": 80,
+                "margin": 30,
+                "width": 70,
+              }
+            }
           >
             <Component
               source={1}
             />
-            <Component>
-              Blocked Path
+            <Component
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+              No Ramp
             </Component>
           </TouchableOpacity>,
           <TouchableOpacity
             accessibilityLabel="Stairs"
             activeOpacity={0.2}
+            id="blockedPath"
             onPress={[Function]}
+            style={
+              Object {
+                "height": 80,
+                "margin": 30,
+                "width": 70,
+              }
+            }
           >
             <Component
               source={1}
             />
-            <Component>
-              Stairs
+            <Component
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+              Blocked Path
             </Component>
           </TouchableOpacity>,
           <TouchableOpacity
             accessibilityLabel="Narrow path"
             activeOpacity={0.2}
+            id="stairs"
             onPress={[Function]}
+            style={
+              Object {
+                "height": 80,
+                "margin": 30,
+                "width": 70,
+              }
+            }
           >
             <Component
               source={1}
             />
-            <Component>
-              Narrow Path
+            <Component
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+              Stairs
             </Component>
           </TouchableOpacity>,
           <TouchableOpacity
             accessibilityLabel="No ramp"
             activeOpacity={0.2}
+            id="narrowPath"
             onPress={[Function]}
+            style={
+              Object {
+                "height": 80,
+                "margin": 30,
+                "width": 70,
+              }
+            }
           >
             <Component
               source={1}
             />
-            <Component>
-              No Ramp
+            <Component
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+              Narrow Path
             </Component>
           </TouchableOpacity>,
           <TouchableOpacity
@@ -447,16 +1005,105 @@ ShallowWrapper {
             activeOpacity={0.2}
             id="show-form"
             onPress={[Function]}
+            style={
+              Object {
+                "height": 80,
+                "margin": 30,
+                "width": 70,
+              }
+            }
           >
             <Component
               source={1}
             />
+            <Component
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+              Other
+            </Component>
           </TouchableOpacity>,
-          <Component>
-            Other
+          <Component
+            animationType="slide"
+            hardwareAccelerated={false}
+            onRequestClose={[Function]}
+            transparent={false}
+            visible={false}
+          >
+            <Component
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <TextInput
+                allowFontScaling={true}
+                onChangeText={[Function]}
+                placeholder="Enter Your Report"
+                style={
+                  Object {
+                    "fontSize": 25,
+                    "marginBottom": 10,
+                  }
+                }
+                underlineColorAndroid="transparent"
+              />
+              <TouchableHighlight
+                activeOpacity={0.85}
+                delayPressOut={100}
+                onPress={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#228ac4",
+                    "borderRadius": 10,
+                    "height": 30,
+                    "width": 100,
+                  }
+                }
+                underlayColor="black"
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "paddingTop": 6,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Submit
+                </Component>
+              </TouchableHighlight>
+              <TouchableHighlight
+                activeOpacity={0.85}
+                delayPressOut={100}
+                onPress={[Function]}
+                underlayColor="black"
+              >
+                <Component
+                  style={
+                    Object {
+                      "fontSize": 20,
+                    }
+                  }
+                >
+                  Close Report
+                </Component>
+              </TouchableHighlight>
+            </Component>
           </Component>,
-          false,
         ],
+        "style": Object {
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "justifyContent": "center",
+        },
       },
       "ref": null,
       "rendered": Array [
@@ -465,28 +1112,28 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": "Inaccessibility Report",
-          },
-          "ref": null,
-          "rendered": "Inaccessibility Report",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "accessibilityLabel": "Broken lift",
             "activeOpacity": 0.2,
             "children": Array [
               <Component
                 source={1}
               />,
-              <Component>
+              <Component
+                style={
+                  Object {
+                    "textAlign": "center",
+                  }
+                }
+              >
                 Broken Lift
               </Component>,
             ],
+            "id": "brokenLift",
             "onPress": [Function],
+            "style": Object {
+              "height": 80,
+              "margin": 30,
+              "width": 70,
+            },
           },
           "ref": null,
           "rendered": Array [
@@ -507,6 +1154,9 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Broken Lift",
+                "style": Object {
+                  "textAlign": "center",
+                },
               },
               "ref": null,
               "rendered": "Broken Lift",
@@ -520,149 +1170,29 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "accessibilityLabel": "Blocked path",
+            "accessibilityLabel": "Broken lift",
             "activeOpacity": 0.2,
             "children": Array [
               <Component
                 source={1}
               />,
-              <Component>
-                Blocked Path
-              </Component>,
-            ],
-            "onPress": [Function],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "source": 1,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": "Blocked Path",
-              },
-              "ref": null,
-              "rendered": "Blocked Path",
-              "type": [Function],
-            },
-          ],
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "accessibilityLabel": "Stairs",
-            "activeOpacity": 0.2,
-            "children": Array [
               <Component
-                source={1}
-              />,
-              <Component>
-                Stairs
-              </Component>,
-            ],
-            "onPress": [Function],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "source": 1,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": "Stairs",
-              },
-              "ref": null,
-              "rendered": "Stairs",
-              "type": [Function],
-            },
-          ],
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "accessibilityLabel": "Narrow path",
-            "activeOpacity": 0.2,
-            "children": Array [
-              <Component
-                source={1}
-              />,
-              <Component>
-                Narrow Path
-              </Component>,
-            ],
-            "onPress": [Function],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "source": 1,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": "Narrow Path",
-              },
-              "ref": null,
-              "rendered": "Narrow Path",
-              "type": [Function],
-            },
-          ],
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "accessibilityLabel": "No ramp",
-            "activeOpacity": 0.2,
-            "children": Array [
-              <Component
-                source={1}
-              />,
-              <Component>
+                style={
+                  Object {
+                    "textAlign": "center",
+                  }
+                }
+              >
                 No Ramp
               </Component>,
             ],
+            "id": "noRamp",
             "onPress": [Function],
+            "style": Object {
+              "height": 80,
+              "margin": 30,
+              "width": 70,
+            },
           },
           "ref": null,
           "rendered": Array [
@@ -683,6 +1213,9 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "No Ramp",
+                "style": Object {
+                  "textAlign": "center",
+                },
               },
               "ref": null,
               "rendered": "No Ramp",
@@ -696,26 +1229,58 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "accessibilityLabel": "Other",
+            "accessibilityLabel": "Blocked path",
             "activeOpacity": 0.2,
-            "children": <Component
-              source={1}
-            />,
-            "id": "show-form",
+            "children": Array [
+              <Component
+                source={1}
+              />,
+              <Component
+                style={
+                  Object {
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Blocked Path
+              </Component>,
+            ],
+            "id": "blockedPath",
             "onPress": [Function],
+            "style": Object {
+              "height": 80,
+              "margin": 30,
+              "width": 70,
+            },
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "source": 1,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "source": 1,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Blocked Path",
+                "style": Object {
+                  "textAlign": "center",
+                },
+              },
+              "ref": null,
+              "rendered": "Blocked Path",
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
         Object {
@@ -723,13 +1288,430 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": "Other",
+            "accessibilityLabel": "Stairs",
+            "activeOpacity": 0.2,
+            "children": Array [
+              <Component
+                source={1}
+              />,
+              <Component
+                style={
+                  Object {
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Stairs
+              </Component>,
+            ],
+            "id": "stairs",
+            "onPress": [Function],
+            "style": Object {
+              "height": 80,
+              "margin": 30,
+              "width": 70,
+            },
           },
           "ref": null,
-          "rendered": "Other",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "source": 1,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Stairs",
+                "style": Object {
+                  "textAlign": "center",
+                },
+              },
+              "ref": null,
+              "rendered": "Stairs",
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
-        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessibilityLabel": "Narrow path",
+            "activeOpacity": 0.2,
+            "children": Array [
+              <Component
+                source={1}
+              />,
+              <Component
+                style={
+                  Object {
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Narrow Path
+              </Component>,
+            ],
+            "id": "narrowPath",
+            "onPress": [Function],
+            "style": Object {
+              "height": 80,
+              "margin": 30,
+              "width": 70,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "source": 1,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Narrow Path",
+                "style": Object {
+                  "textAlign": "center",
+                },
+              },
+              "ref": null,
+              "rendered": "Narrow Path",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessibilityLabel": "No ramp",
+            "activeOpacity": 0.2,
+            "children": Array [
+              <Component
+                source={1}
+              />,
+              <Component
+                style={
+                  Object {
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Other
+              </Component>,
+            ],
+            "id": "show-form",
+            "onPress": [Function],
+            "style": Object {
+              "height": 80,
+              "margin": 30,
+              "width": 70,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "source": 1,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Other",
+                "style": Object {
+                  "textAlign": "center",
+                },
+              },
+              "ref": null,
+              "rendered": "Other",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessibilityLabel": "Other",
+            "activeOpacity": 0.2,
+            "animationType": "slide",
+            "children": <Component
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <TextInput
+                allowFontScaling={true}
+                onChangeText={[Function]}
+                placeholder="Enter Your Report"
+                style={
+                  Object {
+                    "fontSize": 25,
+                    "marginBottom": 10,
+                  }
+                }
+                underlineColorAndroid="transparent"
+              />
+              <TouchableHighlight
+                activeOpacity={0.85}
+                delayPressOut={100}
+                onPress={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#228ac4",
+                    "borderRadius": 10,
+                    "height": 30,
+                    "width": 100,
+                  }
+                }
+                underlayColor="black"
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "paddingTop": 6,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Submit
+                </Component>
+              </TouchableHighlight>
+              <TouchableHighlight
+                activeOpacity={0.85}
+                delayPressOut={100}
+                onPress={[Function]}
+                underlayColor="black"
+              >
+                <Component
+                  style={
+                    Object {
+                      "fontSize": 20,
+                    }
+                  }
+                >
+                  Close Report
+                </Component>
+              </TouchableHighlight>
+            </Component>,
+            "hardwareAccelerated": false,
+            "onRequestClose": [Function],
+            "transparent": false,
+            "visible": false,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <TextInput
+                  allowFontScaling={true}
+                  onChangeText={[Function]}
+                  placeholder="Enter Your Report"
+                  style={
+                    Object {
+                      "fontSize": 25,
+                      "marginBottom": 10,
+                    }
+                  }
+                  underlineColorAndroid="transparent"
+                />,
+                <TouchableHighlight
+                  activeOpacity={0.85}
+                  delayPressOut={100}
+                  onPress={[Function]}
+                  style={
+                    Object {
+                      "backgroundColor": "#228ac4",
+                      "borderRadius": 10,
+                      "height": 30,
+                      "width": 100,
+                    }
+                  }
+                  underlayColor="black"
+                >
+                  <Component
+                    style={
+                      Object {
+                        "color": "#fff",
+                        "paddingTop": 6,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Submit
+                  </Component>
+                </TouchableHighlight>,
+                <TouchableHighlight
+                  activeOpacity={0.85}
+                  delayPressOut={100}
+                  onPress={[Function]}
+                  underlayColor="black"
+                >
+                  <Component
+                    style={
+                      Object {
+                        "fontSize": 20,
+                      }
+                    }
+                  >
+                    Close Report
+                  </Component>
+                </TouchableHighlight>,
+              ],
+              "style": Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "allowFontScaling": true,
+                  "onChangeText": [Function],
+                  "placeholder": "Enter Your Report",
+                  "style": Object {
+                    "fontSize": 25,
+                    "marginBottom": 10,
+                  },
+                  "underlineColorAndroid": "transparent",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "activeOpacity": 0.85,
+                  "children": <Component
+                    style={
+                      Object {
+                        "color": "#fff",
+                        "paddingTop": 6,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Submit
+                  </Component>,
+                  "delayPressOut": 100,
+                  "onPress": [Function],
+                  "style": Object {
+                    "backgroundColor": "#228ac4",
+                    "borderRadius": 10,
+                    "height": 30,
+                    "width": 100,
+                  },
+                  "underlayColor": "black",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Submit",
+                    "style": Object {
+                      "color": "#fff",
+                      "paddingTop": 6,
+                      "textAlign": "center",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "Submit",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "activeOpacity": 0.85,
+                  "children": <Component
+                    style={
+                      Object {
+                        "fontSize": 20,
+                      }
+                    }
+                  >
+                    Close Report
+                  </Component>,
+                  "delayPressOut": 100,
+                  "onPress": [Function],
+                  "underlayColor": "black",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Close Report",
+                    "style": Object {
+                      "fontSize": 20,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "Close Report",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
       ],
       "type": [Function],
     },

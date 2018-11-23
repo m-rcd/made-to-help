@@ -11,6 +11,7 @@ jest.mock('react-native-maps', () => {
   const React = require('react');
   return class MockMapView extends React.Component {
     static Marker = props => React.createElement('Marker', props, props.children);
+
     static Callout = props => React.createElement('Callout', props, props.children);
 
     render() {
@@ -27,14 +28,16 @@ test('Renders DynamicLocation component', () => {
 it('Should test for setState changes to locationChanged', () => {
   const snapshot = renderer.create(<DynamicLocation />);
 
-  const instance = snapshot.getInstance()
+  const instance = snapshot.getInstance();
   expect(instance.state).toMatchSnapshot('something');
 
-  instance.locationChanged({coords: { latitude: -0.09, longitude: 51 } })
-  expect(instance.state).toMatchSnapshot('Something Updated')
+  instance.locationChanged({ coords: { latitude: -0.09, longitude: 51 } });
+  expect(instance.state).toMatchSnapshot('Something Updated');
 });
 
 it('Should test for setState changes to journeyTime and journeyDistance', () => {
-  const wrap = shallow(<DynamicLocation />);
-  expect(wrap).toMatchSnapshot();
+  const wrapper = shallow(<DynamicLocation />);
+  wrapper.setState({ isLoading: false });
+  const finder = wrapper.find('#first-marker');
+  expect(finder.length).toBe(0);
 });

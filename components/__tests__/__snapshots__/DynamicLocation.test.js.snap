@@ -53,7 +53,6 @@ exports[`Renders DynamicLocation component 1`] = `
   </Callout>
 </View>
 `;
-
 exports[`Should test for setState changes to journeyTime and journeyDistance 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
@@ -403,7 +402,6 @@ ShallowWrapper {
   },
 }
 `;
-
 exports[`Should test for setState changes to locationChanged: Something Updated 1`] = `
 Object {
   "alertIsLoading": true,

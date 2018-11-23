@@ -1,13 +1,58 @@
 import * as firebase from 'firebase';
 import React from 'react';
 import {
-  View, TextInput, Text, Button, Alert, TouchableOpacity, Image,
+  View,
+  TextInput,
+  Text,
+  Alert,
+  TouchableOpacity,
+  Image,
+  StyleSheet,
+  Modal,
+  TouchableHighlight,
 } from 'react-native';
 import { Location } from 'expo';
 
-const IMAGES = ['https://i.imgur.com/Pr7KWEL.png', 'https://i.imgur.com/ZEGDS72.png',
-  'https://i.imgur.com/rxKLzCF.png', 'https://i.imgur.com/RZ5g8QB.png',
-  'https://i.imgur.com/Pn1xPAR.png', 'https://i.imgur.com/ep1Fedt.png'];
+const styles = StyleSheet.create({
+  icons: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+  },
+  icon: {
+    margin: 30,
+    height: 80,
+    width: 70,
+  },
+  iconText: {
+    textAlign: 'center',
+  },
+  submitForm: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  submitButton: {
+    backgroundColor: '#228ac4',
+    width: 100,
+    height: 30,
+    borderRadius: 10,
+  },
+  submitButtonText: {
+    textAlign: 'center',
+    paddingTop: 6,
+    color: '#fff',
+  },
+});
+
+const IMAGES = [
+  'https://i.imgur.com/0HBhlFV.png',
+  'https://i.imgur.com/sGMHChF.png',
+  'https://i.imgur.com/03ciaHj.png',
+  'https://i.imgur.com/r3QzsYf.png',
+  'https://i.imgur.com/0j9t7R4.png',
+  'https://i.imgur.com/6aeFpmo.png',
+];
 
 export default class Alerts extends React.Component {
   constructor(props) {
@@ -18,13 +63,18 @@ export default class Alerts extends React.Component {
       text: '',
       typeOfReport: '',
       icon: '',
-      visibleForm: false,
+      showFormModal: false,
     };
   }
+
 
   componentWillMount = async () => {
     const location = await Location.getCurrentPositionAsync({});
     this.setState({ longitude: location.coords.longitude, latitude: location.coords.latitude });
+  };
+
+  setModalVisible = (visible) => {
+    this.setState({ showFormModal: visible });
   };
 
   writeAlertData = (body, location, typeOfReport, icon) => {
@@ -59,14 +109,14 @@ export default class Alerts extends React.Component {
     this.navigateHome();
   };
 
-  sendBrokenLiftData = async () => {
-    await this.setState({ typeOfReport: 'Broken Lift', icon: IMAGES[1] });
-    this.sendData();
-  };
-
   navigateHome = () => {
     this.setState({ text: '' });
     this.props.navigation.navigate('Home');
+  };
+
+  sendBrokenLiftData = async () => {
+    await this.setState({ typeOfReport: 'Broken Lift', icon: IMAGES[1] });
+    this.sendData();
   };
 
   sendBlockedPathData = async () => {
@@ -89,17 +139,21 @@ export default class Alerts extends React.Component {
     this.sendData();
   };
 
+  sendOtherReportData = async () => {
+    await this.writeAlertData(
+      this.state.text,
+      {
+        latitude: this.state.latitude,
+        longitude: this.state.longitude,
+      },
+      this.state.typeOfReport,
+      this.state.icon,
+    );
+  };
+
   onHandleChange = (event) => {
     this.setState({ text: event, icon: IMAGES[0], typeOfReport: 'Other' });
   };
-
-  showForm = () => {
-    if (this.state.visibleForm === true) {
-      this.setState({ visibleForm: false });
-    } else {
-      this.setState({ visibleForm: true });
-    }
-  }
 
   render() {
     return (

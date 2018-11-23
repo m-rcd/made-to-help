@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   },
   calloutText: {
     fontSize: 40,
-    color: 'hotpink',
+    color: '#228ac4',
     textAlign: 'center',
     fontWeight: 'bold',
     // fontFamily: 'Verdana',
@@ -133,6 +133,8 @@ export default class DynamicLocation extends React.Component {
               return (
                 <MapView.Marker
                   key={index}
+                  id="first-marker"
+                  data-test="first-marker"
                   coordinate={coords}
                   title={marker.station}
                   description={stepData}
@@ -163,7 +165,7 @@ export default class DynamicLocation extends React.Component {
             destination={this.props.destination}
             apikey={DB_URL}
             strokeWidth={3}
-            strokeColor="hotpink"
+            strokeColor="#228ac4"
             mode="walking"
             onReady={(result) => {
               this.setState({
@@ -178,6 +180,7 @@ export default class DynamicLocation extends React.Component {
                 latitude: parseFloat(JSON.stringify(this.props.origin.latitude)),
                 longitude: parseFloat(JSON.stringify(this.props.origin.longitude)),
               }}
+              image={require('../assets/images/start.png')}
               description={this.props.origin.address}
               title="Start"
               accessibilityLabel="Start location"
@@ -189,6 +192,7 @@ export default class DynamicLocation extends React.Component {
                 latitude: parseFloat(JSON.stringify(this.props.destination.latitude)),
                 longitude: parseFloat(JSON.stringify(this.props.destination.longitude)),
               }}
+              image={require('../assets/images/finish.png')}
               description={this.props.destination.address}
               title="End"
               accessibilityLabel="Destination"
