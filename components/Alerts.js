@@ -103,40 +103,58 @@ export default class Alerts extends React.Component {
 
   render() {
     return (
-      <View accessible={true}>
+      <View>
         <Text>Inaccessibility Report</Text>
-
-        <TouchableOpacity onPress={this.sendBrokenLiftData}>
+        <TouchableOpacity
+          accessibilityLabel="Broken lift"
+          onPress={this.sendBrokenLiftData}
+        >
           <Image
             source={require('../assets/images/broken-lift.png')}
           />
           <Text>Broken Lift</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={this.sendBlockedPathData}>
+        <TouchableOpacity
+          accessibilityLabel="Blocked path"
+          onPress={this.sendBlockedPathData}
+        >
           <Image
             source={require('../assets/images/blockedPath.png')}
           />
           <Text>Blocked Path</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={this.sendStairsData}>
+        <TouchableOpacity
+          accessibilityLabel="Stairs"
+          onPress={this.sendStairsData}
+        >
           <Image
             source={require('../assets/images/stairs.png')}
           />
           <Text>Stairs</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={this.sendNarrowPathData}>
+        <TouchableOpacity
+          accessibilityLabel="Narrow path"
+          onPress={this.sendNarrowPathData}
+        >
           <Image
             source={require('../assets/images/narrow-road-ahead.png')}
           />
           <Text>Narrow Path</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={this.sendNoRampData}>
+        <TouchableOpacity
+          accessibilityLabel="No ramp"
+          onPress={this.sendNoRampData}
+        >
           <Image
             source={require('../assets/images/no-ramp.png')}
           />
           <Text>No Ramp</Text>
         </TouchableOpacity>
-        <TouchableOpacity id="show-form" onPress={this.showForm}>
+        <TouchableOpacity
+          accessibilityLabel="Other"
+          id="show-form"
+          onPress={this.showForm}
+        >
           <Image
             source={require('../assets/images/alert.png')}
           />
@@ -144,9 +162,18 @@ export default class Alerts extends React.Component {
         <Text>Other</Text>
         {this.state.visibleForm
         && (
-        <View accessible={true}>
-          <TextInput placeholder="Add Issue" onChangeText={this.onHandleChange} />
-          <Button title="Submit" onPress={this.sendData} />
+        <View>
+          <TextInput
+            placeholder="Add Issue"
+            accessibilityLabel="Report an Issue"
+            accessibilityHint="Report an accessibility issue"
+            onChangeText={this.onHandleChange}
+          />
+          <Button
+            title="Submit"
+            accessibilityLabel="Submit"
+            onPress={this.sendData}
+          />
         </View>
         )
         }

@@ -29,7 +29,6 @@ export default class DirectionScreen extends React.Component {
       });
     }
 
-
     updateDestination = (newDestination) => {
       this.setState({
         destination: newDestination,
@@ -38,11 +37,18 @@ export default class DirectionScreen extends React.Component {
 
     render() {
       return (
-        <View style={{ flex: 1 }} accessible={true} testID="directions">
+        <View
+          style={{ flex: 1 }}
+          accessibilityLabel="Directions"
+          accessibilityHint="Enter your desired route"
+          testID="directions"
+        >
           <Origin updateOrigin={this.updateOrigin} />
           <Destination updateDestination={this.updateDestination} />
 
           <TouchableOpacity
+            accessibilityLabel="Search"
+            accessibilityHint="Searches for your route"
             style={{
               borderWidth: 0.5,
               padding: 25,

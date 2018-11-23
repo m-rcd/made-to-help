@@ -85,10 +85,10 @@ export default class DynamicLocation extends React.Component {
     if (this.state.journeyDistance !== null) {
       return (
         <MapView.Callout>
-          <View style={styles.calloutView} accessible={true}>
+          <View style={styles.calloutView}>
             <Text
               style={styles.calloutText}
-              accessibilityLabel={`Hello! Journey Time is ${Math.round(
+              accessibilityLabel={`Journey Time is ${Math.round(
                 this.state.journeyTime,
               )} Minutes and the distance is \n ${this.state.journeyDistance} KM`}
             >
@@ -114,7 +114,11 @@ export default class DynamicLocation extends React.Component {
 
   render() {
     return (
-      <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }} accessible={true}>
+      <View
+        style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}
+        accessibilityLabel="Accessible Stations"
+        accessibilityHint="Step-free access available"
+      >
         <MapView style={{ flex: 1 }} showsUserLocation region={this.state.region} provider="google">
           {/** For Accessibility Markers: */}
           {this.state.isLoading
@@ -176,6 +180,7 @@ export default class DynamicLocation extends React.Component {
               }}
               description={this.props.origin.address}
               title="Start"
+              accessibilityLabel="Start location"
             />
           ) : null}
           {this.state.journeyTime ? (
@@ -186,12 +191,16 @@ export default class DynamicLocation extends React.Component {
               }}
               description={this.props.destination.address}
               title="End"
+              accessibilityLabel="Destination"
             />
           ) : null}
         </MapView>
         {this.showRouteInformation()}
         <MapView.Callout style={styles.alertButton}>
-          <TouchableOpacity onPress={this.toggleMarkerData}>
+          <TouchableOpacity
+            accessibilityLabel="See Alerts"
+            onPress={this.toggleMarkerData}
+          >
             <Image source={require('../assets/images/alertMap.png')} />
           </TouchableOpacity>
         </MapView.Callout>

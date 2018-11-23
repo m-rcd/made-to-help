@@ -2,6 +2,8 @@
 
 exports[`Directions snapshot renders directions form 1`] = `
 <View
+  accessibilityHint="Enter your desired route"
+  accessibilityLabel="Directions"
   style={
     Object {
       "flex": 1,
@@ -165,6 +167,8 @@ exports[`Directions snapshot renders directions form 1`] = `
     </View>
   </View>
   <View
+    accessibilityHint="Searches for your route"
+    accessibilityLabel="Search"
     accessible={true}
     isTVSelectable={true}
     onResponderGrant={[Function]}

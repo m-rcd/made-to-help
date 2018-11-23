@@ -2,6 +2,7 @@
 
 exports[`Map snapshot renders successfully 1`] = `
 <View
+  accessibilityLabel="Map"
   style={
     Object {
       "flex": 1,
@@ -10,6 +11,8 @@ exports[`Map snapshot renders successfully 1`] = `
   testID="map"
 >
   <View
+    accessibilityHint="Step-free access available"
+    accessibilityLabel="Accessible Stations"
     style={
       Object {
         "flex": 1,
@@ -37,6 +40,7 @@ exports[`Map snapshot renders successfully 1`] = `
       }
     >
       <View
+        accessibilityLabel="See Alerts"
         accessible={true}
         isTVSelectable={true}
         onResponderGrant={[Function]}

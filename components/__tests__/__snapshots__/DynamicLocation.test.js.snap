@@ -2,6 +2,8 @@
 
 exports[`Renders DynamicLocation component 1`] = `
 <View
+  accessibilityHint="Step-free access available"
+  accessibilityLabel="Accessible Stations"
   style={
     Object {
       "flex": 1,
@@ -29,6 +31,7 @@ exports[`Renders DynamicLocation component 1`] = `
     }
   >
     <View
+      accessibilityLabel="See Alerts"
       accessible={true}
       isTVSelectable={true}
       onResponderGrant={[Function]}
@@ -68,6 +71,8 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
+      "accessibilityHint": "Step-free access available",
+      "accessibilityLabel": "Accessible Stations",
       "children": Array [
         <MockMapView
           provider="google"
@@ -97,6 +102,7 @@ ShallowWrapper {
           }
         >
           <TouchableOpacity
+            accessibilityLabel="See Alerts"
             activeOpacity={0.2}
             onPress={[Function]}
           >
@@ -172,6 +178,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": <TouchableOpacity
+            accessibilityLabel="See Alerts"
             activeOpacity={0.2}
             onPress={[Function]}
           >
@@ -191,6 +198,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "accessibilityLabel": "See Alerts",
             "activeOpacity": 0.2,
             "children": <Component
               source={1}
@@ -222,6 +230,8 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "accessibilityHint": "Step-free access available",
+        "accessibilityLabel": "Accessible Stations",
         "children": Array [
           <MockMapView
             provider="google"
@@ -251,6 +261,7 @@ ShallowWrapper {
             }
           >
             <TouchableOpacity
+              accessibilityLabel="See Alerts"
               activeOpacity={0.2}
               onPress={[Function]}
             >
@@ -326,6 +337,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <TouchableOpacity
+              accessibilityLabel="See Alerts"
               activeOpacity={0.2}
               onPress={[Function]}
             >
@@ -345,6 +357,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "accessibilityLabel": "See Alerts",
               "activeOpacity": 0.2,
               "children": <Component
                 source={1}

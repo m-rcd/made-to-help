@@ -13,7 +13,11 @@ export default class MapScreen extends React.Component {
     const destination = navigation.getParam('destination');
 
     return (
-      <View style={{ flex: 1 }} accessible={true} testID="map">
+      <View
+        style={{ flex: 1 }}
+        accessibilityLabel="Map"
+        testID="map"
+      >
         <DynamicLocation origin={origin} destination={destination} />
       </View>
     );

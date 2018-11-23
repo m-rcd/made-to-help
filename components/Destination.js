@@ -25,9 +25,11 @@ export default class Destination extends React.Component {
 
   render() {
     return (
-      <View style={{ flex: 1 }} accessible={true}>
+      <View style={{ flex: 1 }}>
         <GooglePlacesAutocomplete
           placeholder="End"
+          accessibilityLabel="End"
+          accessibilityHint="Enter your destination"
           minLength={2}
           autoFocus={false}
           returnKeyType="search"
