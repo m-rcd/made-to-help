@@ -21,6 +21,7 @@ There are some great navigation mobile apps already in existence, BUT they’re 
 
 
 ##  <a name="technologies">**Technologies**</a>
+![React Native Flow](assets/mockups/react-native-code.png)
 
 
 [React Native](https://facebook.github.io/react-native/)
