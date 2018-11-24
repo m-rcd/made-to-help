@@ -1,6 +1,6 @@
 # MADE to Help
 
-[Motivation](#motivation) | [Build status](#build-status) | [Technologies](#technologies) | [User Stories](#user-stories) | [Mock up](#mock-up) | [User Interaction and Interaction](#experience) | [Running the App](#running-the-app) | [Running tests](#running-tests)  | [Contributing](#contributing) | [Leaning documentation](#documentation) | [MADE Engineers](#engineers)
+[Motivation](#motivation) | [Build status](#build-status) | [Technologies](#technologies) | [User Stories](#user-stories) | [Mock up](#mock-up) | [User Interaction and Interaction](#experience) | [Running the App](#running-the-app) | [Running tests](#running-tests)  | [Contributing](#contributing) | [Learning documentation](#documentation) | [MADE Engineers](#engineers)
 
 
 **MADE to Help** is a mobile app that helps find you the best, and most accessible, routes for those who need  help navigating the city.
